@@ -20,6 +20,9 @@ importers:
       '@astrojs/svelte':
         specifier: ^7.2.2
         version: 7.2.2(@types/node@24.10.2)(astro@5.16.4(@types/node@24.10.2)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(lightningcss@1.30.2)(svelte@5.45.8)(typescript@5.9.3)(yaml@2.8.2)
+      '@fontsource/archivo':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource/karla':
         specifier: ^5.2.8
         version: 5.2.8
@@ -868,6 +871,9 @@ packages:
 
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
+
+  '@fontsource/archivo@5.2.8':
+    resolution: {integrity: sha512-Fc4yuMt85MmcYooUVpYHAJRJTymPv2+J9HsMP2f5mxR/0pIWgE2V5XfgNTavPpklX2rJFprdT36iE6Rr8ds9MA==}
 
   '@fontsource/karla@5.2.8':
     resolution: {integrity: sha512-uZMA4ugNcHFYMpjr/9FIHQC3ldtILlqPdK3f4P9XInDgRL0NxdIyRwH9MuGZUT7sdup0kshk9zsGXitq1xpFAw==}
@@ -5428,6 +5434,8 @@ snapshots:
       '@floating-ui/utils': 0.2.10
 
   '@floating-ui/utils@0.2.10': {}
+
+  '@fontsource/archivo@5.2.8': {}
 
   '@fontsource/karla@5.2.8': {}
 
