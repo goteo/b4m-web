@@ -12,24 +12,7 @@ directory = "./dist"
 [observability.logs]
 enabled = true
 
-[env.testing]
+[env.b4m]
 routes = [
-    { pattern = "testing.v4.goteo.org", zone_name = "goteo.org", custom_domain = true },
+    { pattern = "crowdfunding.b4m.space", zone_name = "b4m.space", custom_domain = true },
 ]
-
-[env.staging]
-routes = [
-    { pattern = "staging.v4.goteo.org", zone_name = "goteo.org", custom_domain = true },
-]
-
-[env.beta]
-routes = [
-    { pattern = "new.goteo.org", zone_name = "goteo.org", custom_domain = true },
-]
-
-[env.prod]
-routes = [
-    { pattern = "v4.goteo.org", zone_name = "goteo.org", custom_domain = true },
-]
-[env.preview]
-workers_dev = true
