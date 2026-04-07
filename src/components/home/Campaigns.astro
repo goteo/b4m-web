@@ -8,6 +8,7 @@ import { client } from "../../openapi/client/client.gen";
 import Grid from "../library/Grid.svelte";
 
 const { t } = Astro.locals;
+const locale = Astro.locals.lang;
 
 const highlightedProjects = {
     "impulsa-la-cooperativa-de-informacion-climatica": "",
@@ -16,7 +17,6 @@ const highlightedProjects = {
     "la-porta-del-mon-cooperativa-restaurant": "",
     "espana-en-llamas": "",
     "fons-comunitari-per-la-dana-resposta-collectiva-pe": "",
-    "nuestros-bosques-nuestro-futuro": "",
     "la-benefica": "",
     "ajudans-a-teixir-el-futur-de-la-cooperativa-textil": "",
     "la-villana-de-vallekas-un-centro-social-para-el-ba": "",
@@ -28,7 +28,7 @@ const highlightedProjects = {
 };
 
 const { data: projects } = await apiProjectsGetCollection({
-    headers: { "Accept-Language": getLanguage(Astro) },
+    headers: { "Accept-Language": locale },
     query: {
         "slug[]": Object.keys(highlightedProjects),
     },
