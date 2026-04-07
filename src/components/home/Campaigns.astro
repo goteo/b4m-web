@@ -9,13 +9,21 @@ import { client } from "../../openapi/client/client.gen";
 const { t } = Astro.locals;
 
 const highlightedProjects = {
-    "todos-somos-gaza": "https://www.goteo.org/img/780x478/caratula-43.png",
-    "fons-comunitari-per-la-dana-resposta-collectiva-pe":
-        "https://www.goteo.org/img/780x478/1-1823.jpg",
-    "espana-en-llamas":
-        "https://www.goteo.org/img/700x0/captura-de-pantalla-20120813-a-las-1.35.23-am.png",
-    "menus-solidarios": "https://www.goteo.org/img/780x478/chefsforukraine-poland-6.jpeg",
-    "sindicat-de-llogaters-i-llogateres": "https://ca.goteo.org/img/780x478/banner-goteo-17.jpg",
+    "impulsa-la-cooperativa-de-informacion-climatica": "",
+    "lanzamos-sonda-internacional-y-los-cinco-elementos": "",
+    "salvem-el-delta-del-llobregat": "",
+    "la-porta-del-mon-cooperativa-restaurant": "",
+    "espana-en-llamas": "",
+    "fons-comunitari-per-la-dana-resposta-collectiva-pe": "",
+    "nuestros-bosques-nuestro-futuro": "",
+    "la-benefica": "",
+    "ajudans-a-teixir-el-futur-de-la-cooperativa-textil": "",
+    "la-villana-de-vallekas-un-centro-social-para-el-ba": "",
+    "el-bosque-sonoro-de-mozota-proyecto-social-y-cultu": "",
+    "ovos-campeiros-xema-e-clara": "",
+    "avantva-coop": "",
+    "la-kacharreria": "",
+    "momo-darle-tiempo-al-tiempo": "",
 };
 
 const { data: projects } = await apiProjectsGetCollection({
@@ -35,9 +43,7 @@ const campaigns: Campaign[] = await Promise.all(
             size: index < 1 ? "large" : "small",
             id: project.slug!,
             title: project.title!,
-            image:
-                highlightedProjects[project.slug! as keyof typeof highlightedProjects] ||
-                project.video?.thumbnail!,
+            image: project.video?.thumbnail!,
             minimum: project.budget?.minimum?.money!,
             obtained: accounting!.balance as Money,
             optimum: project.budget?.optimum?.money,

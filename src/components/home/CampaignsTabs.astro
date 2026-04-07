@@ -15,9 +15,20 @@ import { client } from "../../openapi/client/client.gen";
 const { t } = Astro.locals;
 const chosenProjects = {
     "impulsa-la-cooperativa-de-informacion-climatica": "",
-    "fons-cooperatiu-front-l-emergencia-social-i-sanita": "",
-    "la-benefica":
-        "https://i.vimeocdn.com/video/1286954665-1fc1ccfa1b381946d23072ca518e4f0094c566416243095e6_900x500?region=us",
+    "lanzamos-sonda-internacional-y-los-cinco-elementos": "",
+    "salvem-el-delta-del-llobregat": "",
+    "la-porta-del-mon-cooperativa-restaurant": "",
+    "espana-en-llamas": "",
+    "fons-comunitari-per-la-dana-resposta-collectiva-pe": "",
+    "nuestros-bosques-nuestro-futuro": "",
+    "la-benefica": "",
+    "ajudans-a-teixir-el-futur-de-la-cooperativa-textil": "",
+    "la-villana-de-vallekas-un-centro-social-para-el-ba": "",
+    "el-bosque-sonoro-de-mozota-proyecto-social-y-cultu": "",
+    "ovos-campeiros-xema-e-clara": "",
+    "avantva-coop": "",
+    "la-kacharreria": "",
+    "momo-darle-tiempo-al-tiempo": "",
 };
 
 // Mock campaign data - using same campaigns as the main Campaigns component
@@ -40,9 +51,7 @@ const campaigns: Campaign[] = await Promise.all(
             size: "small",
             id: project.slug!,
             title: project.title!,
-            image:
-                chosenProjects[project.slug! as keyof typeof chosenProjects] ||
-                project.video?.thumbnail!,
+            image: project.video?.thumbnail!,
             minimum: project.budget?.minimum?.money!,
             optimum: project.budget?.optimum?.money,
             obtained: accounting!.balance as Money,
