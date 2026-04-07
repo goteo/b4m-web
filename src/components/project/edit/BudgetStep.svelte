@@ -23,6 +23,7 @@
     let minBudgetItems: ProjectBudgetItem[] = $state($wizardState.budgetItems.minimum);
     let optBudgetItems: ProjectBudgetItem[] = $state($wizardState.budgetItems.optimum);
     let loading = $state(false);
+    let showErrorToast = $state(false);
 
     /**
      * Handle Continue button
@@ -60,28 +61,26 @@
 <div class="flex flex-col gap-10">
     {#if Object.keys($validationErrors).length > 0}
         {#each Object.entries($validationErrors) as [key, message]}
-            {#if key === "minimum" || key === "optimum_total"}
-                <Toast
-                    aria-label={key}
-                    class="absolute z-999 self-end"
-                    variant="error"
-                    showToast={true}
-                >
-                    {message}
-                </Toast>
-            {/if}
+            <Toast
+                aria-label={key}
+                class="absolute z-999 self-end"
+                variant="error"
+                bind:showToast={showErrorToast}
+            >
+                {message}
+            </Toast>
         {/each}
     {/if}
     <div class="space-y-4">
         <h1 class="text-3xl leading-12 font-bold text-black lg:text-[40px]">
-            {$t("wizard.budget.title")}
+            {$t("pages.project.edit.budget.title")}
         </h1>
-        <p class="text-content text-base">{$t("wizard.budget.subtitle")}</p>
+        <p class="text-content text-base">{$t("pages.project.edit.budget.subtitle")}</p>
     </div>
 
     <div class="flex flex-col gap-6">
         <span class="text-secondary text-3xl font-bold">
-            {$t("wizard.budget.minimum")}:
+            {$t("domain.project.budget.minimum")}:
             {formatCurrency(
                 project.budget?.minimum?.money?.amount,
                 project.budget?.minimum?.money?.currency,
@@ -91,17 +90,17 @@
             <LoadingSpinner size="lg" class="col-span-3 mx-auto my-10" />
         {:else}
             <Grid class="grid-cols-1 sm:grid-cols-2">
-                {#each minBudgetItems as item, i}
-                    <AdminBudgetCard {item} index={i} {loading} />
+                {#each minBudgetItems as item, index}
+                    <AdminBudgetCard {item} {index} bind:loading />
                 {/each}
 
-                <AdminBudgetCard isCreateCard={true} item={null} {loading} />
+                <AdminBudgetCard isCreateCard={true} item={null} bind:loading />
             </Grid>
         {/if}
     </div>
     <div class="flex flex-col gap-6">
         <span class="text-secondary text-3xl font-bold">
-            {$t("wizard.budget.optimum")}:
+            {$t("domain.project.budget.optimum")}:
             {formatCurrency(
                 project.budget?.optimum?.money?.amount,
                 project.budget?.optimum?.money?.currency,
@@ -122,13 +121,7 @@
 </div>
 
 <div class="mt-10 flex">
-    <Button
-        kind="secondary"
-        size="md"
-        onclick={handleContinue}
-        class="min-w-50"
-        data-testid="budget-continue-btn"
-    >
-        {$t("wizard.campaignInfo.continue")}
+    <Button kind="secondary" size="md" onclick={handleContinue} class="min-w-50">
+        {$t("pages.project.edit.budget.continue")}
     </Button>
 </div>

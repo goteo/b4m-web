@@ -49,7 +49,7 @@
         }
 
         if (Object.keys(errors).length > 0) {
-            validationErrors.set(errors!);
+            validationErrors.set(errors);
             showModalErrorToast = true;
             return;
         }
@@ -59,21 +59,23 @@
     }
 
     function handleDeleteBudgetItem(deadline: "minimum" | "optimum" | undefined) {
-        if (!index || !deadline) return;
+        if (index === undefined || !deadline) return;
 
         deleteBudgetItem(index, deadline);
         openModal = false;
+        validationErrors.set({});
     }
 </script>
 
 {#if isCreateCard}
     <CreateCard
-        title={$t("wizard.budget.createCard.optimum.title")}
-        description={$t("wizard.budget.createCard.optimum.description")}
+        title={$t("pages.project.edit.budget.add.title")}
+        description={$t("pages.project.edit.budget.add.description")}
         variant="budget"
         onSave={handleSaveBudgetItem}
         onclick={() => (openModal = true)}
         bind:open={openModal}
+        bind:showToast={showModalErrorToast}
     />
 {:else if item}
     <div
@@ -94,12 +96,14 @@
                     class="inline-block h-2.5 w-5 rounded-lg"
                     style={`background-color: ${typeBudget[item.type as ProjectBudgetItem["type"]]}`}
                 ></div>
-                <span class="text-content text-sm">{$t(`budget.${item.type}`)}</span>
+                <span class="text-content text-sm">
+                    {$t(`domain.project.budget.type.${item.type}`)}
+                </span>
             </div>
         </div>
 
         <Button kind="secondary" class="w-full" onclick={() => (openModal = true)}>
-            {$t("wizard.budget.editBtn")}
+            {$t("common.edit")}
         </Button>
 
         <BudgetModal

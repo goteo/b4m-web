@@ -8,27 +8,20 @@
     - URL query parameter sync
 -->
 <script lang="ts">
-    import BudgetStep from "./BudgetStep.svelte";
-    import CampaignInfoStep from "./CampaignInfoStep.svelte";
-    import CollaborationsStep from "./CollaborationsStep.svelte";
-    import ConfigurationStep from "./ConfigurationStep.svelte";
-    import RewardsStep from "./RewardsStep.svelte";
-    import WizardShell from "./WizardShell.svelte";
-    import { t } from "../../../i18n/store";
-    import { type Project } from "../../../openapi/client";
+    import ProjectEditorShell from "./ProjectEditorShell.svelte";
+    import { getStepComponent } from "./steps";
+    import { type Project } from "../../../../../openapi/client";
     import {
         wizardState,
         initializeFromProject,
         clearLocalStorage,
         saveToLocalStorage,
-    } from "../../../stores/wizard-state";
+    } from "../../../../../stores/wizard-state";
 
     let {
         project,
-        lang = "es",
     }: {
         project: Project;
-        lang?: string;
     } = $props();
 
     // Initialize wizard state from project and set up URL sync
@@ -129,32 +122,7 @@
     }
 </script>
 
-<WizardShell
-    {title}
-    {subtitle}
-    onTitleChange={handleTitleChange}
-    onSubtitleChange={handleSubtitleChange}
-    onSave={handleSave}
-    onPublish={handlePublish}
->
-    {#snippet currentStepContent()}
-        {#if currentStep === 1}
-            <ConfigurationStep />
-        {:else if currentStep === 2}
-            <CampaignInfoStep />
-        {:else if currentStep === 3}
-            <RewardsStep {project} />
-        {:else if currentStep === 4}
-            <CollaborationsStep {project} />
-        {:else if currentStep === 5}
-            <BudgetStep {project} />
-        {:else if currentStep === 6}
-            <div class="py-12 text-center">
-                <h2 class="text-secondary mb-4 text-2xl font-bold">
-                    {$t("wizard.steps.about_you")}
-                </h2>
-                <p class="text-tertiary">{$t("wizard.placeholders.step_not_implemented")}</p>
-            </div>
-        {/if}
-    {/snippet}
-</WizardShell>
+<ProjectEditorShell {project} onSave={handleSave} onPublish={handlePublish}>
+    {@const StepComponent = getStepComponent(currentStep)}
+    <StepComponent {project} />
+</ProjectEditorShell>

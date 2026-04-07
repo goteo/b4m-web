@@ -16,8 +16,14 @@
 import { z } from "astro/zod";
 import { writable, derived, get } from "svelte/store";
 
-import type { MoneyWithConversion, Project, ProjectBudgetItem, ProjectCalendar } from "../openapi/client";
 import { cyrb53 } from "../utils/hash";
+
+import type {
+    MoneyWithConversion,
+    Project,
+    ProjectBudgetItem,
+    ProjectCalendar,
+} from "../openapi/client";
 
 /**
  * Wizard configuration data (Step 1: Configuration)
@@ -77,9 +83,9 @@ export interface WizardReward {
     money: {
         amount: number;
         currency: string;
-    }
+    };
 
-    // isFinite sets if the reward has a limit of exchanges, and if not, unitsTotal sets the limit 
+    // isFinite sets if the reward has a limit of exchanges, and if not, unitsTotal sets the limit
     isFinite: boolean;
     unitsTotal: number | null;
 }
@@ -90,7 +96,7 @@ export interface WizardReward {
 export interface WizardCollaboration {
     title: string;
     description: string;
-};
+}
 
 /**
  * Wizard Budget data (Step 5: Budget)
@@ -98,7 +104,7 @@ export interface WizardCollaboration {
 export interface WizardBudgetItems {
     minimum: ProjectBudgetItem[];
     optimum: ProjectBudgetItem[];
-};
+}
 
 /**
  * Complete wizard state
@@ -146,7 +152,7 @@ const getDefaultState = (): WizardState => ({
     categories: [],
     budget: {
         amount: 0,
-        currency: "EUR"
+        currency: "EUR",
     },
     calendar: {},
     currentStep: 1,
@@ -165,10 +171,16 @@ const getDefaultState = (): WizardState => ({
         errors: {},
     },
     rewards: [
-        { title: "", description: null, money: { amount: 0, currency: "" }, isFinite: false, unitsTotal: null }
+        {
+            title: "",
+            description: null,
+            money: { amount: 0, currency: "" },
+            isFinite: false,
+            unitsTotal: null,
+        },
     ],
     collaborations: [],
-    budgetItems: { minimum: [], optimum: [] }
+    budgetItems: { minimum: [], optimum: [] },
 });
 
 /**
@@ -226,7 +238,10 @@ export function initializeFromProject(project: Project) {
         title: project.title || "",
         subtitle: project.subtitle || "",
         categories: project.categories || [],
-        budget: { amount: project.budget?.minimum?.money?.amount || 0, currency: project.budget?.minimum?.money?.currency || "EUR" },
+        budget: {
+            amount: project.budget?.minimum?.money?.amount || 0,
+            currency: project.budget?.minimum?.money?.currency || "EUR",
+        },
         calendar: {},
         currentStep: 1,
         configuration: {
@@ -245,7 +260,7 @@ export function initializeFromProject(project: Project) {
         },
         rewards: [],
         collaborations: [],
-        budgetItems: { minimum: [], optimum: [] }
+        budgetItems: { minimum: [], optimum: [] },
     });
 
     // Try to restore additional wizard data from localStorage
@@ -339,7 +354,7 @@ export function restoreFromLocalStorage(): boolean {
             campaignInfo: parsed.campaignInfo || getDefaultState().campaignInfo,
             rewards: parsed.rewards || getDefaultState().rewards,
             collaborations: parsed.collaborations || getDefaultState().collaborations,
-            budgetItems: parsed.budgetItems || getDefaultState().budgetItems
+            budgetItems: parsed.budgetItems || getDefaultState().budgetItems,
         }));
 
         return true;
@@ -637,47 +652,53 @@ export function validateCampaignInfo(): Record<string, string> {
 
     // Media validation
     if (data.images.length === 0 && !data.video) {
-        errors.media = "wizard.validation.campaign_info.media.required";
+        errors.media = "pages.project.edit.rewards.validationn_info.reward.media.required";
     }
 
     // Objectives validation
     const objectivesPlainText = stripHtml(data.objectives).trim();
     if (objectivesPlainText.length === 0) {
-        errors.objectives = "wizard.validation.campaign_info.objectives.required";
+        errors.objectives =
+            "pages.project.edit.rewards.validationn_info.reward.objectives.required";
     } else if (objectivesPlainText.length < 50) {
-        errors.objectives = "wizard.validation.campaign_info.objectives.min_length";
+        errors.objectives =
+            "pages.project.edit.rewards.validationn_info.reward.objectives.min_length";
     } else if (objectivesPlainText.length > 5000) {
-        errors.objectives = "wizard.validation.campaign_info.objectives.max_length";
+        errors.objectives =
+            "pages.project.edit.rewards.validationn_info.reward.objectives.max_length";
     }
 
     // Legacy validation
     const legacyPlainText = stripHtml(data.legacy).trim();
     if (legacyPlainText.length === 0) {
-        errors.legacy = "wizard.validation.campaign_info.legacy.required";
+        errors.legacy = "pages.project.edit.rewards.validationn_info.reward.legacy.required";
     } else if (legacyPlainText.length < 50) {
-        errors.legacy = "wizard.validation.campaign_info.legacy.min_length";
+        errors.legacy = "pages.project.edit.rewards.validationn_info.reward.legacy.min_length";
     } else if (legacyPlainText.length > 5000) {
-        errors.legacy = "wizard.validation.campaign_info.legacy.max_length";
+        errors.legacy = "pages.project.edit.rewards.validationn_info.reward.legacy.max_length";
     }
 
     // Target audience validation
     const targetPlainText = stripHtml(data.targetAudience).trim();
     if (targetPlainText.length === 0) {
-        errors.targetAudience = "wizard.validation.campaign_info.target.required";
+        errors.targetAudience =
+            "pages.project.edit.rewards.validationn_info.reward.target.required";
     } else if (targetPlainText.length < 30) {
-        errors.targetAudience = "wizard.validation.campaign_info.target.min_length";
+        errors.targetAudience =
+            "pages.project.edit.rewards.validationn_info.reward.target.min_length";
     } else if (targetPlainText.length > 5000) {
-        errors.targetAudience = "wizard.validation.campaign_info.target.max_length";
+        errors.targetAudience =
+            "pages.project.edit.rewards.validationn_info.reward.target.max_length";
     }
 
     // Team validation
     const teamPlainText = stripHtml(data.team).trim();
     if (teamPlainText.length === 0) {
-        errors.team = "wizard.validation.campaign_info.team.required";
+        errors.team = "pages.project.edit.rewards.validationn_info.reward.team.required";
     } else if (teamPlainText.length < 50) {
-        errors.team = "wizard.validation.campaign_info.team.min_length";
+        errors.team = "pages.project.edit.rewards.validationn_info.reward.team.min_length";
     } else if (teamPlainText.length > 5000) {
-        errors.team = "wizard.validation.campaign_info.team.max_length";
+        errors.team = "pages.project.edit.rewards.validationn_info.reward.team.max_length";
     }
 
     return errors;
@@ -719,7 +740,7 @@ export const isCampaignInfoValidStore = derived(wizardState, () => {
  * updateReward(index: currentIndex, reward: updatedReward);
  */
 export function updateReward(index: number, reward: WizardReward) {
-    const errors = validateReward(reward, index);
+    const errors = validateReward(reward);
 
     if (Object.keys(errors).length > 0) {
         return errors;
@@ -735,9 +756,7 @@ export function updateReward(index: number, reward: WizardReward) {
 }
 
 export function addReward(reward: WizardReward) {
-    const { rewards } = get(wizardState);
-    const currentIndex = rewards.length;
-    const errors = validateReward(reward, currentIndex);
+    const errors = validateReward(reward);
 
     if (Object.keys(errors).length > 0) {
         return errors;
@@ -760,19 +779,20 @@ export function deleteReward(index: number) {
     saveToLocalStorage();
 }
 
-export function validateReward(reward: WizardReward, index: number): Record<string, string> {
+export function validateReward(reward: WizardReward): Record<string, string> {
     const errors: Record<string, string> = {};
+    const hash = cyrb53(JSON.stringify(reward));
 
-    if (!reward.title?.trim()) {
-        errors[`reward_${index}_title`] = "wizard.validation.rewards.title";
+    if (!reward.title.trim()) {
+        errors[`reward_error_title_${hash}`] = "pages.project.edit.rewards.validation.title";
     }
 
-    if (!reward.money?.amount || reward.money.amount <= 0) {
-        errors[`reward_${index}_amount`] = "wizard.validation.rewards.amount";
+    if (!reward.money.amount || reward.money.amount <= 0) {
+        errors[`reward_error_amount_${hash}`] = "pages.project.edit.rewards.validation.amount";
     }
 
     if (reward.isFinite && (!reward.unitsTotal || reward.unitsTotal <= 0)) {
-        errors[`reward_${index}_units`] = "wizard.validation.rewards.units";
+        errors[`reward_error_units_${hash}`] = "pages.project.edit.rewards.validation.units";
     }
 
     return errors;
@@ -797,9 +817,9 @@ export function validateReward(reward: WizardReward, index: number): Record<stri
  */
 export function updateCollaboration(
     index: number,
-    collab: WizardCollaboration
+    collab: WizardCollaboration,
 ): Record<string, string> {
-    const errors = validateCollaboration(collab, index);
+    const errors = validateCollaboration(collab);
 
     if (Object.keys(errors).length > 0) {
         return errors;
@@ -818,13 +838,8 @@ export function updateCollaboration(
     return {};
 }
 
-
-export function addCollaboration(
-    collab: WizardCollaboration
-): Record<string, string> {
-    const { collaborations } = get(wizardState);
-    const currentIndex = collaborations.length;
-    const errors = validateCollaboration(collab, currentIndex);
+export function addCollaboration(collab: WizardCollaboration): Record<string, string> {
+    const errors = validateCollaboration(collab);
 
     if (Object.keys(errors).length > 0) {
         return errors;
@@ -841,32 +856,35 @@ export function addCollaboration(
     return {};
 }
 
-
 export function deleteCollaboration(index: number) {
-    wizardState.update((state) => ({
-        ...state,
-        collaborations: state.collaborations.filter((_, i) => i !== index),
-    }));
+    wizardState.update((state) => {
+        const collaborations = state.collaborations.splice(index, 1); // Remove the collaboration from the array
+
+        return {
+            ...state,
+            collaborations: { ...collaborations },
+        };
+    });
     hasUnsavedChanges.set(true);
     saveToLocalStorage();
 }
 
-export function validateCollaboration(collab: WizardCollaboration, index: number): Record<string, string> {
+export function validateCollaboration(collab: WizardCollaboration): Record<string, string> {
     const errors: Record<string, string> = {};
+    const hash = cyrb53(JSON.stringify(collab));
 
-    if (!collab.title?.trim()) {
-        errors[`collab_${index}_title`] =
-            "wizard.validation.collaborations.title";
+    if (!collab.title.trim()) {
+        errors[`collab_error_title_${hash}`] = "pages.project.edit.collaborations.validation.title";
     }
 
     if (collab.description && collab.description.length > 1000) {
-        errors[`collab_${index}_description_too_long`] =
-            "wizard.validation.collaborations.description_too_long";
+        errors[`collab_error_description_too_long_${hash}`] =
+            "pages.project.edit.collaborations.validation.descriptionTooLong";
     }
 
     if (!collab.description.trim()) {
-        errors[`collab_${index}_description`] =
-            "wizard.validation.collaborations.description";
+        errors[`collab_error_description_${hash}`] =
+            "pages.project.edit.collaborations.validation.description";
     }
 
     return errors;
@@ -889,10 +907,7 @@ export function validateCollaboration(collab: WizardCollaboration, index: number
  * // Update unitsTotal
  * updateRewards({ unitsTotal: newCount });
  */
-export function updateBudgetItem(
-    index: number,
-    item: ProjectBudgetItem,
-) {
+export function updateBudgetItem(index: number, item: ProjectBudgetItem) {
     const errors = validateBudgetItem(item);
 
     if (Object.keys(errors).length > 0) {
@@ -916,12 +931,9 @@ export function updateBudgetItem(
     saveToLocalStorage();
 }
 
-export function addBudgetItem(
-    item: ProjectBudgetItem,
-) {
-    const { budgetItems } = get(wizardState);
-    console.log({ budgetItems, deadline: item.deadline, currentType: budgetItems[item.deadline], itemDeadline: item.deadline });
+export function addBudgetItem(item: ProjectBudgetItem) {
     const errors = validateBudgetItem(item);
+
     if (Object.keys(errors).length > 0) {
         return errors;
     }
@@ -938,10 +950,7 @@ export function addBudgetItem(
     saveToLocalStorage();
 }
 
-export function deleteBudgetItem(
-    index: number,
-    deadline: "minimum" | "optimum",
-) {
+export function deleteBudgetItem(index: number, deadline: "minimum" | "optimum") {
     wizardState.update((state) => ({
         ...state,
         budgetItems: {
@@ -956,38 +965,31 @@ export function deleteBudgetItem(
 
 export function validateBudgetItem(item: ProjectBudgetItem): Record<string, string> {
     const errors: Record<string, string> = {};
-    console.log(item);
-
     const hash = cyrb53(JSON.stringify(item));
 
     if (!item.title.trim()) {
-        errors[`error_${hash}_title`] =
-            "wizard.validation.budget.title_required";
+        errors[`budget_error_title_${hash}`] = "pages.project.edit.budget.validation.title.";
     }
 
     if (!item.description.trim()) {
-        errors[`error_${hash}_description`] =
-            "wizard.validation.budget.description_required";
+        errors[`budget_error_description_${hash}`] =
+            "pages.project.edit.budget.validation.description";
     }
 
     if (!item.money.amount || item.money.amount <= 0) {
-        errors[`error_${hash}_amount`] =
-            "wizard.validation.budget.amount_invalid";
+        errors[`budget_error_amount_${hash}`] = "pages.project.edit.budget.validation.amount";
     }
 
     if (!item.money.currency) {
-        errors[`error_${hash}_currency`] =
-            "wizard.validation.budget.currency_required";
+        errors[`budget_error_currency_${hash}`] = "pages.project.edit.budget.validation.currency";
     }
 
     if (!item.type) {
-        errors[`error_${hash}_type`] =
-            "wizard.validation.budget.type_required";
+        errors[`budget_error_type_${hash}`] = "pages.project.edit.budget.validation.type";
     }
 
     if (!item.deadline || (item.deadline !== "minimum" && item.deadline !== "optimum")) {
-        errors[`error_${hash}_deadline`] =
-            "wizard.validation.budget.deadline_invalid";
+        errors[`budget_error_deadline_${hash}`] = "pages.project.edit.budget.validation.class";
     }
 
     return errors;
@@ -998,15 +1000,7 @@ export function validateBudgetAmount() {
     const errors: Record<string, string> = {};
 
     if (budgetItems.minimum.length <= 0) {
-        errors.minimum = "wizard.validation.budget.minimum_required";
-    }
-
-    const minTotal = budgetItems.minimum.reduce((sum, i) => sum + i.money.amount, 0);
-    const optTotal = budgetItems.optimum.reduce((sum, i) => sum + i.money.amount, 0);
-
-    if (budgetItems.optimum.length && optTotal < minTotal) {
-        errors.optimum_total =
-            "wizard.validation.budget.optimum_less_than_minimum";
+        errors.minimum = "pages.project.edit.budget.validation.amountMinimum";
     }
 
     return errors;

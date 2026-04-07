@@ -1,7 +1,6 @@
 <script lang="ts">
     import CollabsCard from "./CollabsCard.svelte";
     import { t } from "../../../i18n/store";
-    import { type Project } from "../../../openapi/client";
     import {
         navigateToStep,
         wizardState,
@@ -10,10 +9,6 @@
     import Button from "../../library/Button.svelte";
     import Grid from "../../library/Grid.svelte";
     import LoadingSpinner from "../../search/LoadingSpinner.svelte";
-
-    let { project } = $props<{
-        project: Project;
-    }>();
 
     let collabs = $state<WizardCollaboration[]>($wizardState.collaborations);
     let loading = $state(false);
@@ -27,7 +22,6 @@
     }
 
     async function loadCollabs() {
-        if (!project) return;
         loading = true;
 
         collabs = $wizardState.collaborations;
@@ -43,10 +37,10 @@
 <div class="w-full space-y-10">
     <div class="flex w-full flex-col gap-4">
         <h2 class="text-[40px] leading-12 font-bold text-black">
-            {$t("wizard.steps.collaborations.title")}
+            {$t("pages.project.edit.collaborations.title")}
         </h2>
         <p class="text-content text-base font-normal">
-            {$t("wizard.steps.collaborations.subtitle")}
+            {$t("pages.project.edit.collaborations.subtitle")}
         </p>
     </div>
 
@@ -64,13 +58,8 @@
 
     <!-- Continue Button -->
     <div class="flex justify-start">
-        <Button
-            kind="secondary"
-            size="md"
-            onclick={handleContinue}
-            data-testid="collaborations-continue-btn"
-        >
-            {$t("wizard.collaborations.continue")}
+        <Button kind="secondary" size="md" onclick={handleContinue}>
+            {$t("pages.project.edit.collaborations.continue")}
         </Button>
     </div>
 </div>

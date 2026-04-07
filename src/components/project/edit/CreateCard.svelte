@@ -18,6 +18,7 @@
         onclick,
         variant,
         open = $bindable(false),
+        showToast = $bindable(false),
         reward,
         collab,
         budgetItem,
@@ -28,6 +29,7 @@
         onclick: () => void;
         variant: "reward" | "collab" | "budget";
         open: boolean;
+        showToast: boolean;
         reward?: ProjectReward | null;
         collab?: ProjectCollaboration | null;
         budgetItem?: ProjectBudgetItem | null;
@@ -42,33 +44,33 @@
         <h2
             class="text-soft-purple font-bold {variant === 'budget'
                 ? 'text-2xl leading-8'
-                : 'text-[40px] leading-12'}"
+                : 'text-4xl leading-12'}"
         >
             {title}
         </h2>
         <p class="text-variant1 text-base font-normal">
             {description}
         </p>
+        <Button
+            kind="secondary"
+            class="mt-auto flex w-full items-center justify-center gap-2"
+            {onclick}
+        >
+            <PlusIcon class="p-[2.25px]" />
+            {#if variant === "reward"}
+                {$t("pages.project.edit.rewards.add.button")}
+            {:else if variant === "collab"}
+                {$t("pages.project.edit.collaborations.add.button")}
+            {:else if variant === "budget"}
+                {$t("pages.project.edit.budget.add.button")}
+            {/if}
+        </Button>
     </div>
-    <Button
-        kind="secondary"
-        class="mt-auto flex w-full items-center justify-center gap-2"
-        {onclick}
-    >
-        <PlusIcon class="p-[2.25px]" />
-        {#if variant === "reward"}
-            {$t("wizard.rewards.createCard.btn")}
-        {:else if variant === "collab"}
-            {$t("wizard.collaborations.createCard.btn")}
-        {:else if variant === "budget"}
-            {$t("wizard.budget.createCard.btn")}
-        {/if}
-    </Button>
 </div>
 {#if variant === "reward"}
-    <RewardsModal bind:open {onSave} {reward} />
+    <RewardsModal bind:open bind:showToast {onSave} {reward} />
 {:else if variant === "collab"}
-    <CollabsModal bind:open {onSave} {collab} />
+    <CollabsModal bind:open bind:showToast {onSave} {collab} />
 {:else if variant === "budget"}
-    <BudgetModal bind:open {onSave} {budgetItem} />
+    <BudgetModal bind:open bind:showToast {onSave} {budgetItem} />
 {/if}
