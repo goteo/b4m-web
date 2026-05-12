@@ -1,0 +1,27 @@
+---
+import App from "../../components/App.svelte";
+import Card from "../../components/library/Card.svelte";
+import Layout from "../../layouts/Layout.astro";
+import { goto } from "../../utils/navigation";
+
+const { t, lang, session } = Astro.locals;
+
+if (!session) {
+    return goto("/login", { query: { callback: "/contact" } });
+}
+
+const chatbotParams = new URLSearchParams();
+chatbotParams.append("user_id", session?.user.handle);
+
+const chatbotUrl = `${import.meta.env.PUBLIC_CHATBOT_URL}?${chatbotParams}`;
+---
+
+<Layout>
+    <App locale={lang} {session} client:load>
+        <div class="wrapper">
+            <Card class="m-10 h-[50dvh] overflow-hidden p-0">
+                <iframe class="h-full w-full" src={chatbotUrl}></iframe>
+            </Card>
+        </div>
+    </App>
+</Layout>
