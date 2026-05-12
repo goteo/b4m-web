@@ -12,7 +12,7 @@
 <footer class="text-variant1" aria-labelledby="footer-heading">
     <!-- Funding Partners Section -->
     <section
-        class="bg-purple-soft text-tertiary border-variant1 border-2 border-b-0 py-6 sm:py-8 md:py-10"
+        class="bg-[#ffffff] text-tertiary border-variant1 border-2 border-b-0 py-6 sm:py-8 md:py-10"
         aria-labelledby="funding-partners-heading"
     >
         <div class="wrapper">
@@ -34,16 +34,8 @@
                     >
                         <div class="flex items-center gap-3 sm:gap-4">
                             <FooterPartnerImage
-                                src="/imgs/orgs/NGEU.png"
-                                alt="Funded by the European Union NextGeneration EU"
-                            />
-                            <FooterPartnerImage
-                                src="/imgs/orgs/MTES.png"
-                                alt="Ministerio de Trabajo y Economía Social"
-                            />
-                            <FooterPartnerImage
-                                src="/imgs/orgs/PRTR.png"
-                                alt="Plan de Recuperación, Transformación y Resiliencia"
+                                src="/imgs/orgs/INTERREG_EU.jpg"
+                                alt="Funded by Interreg Euro-MED"
                             />
                         </div>
                     </div>
@@ -60,31 +52,9 @@
                         aria-label="Partner organizations"
                     >
                         <FooterPartnerImage
-                            src="/imgs/orgs/xes.png"
-                            alt="XES - Xarxa d'Economia Solidària"
-                            href="https://xes.cat"
-                            class="rounded-lg"
-                            size="medium"
-                        />
-                        <FooterPartnerImage
-                            src="/imgs/orgs/alda-europe.svg"
-                            alt="Alda Europe - European Association for Local Democracy"
-                            href="https://www.alda-europe.eu"
-                            class="rounded-lg"
-                            size="medium"
-                        />
-                        <FooterPartnerImage
-                            src="/imgs/orgs/alianza-por-el-clima.webp"
-                            alt="Alianza por el Clima"
-                            href="https://alianzaporelclima.org"
-                            class="rounded-lg"
-                            size="medium"
-                        />
-                        <FooterPartnerImage
-                            src="/imgs/orgs/ampliando-democracia.jpg"
-                            alt="Ampliando Democracia"
-                            href="https://ampliandodemocracia.org"
-                            class="rounded-lg"
+                            src="/imgs/orgs/b4m.png"
+                            alt="Bauhaus 4 Med consortium"
+                            href="https://b4m.space"
                             size="medium"
                         />
                     </div>
@@ -111,107 +81,20 @@
                     >
                         <h2 id="footer-navigation-heading" class="sr-only">Footer Navigation</h2>
 
-                        <!-- Collaborate -->
-                        <div class="space-y-2">
-                            <h4 class="text-purple-soft text-sm leading-6 font-bold sm:text-base">
-                                {$t("footer.navigation.collaborate.title")}
-                            </h4>
-                            <ul class="space-y-1 text-xs leading-5 sm:text-sm sm:leading-6">
-                                <li>
-                                    <FooterLink href="/create-project">
-                                        {$t("footer.navigation.collaborate.createProject")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/matchfunding">
-                                        {$t("footer.navigation.collaborate.matchfunding")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/workshops">
-                                        {$t("footer.navigation.collaborate.workshops")}
-                                    </FooterLink>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Help -->
-                        <div class="space-y-2">
-                            <h4 class="text-purple-soft text-sm leading-6 font-bold sm:text-base">
-                                {$t("footer.navigation.help.title")}
-                            </h4>
-                            <ul class="space-y-1 text-xs leading-5 sm:text-sm sm:leading-6">
-                                <li>
-                                    <FooterLink href="/faqs">
-                                        {$t("footer.navigation.help.faqs")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/contact">
-                                        {$t("footer.navigation.help.contact")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/tax-calculator">
-                                        {$t("footer.navigation.help.taxCalculator")}
-                                    </FooterLink>
-                                </li>
-                            </ul>
-                        </div>
-
                         <!-- About Goteo -->
                         <div class="space-y-2">
                             <h4 class="text-purple-soft text-sm leading-6 font-bold sm:text-base">
-                                {$t("footer.navigation.aboutGoteo.title")}
+                                {$t("footer.navigation.about.title")}
                             </h4>
                             <ul class="space-y-1 text-xs leading-5 sm:text-sm sm:leading-6">
                                 <li>
-                                    <FooterLink href="/about">
-                                        {$t("footer.navigation.aboutGoteo.whoWeAre")}
+                                    <FooterLink href="/about/bauhaus4med">
+                                        {$t("footer.navigation.about.crowdvocacy")}
                                     </FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/benefits">
-                                        {$t("footer.navigation.aboutGoteo.goteoBenefits")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/impact">
-                                        {$t("footer.navigation.aboutGoteo.foundationImpact")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/platoniq">
-                                        {$t("footer.navigation.aboutGoteo.platoniqFoundation")}
-                                    </FooterLink>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- For Users -->
-                        <div class="space-y-2">
-                            <h4 class="text-purple-soft text-sm leading-6 font-bold sm:text-base">
-                                {$t("footer.navigation.forUsers.title")}
-                            </h4>
-                            <ul class="space-y-1 text-xs leading-5 sm:text-sm sm:leading-6">
-                                <li>
-                                    <FooterLink href="/wallet">
-                                        {$t("footer.navigation.forUsers.rechargeWallet")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/certificate">
-                                        {$t("footer.navigation.forUsers.downloadCertificate")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/funds">
-                                        {$t("footer.navigation.forUsers.accessComplementaryFunds")}
-                                    </FooterLink>
-                                </li>
-                                <li>
-                                    <FooterLink href="/program">
-                                        {$t("footer.navigation.forUsers.designFundingProgram")}
+                                    <FooterLink href="/about/crowdfunding">
+                                        {$t("footer.navigation.about.crowdfunding")}
                                     </FooterLink>
                                 </li>
                             </ul>
@@ -247,18 +130,8 @@
                         class="flex flex-wrap gap-4 sm:gap-6 lg:gap-8"
                         aria-label="Legal navigation"
                     >
-                        <h3 id="footer-bottom-heading" class="sr-only">Legal and Social Links</h3>
-                        <FooterLink href="/terms" class="text-xs leading-4 font-medium">
-                            {$t("footer.legal.termsOfUse")}
-                        </FooterLink>
-                        <FooterLink href="/privacy" class="text-xs leading-4 font-medium">
+                        <FooterLink href="/about/privacy" class="text-xs leading-4 font-medium">
                             {$t("footer.legal.privacyPolicy")}
-                        </FooterLink>
-                        <FooterLink href="/licenses" class="text-xs leading-4 font-medium">
-                            {$t("footer.legal.licenses")}
-                        </FooterLink>
-                        <FooterLink href="/stats" class="text-xs leading-4 font-medium">
-                            {$t("footer.legal.stats")}
                         </FooterLink>
                     </nav>
 
@@ -271,35 +144,28 @@
                             aria-label="Social media links"
                         >
                             <a
-                                href="mailto:info@goteo.org"
-                                class="focus:ring-purple-soft focus:ring-offset-secondary rounded-sm transition-all duration-200 hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
-                                aria-label="Send email to info@goteo.org"
-                            >
-                                <Gmail width="24" height="24" />
-                            </a>
-                            <a
-                                href="https://instagram.com/goteofunding"
+                                href="https://instagram.com/bauh.aus4med"
                                 class="focus:ring-purple-soft focus:ring-offset-secondary rounded-sm transition-all duration-200 hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
                                 aria-label="Follow us on Instagram"
                             >
                                 <Instagram width="24" height="24" />
                             </a>
                             <a
-                                href="https://facebook.com/goteofunding"
+                                href="https://facebook.com/bauhaus4med"
                                 class="focus:ring-purple-soft focus:ring-offset-secondary rounded-sm transition-all duration-200 hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
                                 aria-label="Follow us on Facebook"
                             >
                                 <Facebook width="24" height="24" />
                             </a>
                             <a
-                                href="https://twitter.com/goteofunding"
+                                href="https://twitter.com/bauhaus4med"
                                 class="focus:ring-purple-soft focus:ring-offset-secondary rounded-sm transition-all duration-200 hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
                                 aria-label="Follow us on X (formerly Twitter)"
                             >
                                 <X width="24" height="24" />
                             </a>
                             <a
-                                href="https://www.linkedin.com/company/platoniqlab"
+                                href="https://www.linkedin.com/company/bauhaus4med"
                                 class="focus:ring-purple-soft focus:ring-offset-secondary rounded-sm transition-all duration-200 hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
                                 aria-label="Connect with us on LinkedIn"
                             >
