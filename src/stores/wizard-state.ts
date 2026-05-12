@@ -14,23 +14,16 @@
  */
 
 import { z } from "astro/zod";
+import murmur from "murmurhash-js";
 import { writable, derived, get } from "svelte/store";
 
-import { cyrb53 } from "../utils/hash";
-
-import type {
-    MoneyWithConversion,
-    Project,
-    ProjectBudgetItem,
-    ProjectCalendar,
-} from "../openapi/client";
+import type { MoneyWithConversion, Project, ProjectBudgetItem } from "../openapi/client";
 
 /**
  * Wizard configuration data (Step 1: Configuration)
  */
 export interface WizardConfiguration {
-    languages: string[]; // Primary + secondary languages
-    fundingRounds: 1 | 2; // Default: 1
+    projectDeadline: "minimum" | "optimum"; // Default: minimum
 }
 
 /**
@@ -45,21 +38,12 @@ export interface MediaImage {
 }
 
 /**
- * Video embed data
- */
-export interface VideoEmbed {
-    type: "youtube" | "vimeo" | "direct";
-    url: string;
-    embedId?: string; // Extracted video ID
-}
-
-/**
  * Campaign Information data (Step 2)
  */
 export interface WizardCampaignInfo {
     // Media
     images: MediaImage[];
-    video: VideoEmbed | null;
+    video: string | undefined;
 
     // Rich text content (stored as HTML)
     objectives: string;
@@ -76,6 +60,7 @@ export interface WizardCampaignInfo {
  * Wizard Rewards data (Step 3: Rewards)
  */
 export interface WizardReward {
+    id?: string | number;
     title: string; // Title displayed in reward card
     description: string | null; // Description displayed in reward card
 
@@ -116,9 +101,7 @@ export interface WizardState {
     // Pre-filled from proposal (Stage 1)
     title: string;
     subtitle: string;
-    categories: string[];
     budget: MoneyWithConversion;
-    calendar: ProjectCalendar;
 
     // Step navigation
     currentStep: number;
@@ -149,20 +132,17 @@ const getDefaultState = (): WizardState => ({
     projectId: undefined,
     title: "",
     subtitle: "",
-    categories: [],
     budget: {
         amount: 0,
         currency: "EUR",
     },
-    calendar: {},
     currentStep: 1,
     configuration: {
-        languages: [],
-        fundingRounds: 1, // Default to 1 round
+        projectDeadline: "minimum", // Default to minimum deadline (1 round)
     },
     campaignInfo: {
         images: [],
-        video: null,
+        video: "",
         objectives: "",
         legacy: "",
         targetAudience: "",
@@ -174,7 +154,7 @@ const getDefaultState = (): WizardState => ({
         {
             title: "",
             description: null,
-            money: { amount: 0, currency: "" },
+            money: { amount: 0, currency: "EUR" },
             isFinite: false,
             unitsTotal: null,
         },
@@ -210,6 +190,12 @@ export const hasUnsavedChanges = writable<boolean>(false);
 export const persistenceError = writable<string | null>(null);
 
 /**
+ * Define whether the project is ready to publish (all steps completed and valid).
+ * Used to enable/disable the Publish button in the UI
+ */
+export const isReadyToPublish = writable<boolean>(false);
+
+/**
  * LocalStorage key for wizard state persistence
  */
 const STORAGE_KEY = "goteo-project-wizard";
@@ -237,20 +223,17 @@ export function initializeFromProject(project: Project) {
         projectId: project.id ? String(project.id) : undefined,
         title: project.title || "",
         subtitle: project.subtitle || "",
-        categories: project.categories || [],
         budget: {
             amount: project.budget?.minimum?.money?.amount || 0,
             currency: project.budget?.minimum?.money?.currency || "EUR",
         },
-        calendar: {},
         currentStep: 1,
         configuration: {
-            languages: [],
-            fundingRounds: 1,
+            projectDeadline: "minimum",
         },
         campaignInfo: {
             images: [],
-            video: null,
+            video: "",
             objectives: "",
             legacy: "",
             targetAudience: "",
@@ -488,8 +471,7 @@ export function resetWizard() {
  * Validation schema for Configuration step
  */
 export const configurationSchema = z.object({
-    languages: z.array(z.string()).min(1, "validation.wizard.languages.required"),
-    fundingRounds: z.union([z.literal(1), z.literal(2)]),
+    projectDeadline: z.union([z.literal(1), z.literal(2)]),
 });
 
 /**
@@ -566,10 +548,9 @@ export const isConfigurationValid = derived(
 
         // Check required fields
         const config = $state.configuration;
-        const hasLanguages = config.languages.length > 0;
-        const roundsSelected = config.fundingRounds;
+        const deadlineSelected = config.projectDeadline;
 
-        return hasLanguages && roundsSelected;
+        return deadlineSelected;
     },
 );
 
@@ -762,10 +743,13 @@ export function addReward(reward: WizardReward) {
         return errors;
     }
 
+    const id = murmur.murmur3(JSON.stringify(reward) + Date.now());
+
     wizardState.update((state) => ({
         ...state,
-        rewards: [...state.rewards, reward],
+        rewards: [...state.rewards, { ...reward, id }],
     }));
+
     hasUnsavedChanges.set(true);
     saveToLocalStorage();
 }
@@ -781,7 +765,7 @@ export function deleteReward(index: number) {
 
 export function validateReward(reward: WizardReward): Record<string, string> {
     const errors: Record<string, string> = {};
-    const hash = cyrb53(JSON.stringify(reward));
+    const hash = murmur.murmur3(JSON.stringify(reward));
 
     if (!reward.title.trim()) {
         errors[`reward_error_title_${hash}`] = "pages.project.edit.rewards.validation.title";
@@ -871,7 +855,7 @@ export function deleteCollaboration(index: number) {
 
 export function validateCollaboration(collab: WizardCollaboration): Record<string, string> {
     const errors: Record<string, string> = {};
-    const hash = cyrb53(JSON.stringify(collab));
+    const hash = murmur.murmur3(JSON.stringify(collab));
 
     if (!collab.title.trim()) {
         errors[`collab_error_title_${hash}`] = "pages.project.edit.collaborations.validation.title";
@@ -965,7 +949,7 @@ export function deleteBudgetItem(index: number, deadline: "minimum" | "optimum")
 
 export function validateBudgetItem(item: ProjectBudgetItem): Record<string, string> {
     const errors: Record<string, string> = {};
-    const hash = cyrb53(JSON.stringify(item));
+    const hash = murmur.murmur3(JSON.stringify(item));
 
     if (!item.title.trim()) {
         errors[`budget_error_title_${hash}`] = "pages.project.edit.budget.validation.title.";
@@ -996,11 +980,21 @@ export function validateBudgetItem(item: ProjectBudgetItem): Record<string, stri
 }
 
 export function validateBudgetAmount() {
-    const { budgetItems } = get(wizardState);
+    const { budgetItems, budget } = get(wizardState);
     const errors: Record<string, string> = {};
 
     if (budgetItems.minimum.length <= 0) {
-        errors.minimum = "pages.project.edit.budget.validation.amountMinimum";
+        errors.minimum_length = "pages.project.edit.budget.validation.minimumItemsLength";
+    }
+
+    let minimumItemsTotalAmount: number = 0;
+
+    for (let i = 0; i < budgetItems.minimum.length - 1; i++) {
+        minimumItemsTotalAmount += budgetItems.minimum[i].money.amount;
+    }
+
+    if (minimumItemsTotalAmount !== budget.amount) {
+        errors.minimum_length = "pages.project.edit.budget.validation.amountMinimum";
     }
 
     return errors;

@@ -3,15 +3,12 @@
 
     First step of the project setup wizard.
     Handles:
-    - Campaign languages (primary + secondary)
     - Funding rounds (1 or 2)
 
     Validation:
-    - At least one language required
     - Funding rounds defaults to 1
 -->
 <script lang="ts">
-    import LanguageSelector from "./LanguageSelector.svelte";
     import RoundSelector from "./RoundSelector.svelte";
     import { t } from "../../../i18n/store";
     import { wizardState, updateConfiguration, navigateToStep } from "../../../stores/wizard-state";
@@ -22,9 +19,6 @@
     }
 
     let { onContinue }: ConfigurationStepProps = $props();
-
-    // Reactive values from store
-    const configuration = $derived($wizardState.configuration);
 
     /**
      * Handle Continue button
@@ -38,17 +32,10 @@
     }
 
     /**
-     * Handle language changes
-     */
-    function handleLanguagesChange(languages: string[]) {
-        updateConfiguration({ languages });
-    }
-
-    /**
      * Handle funding rounds change
      */
-    function handleRoundsChange(rounds: 1 | 2) {
-        updateConfiguration({ fundingRounds: rounds });
+    function handleRoundsChange(projectDeadline: "minimum" | "optimum") {
+        updateConfiguration({ projectDeadline });
     }
 </script>
 
@@ -63,19 +50,6 @@
         </p>
     </div>
 
-    <!-- Languages Section -->
-    <div class="space-y-6">
-        <div class="space-y-4">
-            <h2 class="text-2xl font-bold text-black">
-                {$t("pages.project.edit.configuration.languages.title")}
-            </h2>
-            <p class="text-content text-base font-normal">
-                {$t("pages.project.edit.configuration.languages.description")}
-            </p>
-        </div>
-        <LanguageSelector languages={configuration.languages} onChange={handleLanguagesChange} />
-    </div>
-
     <!-- Funding Rounds Section -->
     <div class="space-y-6">
         <div class="space-y-4">
@@ -86,15 +60,16 @@
                 {$t("pages.project.edit.configuration.rounds.description")}
             </p>
         </div>
-        <RoundSelector bind:rounds={configuration.fundingRounds} onChange={handleRoundsChange} />
+        <RoundSelector
+            bind:deadline={$wizardState.configuration.projectDeadline}
+            onChange={handleRoundsChange}
+        />
     </div>
 
     <!-- Continue Button -->
     <div class="mb- flex justify-start">
         <Button kind="secondary" size="md" onclick={handleContinue}>
-            {#snippet children()}
-                {$t("pages.project.edit.configuration.continue")}
-            {/snippet}
+            {$t("pages.project.edit.configuration.continue")}
         </Button>
     </div>
 </div>

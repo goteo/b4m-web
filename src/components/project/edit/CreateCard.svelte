@@ -3,7 +3,7 @@
     import CollabsModal from "./CollabsModal.svelte";
     import RewardsModal from "./RewardsModal.svelte";
     import { t } from "../../../i18n/store";
-    import PlusIcon from "../../../svgs/PlusIcon.svelte";
+    import MoreAndLess from "../../icons/MoreAndLess.svelte";
     import Button from "../../library/Button.svelte";
 
     import type {
@@ -42,7 +42,7 @@
 >
     <div class="flex flex-col gap-4 text-ellipsis">
         <h2
-            class="text-soft-purple font-bold {variant === 'budget'
+            class="text-purple-soft font-bold {variant === 'budget'
                 ? 'text-2xl leading-8'
                 : 'text-4xl leading-12'}"
         >
@@ -56,7 +56,7 @@
             class="mt-auto flex w-full items-center justify-center gap-2"
             {onclick}
         >
-            <PlusIcon class="p-[2.25px]" />
+            <MoreAndLess sign="more" class="p-[2.25px]" />
             {#if variant === "reward"}
                 {$t("pages.project.edit.rewards.add.button")}
             {:else if variant === "collab"}

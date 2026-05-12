@@ -11,7 +11,7 @@
     import Grid from "../library/Grid.svelte";
     import Reward from "../Reward.svelte";
 
-    import type { ProjectReward, Project, Accounting } from "../../openapi/client/index";
+    import type { ProjectReward, Project } from "../../openapi/client/index";
 
     let {
         lang = $bindable(),
@@ -53,7 +53,7 @@
         const numericAmount = Number(freeAmount);
 
         if (isNaN(numericAmount) || numericAmount <= 0) {
-            alert($t("rewards.error-amount"));
+            alert($t("pages.project.view.rewards.error.amount"));
             return;
         }
 
@@ -61,17 +61,18 @@
             path: { id: String(extractId(project.accounting)) },
         });
 
-        const unit = getUnit((accounting as Accounting)?.currency);
-        const calculatedAmount = numericAmount * unit;
-
         cart.addItem({
-            title: $t("common.donate"),
-            amount: calculatedAmount,
+            kind: "free",
+            type: "single",
             quantity: 1,
-            image: "",
-            project: Number(project.id),
-            target: Number(extractId(project.accounting)),
-            currency: accounting?.currency!,
+            title: $t("common.donate"),
+            recipient: accounting?.owner!,
+            recipientDisplayName: project.title,
+            target: project.accounting!,
+            money: {
+                amount: numericAmount * getUnit(accounting?.currency),
+                currency: accounting?.currency!,
+            },
         });
 
         window.location.href = "/checkout";
@@ -81,7 +82,7 @@
 <section>
     <div class="flex flex-col gap-12">
         <h2 class="text-secondary text-4xl font-bold">
-            {$t("rewards.title")}
+            {$t("pages.project.view.rewards.title")}
         </h2>
         <Grid>
             <div
@@ -91,17 +92,17 @@
             >
                 <div class="flex flex-col gap-6">
                     <h3 class="text-secondary w-full text-left text-2xl font-semibold">
-                        {$t("rewards.donation-free.title")}
+                        {$t("pages.project.view.rewards.donationFree.title")}
                     </h3>
                     <p class="text-sm whitespace-pre-line text-gray-800">
-                        {$t("rewards.donation-free.description")}
+                        {$t("pages.project.view.rewards.donationFree.description")}
                     </p>
                 </div>
                 <div class="flex flex-col gap-6">
                     <input
                         type="text"
                         class="w-full rounded border border-gray-300 p-2"
-                        placeholder={$t("rewards.donation-free.placeholder")}
+                        placeholder={$t("pages.project.view.rewards.donationFree.placeholder")}
                         bind:value={freeAmount}
                     />
                     <Button

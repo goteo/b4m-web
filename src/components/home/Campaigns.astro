@@ -1,7 +1,7 @@
 ---
 import CampaignCard from "./CampaignCard.svelte";
 import type { Campaign } from "../../types/campaign";
-import ArrowRightIcon from "../../svgs/ArrowRightIcon.svelte";
+import Arrow from "../../components/icons/Arrow.svelte";
 import { apiProjectsGetCollection, type Accounting, type Money } from "../../openapi/client";
 import { getLanguage } from "../../middleware/utils";
 import { client } from "../../openapi/client/client.gen";
@@ -83,7 +83,7 @@ const displayCampaigns = selectCampaignsForGrid(campaigns);
     <!-- Header Section -->
     <div class="mb-6 flex items-center justify-between">
         <h2 class="text-2xl font-bold text-black">
-            {t("home.campaigns.title")}
+            {t("pages.home.campaigns.title")}
         </h2>
 
         <!-- "Ver todas" Button -->
@@ -91,9 +91,9 @@ const displayCampaigns = selectCampaignsForGrid(campaigns);
             class="bg-variant1 flex items-center gap-2 rounded-3xl px-6 py-4 transition-all duration-200 hover:opacity-90"
         >
             <!-- Arrow Icon -->
-            <ArrowRightIcon />
+            <Arrow />
             <span class="text-secondary text-base font-bold">
-                {t("home.campaigns.viewAll")}
+                {t("pages.home.campaigns.viewAll")}
             </span>
         </button>
     </div>
@@ -102,7 +102,7 @@ const displayCampaigns = selectCampaignsForGrid(campaigns);
     <Grid class="auto-rows-fr grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" client:load>
         {
             displayCampaigns.map((campaign) => (
-                <CampaignCard size={campaign.size} campaign={campaign} />
+                <CampaignCard size={campaign.size} campaign={campaign} client:load />
             ))
         }
     </Grid>

@@ -1,7 +1,6 @@
 <script lang="ts">
     import Banner from "./Banner.svelte";
     import Card from "./Card.svelte";
-    import Sharebutton from "./Sharebutton.svelte";
     import Tabs from "./Tabs.svelte";
     import TopRewards from "./TopRewards.svelte";
     import { languagesList } from "../../i18n/locales";
@@ -9,17 +8,18 @@
     import {
         type Project,
         type Accounting,
-        type ApiAccountingBalancePointsGetCollectionData,
         apiProjectsIdOrSlugGet,
         type User,
         type ProjectCalendar,
+        type AccountingBalancePoint,
     } from "../../openapi/client/index";
-    import ArrowRightIcon from "../../svgs/ArrowRightIcon.svelte";
     import RememberIcon from "../../svgs/RememberIcon.svelte";
     import { getLanguageDisplayName } from "../../utils/lang";
     import Countdown from "../Countdown.svelte";
+    import Arrow from "../icons/Arrow.svelte";
     import LanguagesDropdown from "../LanguagesDropdown.svelte";
     import Button from "../library/Button.svelte";
+    import Sharebutton from "../library/Share/ShareButton.svelte";
     import Toast from "../library/Toast.svelte";
     import Player from "../Player/Player.svelte";
     import ProjectTags from "../ProjectTags.svelte";
@@ -36,7 +36,7 @@
         accounting: Accounting;
         owner: User;
         totalSupports: number;
-        balancePoints: ApiAccountingBalancePointsGetCollectionData;
+        balancePoints: AccountingBalancePoint[];
     } = $props();
 
     const projectDeadline = $derived(getCurrentDeadline(project.calendar!));
@@ -94,6 +94,11 @@
         project = data!;
     }
 
+    let outOfCampaign = $state(false);
+    $effect(() => {
+        outOfCampaign = project.status !== "in_campaign";
+    });
+
     let langMismatch = $state(false);
     let attemptedLang = $state("");
 
@@ -125,8 +130,14 @@
 </script>
 
 <section class="wrapper">
-    <Toast variant="warning" bind:showToast={langMismatch} class="mb-6 w-full">
-        {$t("lang.error.notAvailable", { lang: getLanguageDisplayName(attemptedLang)! })}
+    <Toast variant="warning" bind:showToast={langMismatch} class="mb-3 w-full">
+        {$t("pages.project.view.langNotAvailable", {
+            lang: getLanguageDisplayName(attemptedLang)!,
+        })}
+    </Toast>
+
+    <Toast variant="notification" bind:showToast={outOfCampaign} class="w-full">
+        {$t("pages.project.view.outOfCampaign")}
     </Toast>
 
     <div class="my-10 flex w-full flex-col-reverse gap-5 lg:flex-row lg:justify-between">
@@ -193,25 +204,25 @@
     <div class="mb-12 flex w-full flex-col justify-between gap-4 lg:flex-row">
         <ProjectTags {project} />
         <div class="flex flex-row justify-between gap-6">
-            <Sharebutton {project} />
+            <Sharebutton shareText={project.title ?? ""} projectSlug={project.slug ?? ""} />
             <Button kind="invert" size="sm" class="px-0">
                 <RememberIcon />
-                {$t("project.actions.remember")}
+                {$t("common.remember")}
             </Button>
         </div>
     </div>
     <div class="flex flex-col gap-8">
         <div class="flex items-center justify-between">
             <h2 class="text-2xl font-bold text-black">
-                {$t("reward.trending")}
+                {$t("pages.project.view.rewards.trending")}
             </h2>
             <Button kind="secondary" class="hidden lg:flex" onclick={scrollToRewards}>
-                <ArrowRightIcon />{$t("reward.showAll")}
+                <Arrow />{$t("pages.project.view.rewards.showAll")}
             </Button>
         </div>
         <TopRewards bind:lang={projectLanguage} {project} />
         <Button kind="secondary" class="lg:hidden" onclick={scrollToRewards}>
-            <ArrowRightIcon />{$t("reward.showAll")}
+            <Arrow />{$t("pages.project.view.rewards.showAll")}
         </Button>
     </div>
     <Banner ownerName={owner.displayName || ""} />
