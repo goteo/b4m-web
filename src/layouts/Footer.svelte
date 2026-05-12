@@ -92,7 +92,7 @@
                                     </FooterLink>
                                 </li>
                                 <li>
-                                    <FooterLink href="/about/crowdfunding">
+                                    <FooterLink href="/about">
                                         {$t("footer.navigation.about.crowdfunding")}
                                     </FooterLink>
                                 </li>
