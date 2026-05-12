@@ -2,7 +2,6 @@
     import FooterLink from "../components/FooterLink.svelte";
     import FooterPartnerImage from "../components/FooterPartnerImage.svelte";
     import Facebook from "../components/icons/social/Facebook.svelte";
-    import Gmail from "../components/icons/social/Gmail.svelte";
     import Instagram from "../components/icons/social/Instagram.svelte";
     import Linkedin from "../components/icons/social/Linkedin.svelte";
     import X from "../components/icons/social/X.svelte";
@@ -12,7 +11,7 @@
 <footer class="text-variant1" aria-labelledby="footer-heading">
     <!-- Funding Partners Section -->
     <section
-        class="bg-[#ffffff] text-tertiary border-variant1 border-2 border-b-0 py-6 sm:py-8 md:py-10"
+        class="text-tertiary border-variant1 border-2 border-b-0 bg-[#ffffff] py-6 sm:py-8 md:py-10"
         aria-labelledby="funding-partners-heading"
     >
         <div class="wrapper">

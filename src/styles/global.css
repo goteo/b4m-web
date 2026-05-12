@@ -15,11 +15,11 @@
 
 @theme {
     /* Light Theme (default) */
-    --color-primary: #99FFCC;
+    --color-primary: #99ffcc;
     --color-primary-hover: #4dd0b8;
-    --color-secondary: #3A4B54;
-    --color-tertiary: #F0998D;
-    --color-content: #57656D;
+    --color-secondary: #3a4b54;
+    --color-tertiary: #f0998d;
+    --color-content: #57656d;
     --color-body: #1e293b;
 
     /* Extended color tokens for components */
@@ -28,16 +28,16 @@
     --color-grey: #f3f3ef;
     --color-gray-light: #f3f3f3; /* Light gray for borders */
     --color-light-accent: #e6d9f3; /* Light purple accent for buttons */
-    --color-purple-soft: #F4F0F1;
-    --color-purple-med: #EDF0E1;
+    --color-purple-soft: #f4f0f1;
+    --color-purple-med: #edf0e1;
 
-    --color-variant1: #C4E9E1;
-    --color-variant2: #ACFFCC;
-    --color-variant3: #A1C4FA;
-    --color-variant4: #FFFF99;
+    --color-variant1: #c4e9e1;
+    --color-variant2: #acffcc;
+    --color-variant3: #a1c4fa;
+    --color-variant4: #ffff99;
 
-    --color-semantic-error: #F0998D;
-    --color-semantic-success: #C4E9E1;
+    --color-semantic-error: #f0998d;
+    --color-semantic-success: #c4e9e1;
     --color-semantic-notification: #c2eeff;
     --color-semantic-warning: #ffffc2;
 
