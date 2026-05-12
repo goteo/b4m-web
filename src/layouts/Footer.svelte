@@ -132,6 +132,10 @@
                         <FooterLink href="/about/privacy" class="text-xs leading-4 font-medium">
                             {$t("footer.legal.privacyPolicy")}
                         </FooterLink>
+
+                        <FooterLink href="/about/cookies" class="text-xs leading-4 font-medium">
+                            {$t("footer.legal.cookies")}
+                        </FooterLink>
                     </nav>
 
                     <!-- Social Media and Platoniq -->
