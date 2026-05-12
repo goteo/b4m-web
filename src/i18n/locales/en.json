@@ -9,12 +9,20 @@
     "edit": "Edit",
     "delete": "Delete",
     "continue": "Continue",
+    "back": "Back",
     "cancel": "Cancel",
     "publish": "Publish",
     "preview": "Preview",
     "select": "Choose an option",
     "remove": "Remove",
-    "textPlaceholder": "Type here"
+    "textPlaceholder": "Type here",
+    "remember": "Remember",
+    "countdown": {
+      "remaining": "Remaining",
+      "expired": "Campaign ended"
+    },
+    "login": "Login",
+    "goHome": "Go back home"
   },
   "domain": {
     "_": "Business concepts (project, reward, contribution, etc.)",
@@ -38,15 +46,191 @@
       "reward": {
         "byAtLeast": "By {{ amount }}",
         "unitsTotal": {
-          "single": "There is 1 unit",
+          "single": "There is one unit",
           "multiple": "There are {{ units }} units"
         },
         "isInfinite": "No unit limit"
+      },
+      "status": {
+        "all": "All statuses",
+        "funding": "In funding",
+        "successful": "Successful",
+        "completed": "Completed"
       }
+    },
+    "category": {
+      "culture": "Culture",
+      "rights": "Rights",
+      "education": "Education",
+      "journalism": "Independent Journalism",
+      "health": "Health",
+      "ecological_transition": "Ecological transition",
+      "social_economy": "Social economy",
+      "rural": "Rural",
+      "science": "Science"
     }
   },
   "pages": {
     "_": "Page-specific content (/home, /search, /project/[id], etc.)",
+    "home": {
+      "banner": {
+        "title": "We're renewing Goteo!",
+        "description": "Goteo has built a unique history in the world of crowdfunding. Do you want to keep being part of it?",
+        "ctaText": "Join our story",
+        "ctaLink": "/about",
+        "closeAriaLabel": "Close banner"
+      },
+      "campaigns": {
+        "title": "Most recent campaigns",
+        "tabsTitle": "Campaigns on Goteo",
+        "tabs": {
+          "endingSoon": "Ending soon",
+          "mostSuccessful": "Most successful",
+          "withMatchfunding": "With matchfunding"
+        },
+        "viewAll": "See all",
+        "obtained": "Raised",
+        "minimum": "Minimum",
+        "optimum": "Optimum",
+        "daysRemaining": "{{days}} days remaining",
+        "matchfunding": "Matchfunding",
+        "status": {
+          "minimumReached": "Minimum achieved!",
+          "goForMinimum": "Go for the minimum!"
+        },
+        "remaining": {
+          "toOptimum": "Missing for optimum",
+          "toMinimum": "Missing for minimum"
+        },
+        "userDonations": "Your donations:"
+      },
+      "blog": {
+        "title": "Big changes are coming… don't miss out!",
+        "excerpt": "A process involving a significant technical migration of the current platform. To do it with all security guarantees and without loss of information, we need to carry out an orderly transition, with key dates for campaign publication and donations…",
+        "readMore": "Continue reading"
+      },
+      "matchfunding": {
+        "title": "Matchfunding",
+        "description": "You'll only see the match effect on Goteo. Since 2013, we have been looking for organizations that want to multiply the impact of crowdfunding. For every euro a person contributes to a Goteo campaign, a collaborating institution (foundation, public administration, company…) contributes the same amount, or even more.",
+        "actions": {
+          "learnMore": "I want to know more",
+          "viewCalls": "View active calls"
+        },
+        "impact": {
+          "title": "Impact Data",
+          "description": "Matchfunding not only multiplies economic resources but also generates tangible social impact. Essentially, matchfunding transforms micro-donations into macro impact, validating projects with citizen support and optimizing public/private resources.",
+          "matchers": "Contributed in Matchfunding:",
+          "successfulProjects": "Successful projects:",
+          "successRate": "Success rate:"
+        },
+        "cards": {
+          "grant": "Grant allocation",
+          "inscription": "Registration date",
+          "participants": "Participating projects",
+          "apply": "Register for the call",
+          "viewCampaigns": "View the call's campaigns",
+          "finished": "Finished {{date}}"
+        }
+      },
+      "stats": {
+        "title": "Goteo Stats",
+        "theoryToAction": {
+          "title": "From theory to action",
+          "subtitle": "Figures revealing our real footprint. Data accurate as of December 2024.",
+          "projectsReceived": {
+            "value": "10,281",
+            "label": "Projects received"
+          },
+          "projectsPublished": {
+            "value": "2,813",
+            "label": "Published projects"
+          },
+          "successRate": {
+            "value": "83%",
+            "label": "Success rate"
+          },
+          "button": "View Goteo Stats"
+        },
+        "whyGoteo": {
+          "title": "Why Goteo?",
+          "subtitle": "We have values, and the data backs us up. Accurate as of December 2024.",
+          "community": {
+            "value": "384,341",
+            "label": "Community"
+          },
+          "averageDonors": {
+            "value": "152",
+            "label": "Average donors per project"
+          },
+          "totalRaised": {
+            "value": "23M €",
+            "label": "Total raised"
+          },
+          "button": "I want to know more"
+        }
+      },
+      "stories": {
+        "title": "Goteo unveils a new website!",
+        "subtitle": "Delighted to share it with you",
+        "description": "Goteo has a new face! Navigate through our revamped website and discover a more intuitive and attractive social crowdfunding experience. Explore innovative projects, meet the creators behind them, and join our community.\nBecome a donor and make your ideas come true!",
+        "button": "Become a donor"
+      },
+      "featuredPromoters": {
+        "title": "Featured Promoters",
+        "viewAll": "See all",
+        "projectsPromoted": "Promoted projects",
+        "capitalRaised": "Capital raised",
+        "promoterImage": "Promoter's photo",
+        "shareProfile": "Share {{name}}'s profile"
+      },
+      "resources": {
+        "title": "Resources: Fuel for Creative Projects",
+        "viewAll": "View more resources",
+        "readMore": "Read more",
+        "articles": {
+          "firstCampaign": {
+            "title": "How to run your first campaign?",
+            "description": "Your project deserves to take off: Master social crowdfunding with our FREE TOOLBOX. Practical guide + downloadable templates to win over your audience."
+          },
+          "testimonials": {
+            "title": "Testimonials from our promoters",
+            "description": "Who can better tell you what it's like to promote successful campaigns? Our promoters share firsthand what it's like to manage a campaign with Goteo."
+          }
+        }
+      }
+    },
+    "index": {
+      "title": "Goteo"
+    },
+    "403": {
+      "title": "You don't have sufficient permissions to proceed",
+      "subtitle": "Please, go back to where you came from.",
+      "meta": {
+        "title": "Access denied",
+        "description": "Insufficient permissions."
+      }
+    },
+    "404": {
+      "title": "There's not a drop left of the page you're looking for",
+      "subtitle": "Please, return to the start.",
+      "meta": {
+        "title": "Page not found",
+        "description": "The page you're looking for doesn't exist or has been moved."
+      }
+    },
+    "500": {
+      "title": "Something went terribly wrong",
+      "subtitle": "Please wait a few seconds and try again.",
+      "meta": {
+        "title": "Unexpected request condition",
+        "description": "Internal server error."
+      }
+    },
+    "checkout": {
+      "summary": {
+        "toRecipient": "{{ amount }} to {{ name }}"
+      }
+    },
     "project": {
       "edit": {
         "title": "Editing project: {{ project }}",
@@ -193,10 +377,340 @@
             "type": "The item type must be specified",
             "class": "The item class must be specified"
           }
+        },
+        "aboutYou": {
+          "title": "More about you",
+          "subtitle": "Describe yourself to the campaign promoter.",
+          "prefill": "Select saved data",
+          "legalEntity": "Legal form",
+          "legalEntityHelper": "Indicate the legal form of the campaign promoter.",
+          "individual": "Natural person",
+          "organization": "Legal entity",
+          "name": "Indicate promotor's name",
+          "nameHelper": "Tell us how the promoter will be referred to. This designation will appear on the public part of the campaign.",
+          "namePlaceholder": "Promoter's name",
+          "taxId": "Indicate the promoter's NIF",
+          "taxIdHelper": "Only the promoter will see it. This information will not be public, it will only be used to formalize the campaign's agreements and conditions.",
+          "taxIdPlaceholder": "Enter the CIF",
+          "location": "Activity area",
+          "locationHelper": "Indicate the geographical scope of action of the promoter or promoting group.",
+          "territory": "Scope of action",
+          "country": "For which country",
+          "teamDescription": "Promoter team description",
+          "teamDescriptionHelper": "Tell us what the promoting entity does, what type of activities it carries out on a day-to-day basis, and what its objectives are.",
+          "teamDescriptionPlaceholder": "Briefly describe the promoter's activity",
+          "privateContacts": "Private contact details",
+          "privateContactsHelper": "Complete at least one contact detail. The information will not be public, it will only be used by Goteo to communicate about uses related to the campaign you are preparing.",
+          "email": "Email",
+          "phone": "Phone",
+          "addContact": "Add contact",
+          "preferred": "Preferred",
+          "publicContacts": "Public contact details",
+          "publicContactsHelper": "We will indicate which contact/public details you want to appear in your campaign and on your promoter profile.",
+          "placeholders": {
+            "website": "Insert your website",
+            "email": "Insert your email account",
+            "instagram": "Insert your Instagram account",
+            "facebook": "Insert your Facebook account",
+            "twitter": "Insert your X/Twitter account",
+            "linkedin": "Insert your LinkedIn account"
+          },
+          "continue": "Next step"
         }
       },
+      "create": {
+        "title": "Propose a campaign",
+        "subtitle": "Briefly describe the project and crowdfunding campaign.",
+        "budgetPreview": "Required funds",
+        "description": {
+          "title": "Briefly describe your proposal",
+          "titlePrompt": "Indicate your campaign name",
+          "titlePlaceholder": "Campaign name",
+          "subtitle": "Indicate the name of your campaign and briefly describe the project you will carry out if you achieve financing.",
+          "subtitlePrompt": "Briefly describe your project.",
+          "subtitlePlaceholder": "No description"
+        },
+        "categories": {
+          "title": "Which category suits your campaign?",
+          "subtitle": "(You can choose up to 2)"
+        },
+        "budget": {
+          "title": "How much money do you need?",
+          "subtitle": "Select the amount you need to carry out your project.",
+          "amountPrompt": "Indicate the amount you need"
+        },
+        "release": {
+          "title": "Campaign launch date",
+          "subtitle": "(Bear in mind that crowdfunding campaigns have a minimum duration of 40 days)"
+        },
+        "submit": "Propose campaign"
+      },
       "view": {
-        "owner": "Crowdfunding campaign by {{ owner }}"
+        "owner": "Crowdfunding campaign promoted by {{ owner }}",
+        "tabs": {
+          "project": "Campaign information",
+          "rewards": "Rewards",
+          "budget": {
+            "title": "Budget",
+            "minimum": "Minimum",
+            "optimal": "Optimum",
+            "raised": "Raised",
+            "total": "Total",
+            "chartTitle": "This is the budget required for this campaign. Discover how your support can lead us to success.",
+            "chart": {
+              "secondRound": "2nd Round",
+              "start": "Start"
+            }
+          },
+          "updates": {
+            "title": "Updates",
+            "modalTitle": "New update",
+            "by": "By:",
+            "content": {
+              "title": "Do not miss the campaign progress details",
+              "empty": "There are no more planned updates.",
+              "btn": {
+                "readMore": "Continue reading",
+                "share": "Share"
+              }
+            }
+          },
+          "community": {
+            "title": "Community",
+            "content": {
+              "title": "Donations and messages of support from the community"
+            },
+            "contribution": "Contribution",
+            "matchfunding": {
+              "contribution": "Sum of contributions",
+              "aported": "Contributed",
+              "upTo": "up to"
+            },
+            "anonymous": {
+              "length": "anonymous",
+              "title": "Anonymous donations",
+              "description": "Not all heroes wear capes nor feel the need to show their identity."
+            }
+          }
+        },
+        "rewards": {
+          "trending": "Most popular rewards",
+          "showAll": "See all",
+          "title": "Select your rewards",
+          "donationFree": {
+            "title": "I forgo an individual reward, I just want to help the project",
+            "description": "In this space you can donate the amount you consider without a reward in return. Every contribution, big or small, makes a difference and brings us closer to the goal.",
+            "placeholder": "Select the contribution e.g. €20"
+          },
+          "error": {
+            "amount": "Please enter a valid amount"
+          }
+        },
+        "banner": {
+          "donator": {
+            "description": "Goteo belongs to the Platoniq Foundation. When you contribute to a campaign, your money is held by Platoniq and donated to {{owner}} if the set success goals are met.",
+            "learnMore": "Learn more."
+          },
+          "certificate": {
+            "description": "By collaborating with a Goteo-promoted project, you can request a donation certificate. This allows you to deduct up to 80% of what you contributed in your next tax return.",
+            "learnMore": "Learn more."
+          }
+        },
+        "langNotAvailable": "The selected language \"{{lang}}\" is not available for this project. Displaying content in the available language.",
+        "outOfCampaign": "This project is out of campaign and no longer accepts payments."
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Discover how we do crowdfunding",
+        "description": "At Goteo, we believe that collective funding is more than money: it is trust, community, and social commitment. Our crowdfunding model is based on promoting projects that generate a positive impact and closely accompanying the people and organizations that make them possible.",
+        "cta": "Launch your project"
+      },
+      "whatIs": {
+        "title": "What is crowdfunding",
+        "subtitle": "A real social impact.",
+        "description": "Crowdfunding is a form of financing that brings together people who believe in an idea and decide to support it with small (or large) contributions. At Goteo, we understand it as a space not just to raise funds, but also to create support networks, visibility, and learning."
+      },
+      "advisory": {
+        "title": "Support and guidance from our team",
+        "description": "At Goteo, you are never alone. Our team guides you step-by-step, from defining your project to managing the campaign. We offer free advice to help you prepare your project. If you need more assistance, you can request premium personalized advisory, with support materials and a proven methodology to increase your chances of success."
+      },
+      "phases": {
+        "title": "Understand the phases and mechanics",
+        "items": {
+          "preparation": {
+            "title": "Preparation",
+            "description": "Define objectives, budget, duration, and communication plan. Your project can be published if it meets these criteria."
+          },
+          "launch": {
+            "title": "Launch",
+            "description": "We activate fundraising and support you in dissemination."
+          },
+          "fundsReceived": {
+            "title": "Funds received",
+            "description": "Upon reaching the goal, complete a form and send documentation for the transfer. Ensure transparency and explain the project to the community."
+          },
+          "followUp": {
+            "title": "Follow-up",
+            "description": "After the campaign, share the project's progress with your donor community and close the cycle with transparency."
+          }
+        }
+      },
+      "events": {
+        "title": "Join our trainings and events",
+        "description": "We periodically organize workshops, webinars, and gatherings where we share learnings, trends, and real crowdfunding experiences. These are spaces to train, inspire, and connect with others who, like you, want to turn ideas into realities. Subscribe to receive current information from our bulletin."
+      },
+      "advantages": {
+        "title": "Advantages of Goteo",
+        "items": {
+          "taxDeductions": {
+            "title": "Tax deductions",
+            "description": "Donations in Goteo have tax advantages for both individuals and companies, as we manage contributions through a foundation. This is something that most platforms do not offer."
+          },
+          "allOrNothing": {
+            "title": "All or nothing",
+            "description": "Projects receive financial support only if they prove to be viable and reach the minimum budget. Otherwise, donations are returned to donors to continue supporting new initiatives."
+          },
+          "twoRounds": {
+            "title": "Two rounds of co-financing in 40+40 days",
+            "description": "By default, we establish two co-financing rounds, each 40 days long. The first is \"all or nothing,\" tied to the essential minimum budget, and the second to an optimal amount for making additional improvements, where everything is included."
+          },
+          "personalizedSupport": {
+            "title": "Personalized support",
+            "description": "We don't leave promoters alone. Our team advises before, during, and after the campaign with strategic advice and technical support. Other platforms only serve as a showcase for projects."
+          },
+          "loyalCommunity": {
+            "title": "Loyal community",
+            "description": "We have a base of recurring donors who trust Goteo and continue to support campaigns because they value the social and cultural impact. This provides projects with more opportunities to achieve their goals."
+          },
+          "matchfunding": {
+            "title": "Institutional co-financing (matchfunding)",
+            "description": "Through alliances with institutions, we multiply citizen contributions with public or private funds. This hybrid model is unique to Goteo and does not exist on most platforms."
+          },
+          "socialImpact": {
+            "title": "Focus on transformative social impact",
+            "description": "Not all projects are accepted. At Goteo, we prioritize those aligned with the Social Economy and democratic values, be it in the form of open knowledge, community improvements, or environmental and social impact."
+          },
+          "transparency": {
+            "title": "Transparency and trust",
+            "description": "Campaigns are subjected to a validation and advisory process. The community knows that the published projects meet minimum quality and coherence standards, which increases credibility."
+          },
+          "provenMethodology": {
+            "title": "Proven methodology",
+            "description": "With over a decade of experience and hundreds of funded projects, we offer a proven methodology that increases chances of success."
+          }
+        }
+      }
+    },
+    "search": {
+      "title": "Search campaigns - Goteo",
+      "description": "Explore our campaign catalog and find the one that inspires you the most to donate",
+      "heading": "Find the campaign you are looking for",
+      "subtitle": "Explore our campaign catalog and choose the one that inspires you the most to donate",
+      "topResults": "Most searched campaigns",
+      "showingTopResults": "Showing the top {{count}} campaigns",
+      "loading": "Searching campaigns...",
+      "input": {
+        "placeholder": "Search",
+        "label": "Search campaign",
+        "clear": "Clear search",
+        "button": "Search"
+      },
+      "filters": {
+        "show": "Show filters",
+        "hide": "Hide filters",
+        "close": "Close filters",
+        "apply": "Apply filters",
+        "clear": "Reset filters",
+        "categoryLabel": "Choose a category",
+        "selectCategory": "Select category",
+        "deselectCategory": "Unselect category",
+        "selectedCategories": "{{count, plural, one {One category selected} other {# categories selected}}}",
+        "status": {
+          "label": "Campaign status"
+        }
+      },
+      "empty": {
+        "title": "No results found",
+        "description": "There are no campaigns matching your current search. Check the spelling or try with different keywords or more general terms.",
+        "clearFilters": "Reset filters",
+        "suggestions": {
+          "title": "Suggestions to improve your search:",
+          "checkSpelling": "Check the spelling of your keywords",
+          "tryDifferentKeywords": "Try different keywords",
+          "removeFilters": "Remove some filters to broaden the search",
+          "broadenSearch": "Use more general terms"
+        }
+      },
+      "initial": {
+        "title": "Search for your ideal campaign",
+        "description": "Use the filters above to find campaigns that inspire you."
+      },
+      "results": {
+        "count": "{{count, plural, one {One result found} other {# results found}}}",
+        "found": "{{count, plural, one {One result found} other {# results found}}}",
+        "noResults": "No results found",
+        "regionLabel": "Search results",
+        "showing": "Showing {{count}} results",
+        "empty": {
+          "title": "No results found",
+          "description": "There are no campaigns matching your current search.",
+          "clearFilters": "Reset filters"
+        }
+      },
+      "error": {
+        "title": "Search error",
+        "retry": "Try again",
+        "network": {
+          "title": "No internet connection",
+          "description": "Unable to connect to the server. Check your internet connection and try again."
+        },
+        "timeout": {
+          "title": "The search is taking too long",
+          "description": "The server is not responding. Please try again later or use local data."
+        },
+        "server": {
+          "title": "Server error",
+          "description": "There is a problem with the server. Try again later or use local data."
+        },
+        "unknown": {
+          "title": "Unexpected error",
+          "description": "An unexpected error occurred. Please try again."
+        },
+        "actions": {
+          "retry": "Retry",
+          "showHelp": "Show help"
+        },
+        "technicalDetails": "Technical details"
+      },
+      "errors": {
+        "searchFailed": "Search could not be performed. Try again.",
+        "api": {
+          "invalidToken": "Authentication failed. Please check your credentials.",
+          "expiredToken": "Your session has expired. Please log in again.",
+          "missingToken": "Authentication required. Please log in.",
+          "networkError": "Connection error. Check your internet connection.",
+          "serverError": "Service Error. Please try again later."
+        }
+      },
+      "accessibility": {
+        "resultsFound": "{{count, plural, one {One campaign found} other {# campaigns found}}}"
+      },
+      "loadMore": {
+        "button": "Learn more",
+        "loading": "Loading more results...",
+        "announcement": "{{count}} more results loaded. Showing a total of {{loaded}} results."
+      },
+      "pagination": {
+        "summary": "Page {{page}} of {{totalPages}} ({{totalCount}} results in total)",
+        "ariaLabel": "Results page navigation",
+        "page": "Page {{page}}",
+        "currentPage": "Page {{page}}",
+        "previous": "Previous",
+        "next": "Next",
+        "loading": "Loading...",
+        "loadMore": "Load more results",
+        "noMoreResults": "No results"
       }
     }
   },
@@ -205,6 +719,13 @@
     "loading": "Loading...",
     "notImplemented": "This functionality is not yet implemented. We're working on it, thank you for your patience!",
     "error": {
+      "unknown": "An unknown error occurred",
+      "payment": {
+        "missingMethod": "Payment method must be selected",
+        "missingCartData": "The cart is empty",
+        "unprocessableCartData": "Cannot process the cart, please empty it and try again",
+        "badAPIResponse": "There was an error communicating with the payment gateway"
+      },
       "file": {
         "sizeTooLarge": "{{ file }} exceeds the maximum size ({{ max }})",
         "unsupportedType": "Unsupported file type: {{ file }}"
@@ -224,71 +745,22 @@
     "donors": "Donors",
     "units": "{{units}} units remain",
     "noUnits": "No units remain",
-    "trending": "Most popular rewards",
     "headline": "Select your reward",
     "addAndContinue": "Add to cart and continue",
     "input": "Select the contribution e.g. €20",
-    "btnFreeDonationLabel": "Free donation",
-    "showAll": "See all"
+    "btnFreeDonationLabel": "Free donation"
   },
   "budget": {
     "headline": "Know the key needs of this campaign and discover how your support can make this project come true.",
     "chart": {
       "minimum": "Minimum",
       "optimal": "Optimum",
-      "progress": "Campaign status",
-      "secondRound": "2nd Round",
-      "start": "Home"
+      "progress": "Campaign status"
     }
   },
   "project": {
-    "tabs": {
-      "project": "Campaign information",
-      "budget": {
-        "chart-title": "This is the necessary budget to make this campaign come true and discover how your support can lead us to success.",
-        "title": "Budget",
-        "minimum": "Minimum",
-        "optimal": "Optimum",
-        "raised": "Raised",
-        "total": "Total",
-        "campaingState": "Campaign status"
-      },
-      "rewards": "Rewards",
-      "updates": {
-        "title": "Updates",
-        "modal-title": "New update",
-        "by": "By:",
-        "content": {
-          "title": "Do not lose detail of the advances of this campaign",
-          "empty": "There are no more planned updates.",
-          "btn": {
-            "read-more": "Continue reading",
-            "share": "Share"
-          }
-        }
-      },
-      "community": {
-        "title": "Community",
-        "owner-anonymous": "Anonymous",
-        "content": {
-          "title": "Community support donations and messages"
-        },
-        "contribution": "Input",
-        "matchfunding": {
-          "contribution": "Sum of contributions",
-          "aported": "Provided",
-          "up_to": "up to"
-        },
-        "anonymous": {
-          "length": "anonymous",
-          "title": "Anonymous donations",
-          "description": "Not all heroes wear capes nor feel the need to reveal their identity."
-        }
-      }
-    },
     "actions": {
       "share": "Share",
-      "remember": "Remember",
       "viewAll": "See all",
       "viewMore": "See more",
       "viewLess": "See less"
@@ -296,16 +768,6 @@
     "impact": {
       "description": "By collaborating with a Goteo-promoted project you can request a donation certificate. You can deduct up to 80% of what you've contributed in your next tax return.",
       "learnMore": "Know more."
-    },
-    "banner": {
-      "donator": {
-        "description": "Goteo belongs to the Platoniq Foundation. {{owner}}, in case of reaching the successful objectives set.",
-        "learnMore": "Know more."
-      },
-      "certificate": {
-        "description": "By collaborating with a Goteo-promoted project you can request a donation certificate. You can deduct up to 80% of what you've contributed in your next tax return.",
-        "learnMore": "Know more."
-      }
     },
     "share": {
       "modal": {
@@ -332,147 +794,6 @@
       "placeholder": "Search for your campaign"
     },
     "categories": "Categories"
-  },
-  "search": {
-    "title": "Search campaigns - Goteo",
-    "description": "Explore our campaign catalog to find the one that inspires you to donate",
-    "heading": "Find the campaign you are looking for",
-    "subtitle": "Explore our campaign catalog and choose the one that inspires you the most to make your donation",
-    "topResults": "Most Searched Campaigns",
-    "showing_top_results": "Showing the {{count}} most popular campaigns",
-    "placeholder": "Search",
-    "label": "Search campaigns",
-    "clearSearch": "Clear Search",
-    "searchButton": "Search",
-    "closeFilters": "Close Filters",
-    "showFilters": "Show Filters",
-    "hideFilters": "Hide Filters",
-    "applyFilters": "Apply Filters",
-    "categoryLabel": "Choose a category",
-    "selectCategory": "Select category",
-    "deselectCategory": "Unselect category",
-    "selectedCategories": "{{count}} categories selected",
-    "clearFilters": "Clear Filters",
-    "loading": "Searching campaigns...",
-    "results": {
-      "count": "{{count}} results found",
-      "found": "{{count}} results found",
-      "noResults": "No results found",
-      "regionLabel": "Search Results",
-      "showing": "Showing {{count}} results",
-      "empty": {
-        "title": "No results found",
-        "description": "There are no campaigns matching your current search.",
-        "clearFilters": "Clear Filters"
-      }
-    },
-    "initial": {
-      "title": "Search for your ideal campaign",
-      "description": "Use the filters above to find campaigns that inspire you."
-    },
-    "filters": {
-      "clear": "Reset filters"
-    },
-    "errors": {
-      "searchFailed": "Could not perform the search. Try again.",
-      "api": {
-        "invalidToken": "Authentication failed. Please verify your credentials.",
-        "expiredToken": "Your session has expired. Please log in again.",
-        "missingToken": "Authentication required. Please log in.",
-        "networkError": "Connection error. Check your internet connection.",
-        "serverError": "Server error. Please try again later."
-      }
-    },
-    "empty": {
-      "title": "No campaigns found",
-      "description": "There are no campaigns matching your current search. Check the spelling or try different or more general keywords.",
-      "suggestions": {
-        "title": "Suggestions to improve your search:",
-        "checkSpelling": "Check the spelling of your keywords",
-        "tryDifferentKeywords": "Try different keywords",
-        "removeFilters": "Remove some filters to broaden the search",
-        "broadenSearch": "Use more general terms"
-      }
-    },
-    "accessibility": {
-      "resultsFound": "{{count}} campaigns found"
-    },
-    "loadMore": {
-      "button": "Load More",
-      "loading": "Loading more results...",
-      "announcement": "{{count}} more results loaded. Showing {{loaded}} results in total."
-    },
-    "pagination": {
-      "summary": "Page {{page}} of {{totalPages}} ({{totalCount}} total results)",
-      "ariaLabel": "Results page navigation",
-      "page": "Page {{page}}",
-      "currentPage": "Page {{page}}",
-      "previous": "Previous",
-      "next": "Next",
-      "loading": "Loading...",
-      "loadMore": "Load more results",
-      "noMoreResults": "No more results"
-    },
-    "error": {
-      "title": "Search Error",
-      "retry": "Try again",
-      "network": {
-        "title": "No internet connection",
-        "description": "Cannot connect to the server. Verify your internet connection and try again."
-      },
-      "timeout": {
-        "title": "Search is taking too long",
-        "description": "Server is not responding. Try again or use local data."
-      },
-      "server": {
-        "title": "Server Error",
-        "description": "There is a problem with the server. Try later or use local data."
-      },
-      "unknown": {
-        "title": "Unexpected Error",
-        "description": "An unexpected error occurred. Try again."
-      },
-      "actions": {
-        "retry": "Retry",
-        "showHelp": "Show Help"
-      },
-      "technicalDetails": "Technical Details"
-    }
-  },
-  "filters": {
-    "selectOption": "Select Option",
-    "timePeriod": "Time Period",
-    "campaignStatus": "Campaign Status",
-    "location": "Location",
-    "time": {
-      "all": "Anytime",
-      "week": "Last week",
-      "month": "Last month",
-      "year": "Last year"
-    },
-    "status": {
-      "all": "All statuses",
-      "funding": "In funding",
-      "successful": "Successful",
-      "completed": "Completed"
-    },
-    "locationOptions": {
-      "all": "Any location",
-      "spain": "Spain",
-      "europe": "Europe",
-      "global": "Global"
-    }
-  },
-  "categories": {
-    "culture": "Culture",
-    "rights": "Rights",
-    "education": "Education",
-    "journalism": "Independent Journalism",
-    "health": "Health",
-    "ecological_transition": "Ecological Transition",
-    "social_economy": "Social Economy",
-    "rural": "Rural",
-    "science": "Science"
   },
   "ShareButton": {
     "title": "Spread this project around the world",
@@ -597,22 +918,14 @@
     "invalid": "Invalid input"
   },
   "countdown": {
-    "expired": "Finished campaign",
-    "remaining": "They remain",
     "error": {
       "not-found": "The date of completion of the campaign has not been found."
     }
   },
   "rewards": {
-    "title": "Select your rewards",
     "unavailable": "There are no rewards available.",
     "donators": "{{donators}} donors",
     "units-available": "{{units}} units remaining",
-    "donation-free": {
-      "title": "I give up an individual reward, I just want to help the project",
-      "description": "In this space, you can donate the amount you consider without obtaining a reward in return. Each contribution, big or small, makes a difference and brings us closer to the goal.",
-      "placeholder": "Select the contribution e.g. €20"
-    },
     "by-amount-or-more": "For {{amount}} or more",
     "thanks-message": "Thanks for cooperating",
     "reward-iva-message": "Remember that each contribution has a tax relief between 35% and 80%! Calculate here: {{link}}",
@@ -643,7 +956,6 @@
   },
   "title": "Hello!",
   "header": {
-    "login": "Login",
     "btnCart": "Go to checkout",
     "search": "Search",
     "createProject": "Create your project",
@@ -653,7 +965,7 @@
     "title": "Summary of your selected donations",
     "subtitle": "We show you the ones you have selected, press the \"Continue\" button to pay.",
     "reward": {
-      "claimed": "people have already claimed this reward",
+      "claimed": "{{ units, plural, one {One person has already claimed this reward} other {# people have already claimed this reward}}}",
       "unclaimed": "No one has claimed this reward. Be the first!"
     },
     "tipjar": {
@@ -679,8 +991,8 @@
       "hide_details": "Hide details",
       "show_more": "See more",
       "hide": "Hide",
-      "donations": "Donations",
-      "foundation": "Platoniq Foundation"
+      "donations": "of donations",
+      "foundation": "contribution to "
     },
     "cart": {
       "freeDonation": {
@@ -770,13 +1082,6 @@
       "missingAccountingId": "Not all the data has been found. Please, log in again."
     }
   },
-  "global": {
-    "btn": {
-      "continue": "Continue",
-      "back": "Back",
-      "send": "Send"
-    }
-  },
   "contributions": {
     "title": "Contributions",
     "description": "Here are the latest contributions to campaigns, you can order and filter them as you want.",
@@ -802,8 +1107,8 @@
           "in_charge": "Charged",
           "to_refund": "To be refunded",
           "refunded": "Refunded",
-          "to_wallet": "Por reembolsar a monedero",
-          "walleted": "Reembolsado a monedero"
+          "to_wallet": "To refund to wallet",
+          "walleted": "Refunded to wallet"
         },
         "refund": {
           "to_wallet": "Yes",
@@ -832,7 +1137,7 @@
           }
         },
         "estimatedFee": "Estimated fee",
-        "concept": "Concepto"
+        "concept": "Concept"
       },
       "actions": {
         "refundToWallet": "Refund to wallet",
@@ -891,12 +1196,12 @@
       "rangeAmount": {
         "title": "Select amount",
         "options": {
+          "500000": "€5,000+",
           "all": "All",
           "000..10000": "€0 - €100",
           "10000..50000": "€100 - €500",
           "50000..100000": "€500 - €1,000",
-          "100000..500000": "€1,000 - €5,000",
-          "500000": "€5,000+"
+          "100000..500000": "€1,000 - €5,000"
         }
       },
       "dateRange": {
@@ -913,12 +1218,12 @@
         "title": "Charge status",
         "options": {
           "all": "All",
-          "to_charge": "Por cobrar",
+          "to_charge": "Pending payment",
           "in_charge": "Charged",
           "to_refund": "To be refunded",
           "refunded": "Refunded",
-          "to_wallet": "Por reembolsar a monedero",
-          "walleted": "Reembolsado a monedero"
+          "to_wallet": "To refund to wallet",
+          "walleted": "Refunded to wallet"
         }
       },
       "projectStatus": {
@@ -955,130 +1260,10 @@
       "noData": "No data found to export"
     }
   },
-  "home": {
-    "campaigns": {
-      "title": "Latest campaigns",
-      "tabsTitle": "Campaigns in Goteo",
-      "tabs": {
-        "endingSoon": "Ending soon",
-        "mostSuccessful": "Most successful",
-        "withMatchfunding": "With Matchfunding"
-      },
-      "viewAll": "See all",
-      "obtained": "Raised",
-      "minimum": "Minimum",
-      "optimum": "Optimum",
-      "daysRemaining": "{{days}} days remaining",
-      "matchfunding": "Matchfunding",
-      "status": {
-        "minimumReached": "Minimum achieved!",
-        "goForMinimum": "Go for the minimum!"
-      },
-      "remaining": {
-        "toOptimum": "Falta para óptimo",
-        "toMinimum": "Falta para mínimo"
-      },
-      "userDonations": "Your donations:"
-    },
-    "blog": {
-      "title": "Big changes are coming... don't miss anything!",
-      "excerpt": "A process involving a significant technical migration of the current platform, and to do it with all the guarantees of security and without the loss of information, we need to carry out an orderly transition, with key dates for the publication of campaigns and making donations…",
-      "readMore": "Continue reading"
-    },
-    "matchfunding": {
-      "title": "Matchfunding",
-      "description": "The match effect is only seen on Goteo. Since 2013, we have been looking for organizations to multiply the impact of crowdfunding. For every euro a person contributes to a Goteo campaign, a collaborating institution (foundation, public administration, company…) contributes the same amount, or even more.",
-      "actions": {
-        "learnMore": "Quiero saber más",
-        "viewCalls": "Ver convocatorias activas"
-      },
-      "impact": {
-        "title": "Impact data",
-        "description": "Matchfunding not only multiplies financial resources but also generates tangible social impact. Essentially, matchfunding transforms microdonations into macro impact, validating projects with civic support and optimizing public/private resources.",
-        "matchers": "Contributed in Matchfunding:",
-        "successfulProjects": "Projects benefited:",
-        "successRate": "Success rate:"
-      },
-      "cards": {
-        "grant": "Dotación convocatoria",
-        "inscription": "Fecha de inscripción",
-        "participants": "Proyectos participantes",
-        "apply": "Inscríbete en la convocatoria",
-        "viewCampaigns": "Ver las campañas de la convocatoria",
-        "finished": "Finished {{date}}"
-      }
-    },
-    "stats": {
-      "title": "Goteo Statistics",
-      "theoryToAction": {
-        "title": "De la teoría a la acción",
-        "subtitle": "The figures that reveal our real footprint. Data as of December 2024.",
-        "projectsReceived": {
-          "value": "10,281",
-          "label": "Proyectos recibidos"
-        },
-        "projectsPublished": {
-          "value": "2,813",
-          "label": "Proyectos publicados"
-        },
-        "successRate": {
-          "value": "83%",
-          "label": "Tasa de éxito"
-        },
-        "button": "Ver Stats de Goteo"
-      },
-      "whyGoteo": {
-        "title": "Why Goteo?",
-        "subtitle": "We have values and the data backs us up. Data as of December 2024.",
-        "community": {
-          "value": "384,341",
-          "label": "Community"
-        },
-        "averageDonors": {
-          "value": "152",
-          "label": "Average donors per project"
-        },
-        "totalRaised": {
-          "value": "23M €",
-          "label": "Total raised"
-        },
-        "button": "Want to know more"
-      }
-    },
-    "stories": {
-      "title": "Goteo launches new website!",
-      "subtitle": "Delighted to share it with you",
-      "description": "Goteo has a new look! Navigate our revamped site and discover a more intuitive and engaging social crowdfunding experience. Explore innovative projects, meet the creators behind them, and join our community.\nBecome a donor and bring your ideas to life!",
-      "button": "Become a donor"
-    },
-    "featuredPromoters": {
-      "title": "Featured Promoters",
-      "viewAll": "See all",
-      "projectsPromoted": "Projects promoted",
-      "capitalRaised": "Capital raised",
-      "promoterImage": "Promoter's picture",
-      "shareProfile": "Share {{name}}'s profile"
-    },
-    "resources": {
-      "title": "Resources: Fuel for Creative Projects",
-      "viewAll": "See more resources",
-      "readMore": "Read more",
-      "articles": {
-        "firstCampaign": {
-          "title": "How do I run my first campaign?",
-          "description": "Your project deserves to take off: Master social crowdfunding with our FREE TOOLBOX. Practical guide + downloadable templates to win over your audience."
-        },
-        "testimonials": {
-          "title": "Testimonials from our promoters",
-          "description": "Who can better tell you what it's like to run successful campaigns? Our promoters share firsthand what it's like to manage a campaign with Goteo."
-        }
-      }
-    }
-  },
   "admin": {
     "projects": {
       "totalizers": {
-        "selectedCampaigns": "Selected campaigns:",
+        "selected": "Selected projects:",
         "totalEarned": "Total earned:",
         "totalPaid": "Total paid:",
         "totalUnpaid": "Pending payment:"
@@ -1111,12 +1296,10 @@
         "contact": "Contact",
         "taxCalculator": "Tax calculator"
       },
-      "aboutGoteo": {
-        "title": "About Goteo",
-        "whoWeAre": "Who are we?",
-        "goteoBenefits": "Benefits of Goteo",
-        "foundationImpact": "Foundation impact",
-        "platoniqFoundation": "Platoniq Foundation"
+      "about": {
+        "title": "About Bauhaus4Med Crowd",
+        "crowdfunding": "What is Goteo?",
+        "crowdvocacy": "What is Bauhaus4Med?"
       },
       "forUsers": {
         "title": "For users",
@@ -1135,35 +1318,6 @@
     "platoniq": {
       "foundation": "Foundation",
       "name": "Platoniq"
-    }
-  },
-  "create": {
-    "project": {
-      "title": "Propose a campaign",
-      "subtitle": "Briefly describe the project and the crowdfunding campaign.",
-      "budgetPreview": "Money needed",
-      "description": {
-        "title": "Briefly describe your proposal",
-        "titlePrompt": "Enter the name of your campaign",
-        "titlePlaceholder": "Campaign name",
-        "subtitle": "Enter the name of your campaign and briefly describe the project you will carry out if you obtain funding.",
-        "subtitlePrompt": "Briefly describe your project.",
-        "subtitlePlaceholder": "No description"
-      },
-      "categories": {
-        "title": "Which category fits your campaign?",
-        "subtitle": "(You can choose a maximum of 2)"
-      },
-      "budget": {
-        "title": "How much money do you need?",
-        "subtitle": "Select the amount you need to execute your project.",
-        "amountPrompt": "Enter the amount you need"
-      },
-      "release": {
-        "title": "Campaign start date",
-        "subtitle": "(Consider that crowdfunding campaigns have a minimum duration of 40 days)"
-      },
-      "submit": "Propose campaign"
     }
   },
   "profile": {
@@ -1270,9 +1424,12 @@
       }
     }
   },
-  "lang": {
-    "error": {
-      "notAvailable": "The selected language \"{{lang}}\" is not available for this project. Displaying content in the available language."
+  "blog": {
+    "share": {
+      "modal": {
+        "title": "Spread this blog around the world",
+        "description": "You can copy the link to send it and also share it on Facebook or X."
+      }
     }
   }
 }

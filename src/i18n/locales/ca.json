@@ -9,12 +9,20 @@
     "edit": "Editar",
     "delete": "Esborrar",
     "continue": "Continuar",
+    "back": "Tornar",
     "cancel": "Cancel·lar",
     "publish": "Publicar",
     "preview": "Previsualitzar",
     "select": "Escull una opció",
     "remove": "Eliminar",
-    "textPlaceholder": "Escriu aquí"
+    "textPlaceholder": "Escriu aquí",
+    "remember": "Recorda",
+    "countdown": {
+      "remaining": "Queden",
+      "expired": "Campanya finalitzada"
+    },
+    "login": "Iniciar sessió",
+    "goHome": "Tornar a l'inici"
   },
   "domain": {
     "_": "Conceptes empresarials (projecte, recompensa, contribució, etc.)",
@@ -39,14 +47,190 @@
         "byAtLeast": "Per {{ amount }}",
         "unitsTotal": {
           "single": "Hi ha una unitat",
-          "multiple": "Hi ha {{ units }} unitats"
+          "multiple": "Hay {{ units }} unidades"
         },
         "isInfinite": "Sense límit d'unitats"
+      },
+      "status": {
+        "all": "Tots els estats",
+        "funding": "En finançament",
+        "successful": "Exitós",
+        "completed": "Completes"
       }
+    },
+    "category": {
+      "culture": "Cultura",
+      "rights": "Drets",
+      "education": "Educació",
+      "journalism": "Periodisme independent",
+      "health": "Salut",
+      "ecological_transition": "Transició ecològica",
+      "social_economy": "Economia social",
+      "rural": "Rural",
+      "science": "Ciència"
     }
   },
   "pages": {
     "_": "Contingut especifíc de la pàgina (/home, /search, /project/[id], etc.)",
+    "home": {
+      "banner": {
+        "title": "Renovem Goteo!",
+        "description": "Goteo ha construït una història única al món del micromecenatge. Vols seguir formant-ne part?",
+        "ctaText": "Uneix-te a la nostra història",
+        "ctaLink": "/about",
+        "closeAriaLabel": "Tancar banner"
+      },
+      "campaigns": {
+        "title": "Campanyes més recents",
+        "tabsTitle": "Campanyes a Goteo",
+        "tabs": {
+          "endingSoon": "Acaben aviat",
+          "mostSuccessful": "Més exitoses",
+          "withMatchfunding": "Amb Matchfunding"
+        },
+        "viewAll": "Veure totes",
+        "obtained": "Obtingut",
+        "minimum": "Mínim",
+        "optimum": "Òptim",
+        "daysRemaining": "Queden {{days}} dies",
+        "matchfunding": "Matchfunding",
+        "status": {
+          "minimumReached": "Mínim aconseguit!",
+          "goForMinimum": "A per el mínim!"
+        },
+        "remaining": {
+          "toOptimum": "Falta per òptim",
+          "toMinimum": "Falta per mínim"
+        },
+        "userDonations": "Les teves donacions:"
+      },
+      "blog": {
+        "title": "S'acosten grans canvis… no et perdis res!",
+        "excerpt": "Un procés que implica una important migració tècnica de la plataforma actual, i per fer-ho amb totes les garanties de seguretat i sense pèrdua d'informació, necessitem dur a terme una transició ordenada, amb dates clau per a la publicació de campanyes i la realització de donacions…",
+        "readMore": "Llegir més"
+      },
+      "matchfunding": {
+        "title": "Matchfunding",
+        "description": "L'efecte match només el veuràs a Goteo. Des del 2013 busquem organitzacions que vulguin multiplicar l'impacte del crowdfunding. Per cada euro que una persona aporta a una campanya de Goteo, una institució col·laboradora (fundació, administració pública, empresa...) aporta la mateixa quantitat, o fins i tot més.",
+        "actions": {
+          "learnMore": "Vull saber més",
+          "viewCalls": "Veure convocatòries actives"
+        },
+        "impact": {
+          "title": "Dades d'impacte",
+          "description": "El matchfunding no només multiplica recursos econòmics, sinó que genera un impacte social tangible. En essència, el matchfunding transforma microdonacions en impacte macro, validant projectes amb suport ciutadà i optimitzant recursos públics/privats.",
+          "matchers": "Aportat en Matchfunding:",
+          "successfulProjects": "Projectes beneficiats:",
+          "successRate": "Percentatge d'èxit:"
+        },
+        "cards": {
+          "grant": "Dotació convocatòria",
+          "inscription": "Data d'inscripció",
+          "participants": "Projectes participants",
+          "apply": "Inscriu-te a la convocatòria",
+          "viewCampaigns": "Veure les campanyes de la convocatòria",
+          "finished": "Finalitzat {{date}}"
+        }
+      },
+      "stats": {
+        "title": "Estadístiques de Goteo",
+        "theoryToAction": {
+          "title": "De la teoria a l'acció",
+          "subtitle": "Les xifres que revelen la nostra empremta real. Dades a data de desembre del 2024.",
+          "projectsReceived": {
+            "value": "10.281",
+            "label": "Projectes rebuts"
+          },
+          "projectsPublished": {
+            "value": "2.813",
+            "label": "Projectes publicats"
+          },
+          "successRate": {
+            "value": "83%",
+            "label": "Taxa d'èxit"
+          },
+          "button": "Veure stats de Goteo"
+        },
+        "whyGoteo": {
+          "title": "Per què Goteo?",
+          "subtitle": "Tenim valors i les dades ens avalen. Dades a data de desembre del 2024.",
+          "community": {
+            "value": "384.341",
+            "label": "Comunitat"
+          },
+          "averageDonors": {
+            "value": "152",
+            "label": "Mitjana de donants per projecte"
+          },
+          "totalRaised": {
+            "value": "23M €",
+            "label": "Recaptació total"
+          },
+          "button": "Vull saber més"
+        }
+      },
+      "stories": {
+        "title": "Goteo estrena nova web!",
+        "subtitle": "Encantats de compartir-ho amb tu",
+        "description": "Goteo té una nova cara! Navega per la nostra web renovada i descobreix una experiència de crowdfunding social més intuïtiva i atractiva. Explora projectes innovadors, coneix els creadors que hi ha darrere d'ells i uneix-te a la nostra comunitat.\nConverteix-te en donant i fes realitat les teves idees!",
+        "button": "Converteix-te en donant"
+      },
+      "featuredPromoters": {
+        "title": "Impulsors destacats",
+        "viewAll": "Veure tots",
+        "projectsPromoted": "Projectes impulsats",
+        "capitalRaised": "Capital recaptat",
+        "promoterImage": "Foto de l'impulsor",
+        "shareProfile": "Compartir perfil de {{name}}"
+      },
+      "resources": {
+        "title": "Recursos: Combustible per a Projectes Creatius",
+        "viewAll": "Veure més recursos",
+        "readMore": "Llegir més",
+        "articles": {
+          "firstCampaign": {
+            "title": "Com faig la meva primera campanya?",
+            "description": "El teu projecte mereix enlairar-se: Domina el crowdfunding social amb la nostra CAPSA D'EINES GRATUÏTA. Guia pràctica + plantilles descarregables per conquerir la teva audiència."
+          },
+          "testimonials": {
+            "title": "Testimonis dels nostres impulsors",
+            "description": "Qui pot explicar-te millor com és impulsar campanyes exitoses? Els nostres impulsors ens expliquen de primera mà com és gestionar una campanya amb Goteo."
+          }
+        }
+      }
+    },
+    "index": {
+      "title": "Goteo"
+    },
+    "403": {
+      "title": "No tens permisos suficients per continuar",
+      "subtitle": "Si us plau, torna per on has vingut.",
+      "meta": {
+        "title": "Accés prohibit",
+        "description": "Sense permisos suficients."
+      }
+    },
+    "404": {
+      "title": "No queda ni una gota de la pàgina que estàs buscant",
+      "subtitle": "Si us plau, torna a l'inici.",
+      "meta": {
+        "title": "Pàgina no trobada",
+        "description": "La pàgina que busques no existeix o ha estat moguda."
+      }
+    },
+    "500": {
+      "title": "Alguna cosa ha anat terriblement malament",
+      "subtitle": "Si us plau, espera uns segons abans de tornar a intentar-ho.",
+      "meta": {
+        "title": "Condició inesperada per a la sol·licitud",
+        "description": "Error intern del servidor."
+      }
+    },
+    "checkout": {
+      "summary": {
+        "toRecipient": "{{ amount }} per a {{ name }}"
+      }
+    },
     "project": {
       "edit": {
         "title": "Editant projecte: {{ project }}",
@@ -193,10 +377,340 @@
             "type": "El tipus de partida s'ha d'especificar",
             "class": "La classe de partida s'ha d'especificar"
           }
+        },
+        "aboutYou": {
+          "title": "Més sobre tu",
+          "subtitle": "Descriu-te al impulsor de la campanya.",
+          "prefill": "Selecciona dades guardades",
+          "legalEntity": "Forma jurídica",
+          "legalEntityHelper": "Indica la forma jurídica de qui impulsa aquesta campanya.",
+          "individual": "Persona física",
+          "organization": "Persona jurídica",
+          "name": "Indica el nom de l'impulsor",
+          "nameHelper": "Digue'ns com denominarem l'impulsor. Aquesta denominació apareixerà a la part pública de la campanya.",
+          "namePlaceholder": "Nom de l'impulsor",
+          "taxId": "Indica el NIF de l'impulsor",
+          "taxIdHelper": "Només ho veurà l'impulsor. Aquesta informació no serà pública, només s'utilitzarà per formalitzar els acords i condicions de la campanya.",
+          "taxIdPlaceholder": "Indica el CIF",
+          "location": "Lloc d'activitat",
+          "locationHelper": "Indica quin és l'àmbit geogràfic d'actuació de l'impulsor o grup impulsor.",
+          "territory": "Àmbit d'actuació",
+          "country": "Per a quin Estat",
+          "teamDescription": "Descripció de l'equip impulsor",
+          "teamDescriptionHelper": "Explica'ns a què es dedica l'entitat impulsora, quines activitats fa en el dia a dia i quins són els seus objectius.",
+          "teamDescriptionPlaceholder": "Descriu breument l'activitat de l'impulsor",
+          "privateContacts": "Dades de contacte privats",
+          "privateContactsHelper": "Completa almenys una dada de contacte. La informació no serà pública, només la podrà utilitzar Goteo per comunicar-se sobre usos relacionats amb la campanya que estàs preparant.",
+          "email": "Correu electrònic",
+          "phone": "Telèfon",
+          "addContact": "Afegir contacte",
+          "preferred": "Preferit",
+          "publicContacts": "Dades de contacte públics",
+          "publicContactsHelper": "Indiquem quines dades de contacte/públics vols que apareguin a la teva campanya i al teu perfil impulsor.",
+          "placeholders": {
+            "website": "Insereix el teu web",
+            "email": "Insereix el teu compte de correu",
+            "instagram": "Insereix el teu compte d'Instagram",
+            "facebook": "Insereix el teu compte de Facebook",
+            "twitter": "Insereix el teu compte de X/Twitter",
+            "linkedin": "Insereix el teu compte de LinkedIn"
+          },
+          "continue": "Següent pas"
         }
       },
+      "create": {
+        "title": "Proposa una campanya",
+        "subtitle": "Descriu breument el projecte i la campanya de crowdfunding.",
+        "budgetPreview": "Dinero necessari",
+        "description": {
+          "title": "Descriu breument la teva proposta",
+          "titlePrompt": "Indica el nom de la teva campanya",
+          "titlePlaceholder": "Nom de campanya",
+          "subtitle": "Indica el nom de la teva campanya i descriu breument el projecte que duràs a terme si aconsegueixes el finançament.",
+          "subtitlePrompt": "Indica breument la descripció del teu projecte.",
+          "subtitlePlaceholder": "Sense descripció"
+        },
+        "categories": {
+          "title": "Quina categoria s'adapta a la teva campanya?",
+          "subtitle": "(Pots triar un màxim de 2)"
+        },
+        "budget": {
+          "title": "Quant diners necessites?",
+          "subtitle": "Selecciona la quantitat que necessitis per portar a terme el teu projecte.",
+          "amountPrompt": "Indica la quantitat que necessites"
+        },
+        "release": {
+          "title": "Data de sortida de campanya",
+          "subtitle": "(Tingues en compte que les campanyes de crowdfunding tenen una durada mínima de 40 dies)"
+        },
+        "submit": "Proposa campanya"
+      },
       "view": {
-        "owner": "Campanya de crowdfunding impulsada per {{ owner }}"
+        "owner": "Campanya de crowdfunding impulsada per {{ owner }}",
+        "tabs": {
+          "project": "Informació de campanya",
+          "rewards": "Recompenses",
+          "budget": {
+            "title": "Pressupost",
+            "minimum": "Mínim",
+            "optimal": "Òptim",
+            "raised": "Obtingut",
+            "total": "Total",
+            "chartTitle": "Aquest és el pressupost per aquesta campanya. Descobreix com el teu suport ens pot portar a l'èxit.",
+            "chart": {
+              "secondRound": "2a Ronda",
+              "start": "Inici"
+            }
+          },
+          "updates": {
+            "title": "Actualitzacions",
+            "modalTitle": "Nova actualització",
+            "by": "Per:",
+            "content": {
+              "title": "No perdis detall dels avenços d'aquesta campanya",
+              "empty": "No hi ha més actualitzacions previstes.",
+              "btn": {
+                "readMore": "Llegir més",
+                "share": "Compartir"
+              }
+            }
+          },
+          "community": {
+            "title": "Comunitat",
+            "content": {
+              "title": "Donacions i missatges de suport de la comunitat"
+            },
+            "contribution": "Aportació",
+            "matchfunding": {
+              "contribution": "Suma de les aportacions",
+              "aported": "Aportats",
+              "upTo": "fins a"
+            },
+            "anonymous": {
+              "length": "anònims",
+              "title": "Donacions anònimes",
+              "description": "No totes les persones heroïnes porten capa ni tampoc senten la necessitat de mostrar la seva identitat."
+            }
+          }
+        },
+        "rewards": {
+          "trending": "Recompenses més populars",
+          "showAll": "Veure totes",
+          "title": "Selecciona les teves recompenses",
+          "donationFree": {
+            "title": "Renuncio a una recompensa individual, només vull ajudar al projecte",
+            "description": "En aquest espai pots donar la quantitat que consideris sense obtenir recompensa a canvi. Cada aportació, gran o petita, marca la diferència i ens acosta a l'objectiu.",
+            "placeholder": "Selecciona l'aportació Ex.20€"
+          },
+          "error": {
+            "amount": "Si us plau, ingressa una quantitat vàlida"
+          }
+        },
+        "banner": {
+          "donator": {
+            "description": "Goteo pertany a la Fundació Platoniq. Al col·laborar en una campanya els teus diners seran custodiats per Platoniq i donats a {{owner}} en cas d'arribar als objectius d'èxit marcats.",
+            "learnMore": "Saber més."
+          },
+          "certificate": {
+            "description": "En col·laborar amb un projecte impulsat a Goteo pots sol·licitar un certificat de donació. Així, et dedueixes fins a un 80% del que hagis aportat en la teva pròxima declaració de renda.",
+            "learnMore": "Saber més."
+          }
+        },
+        "langNotAvailable": "L'idioma seleccionat \"{{lang}}\" no està disponible per a aquest projecte. Mostrant contingut en l'idioma disponible.",
+        "outOfCampaign": "Aquest projecte està fora de campanya i ja no admet pagaments."
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Coneix la nostra manera de fer crowdfunding",
+        "description": "A Goteo creiem que el finançament col·lectiu és més que diners: és confiança, comunitat i compromís social. El nostre model de crowdfunding es basa en l'impuls de projectes que generen impacte positiu i en l'acompanyament proper a les persones i organitzacions que els fan possibles.",
+        "cta": "Impulsa el teu projecte"
+      },
+      "whatIs": {
+        "title": "Què és el crowdfunding",
+        "subtitle": "Un impacte social de veritat.",
+        "description": "El crowdfunding és una forma de finançament que uneix moltes persones que creuen en una idea i decideixen donar-hi suport amb petites (o grans) aportacions. A Goteo ho entenem com un espai on no es busca només recaptar fons, sinó també crear xarxes de suport, visibilitat i aprenentatge."
+      },
+      "advisory": {
+        "title": "Assessoria i acompanyament del nostre equip",
+        "description": "A Goteo no estàs sola. El nostre equip t'acompanya pas a pas, des de la definició del teu projecte fins a la gestió de la campanya. Oferim assessorament gratuït que t'ajudarà a preparar el teu projecte. Si necessites més ajuda pots sol·licitar un assessorament personalitzat premium, amb materials de suport i una metodologia provada per augmentar les teves possibilitats d'èxit."
+      },
+      "phases": {
+        "title": "Entén les fases i la mecànica",
+        "items": {
+          "preparation": {
+            "title": "Preparació",
+            "description": "Defineix objectius, pressupost, durada i pla de comunicació. El teu projecte podrà publicar-se si compleix aquests criteris."
+          },
+          "launch": {
+            "title": "Llançament",
+            "description": "Activem la recaptació i et donem suport en la difusió."
+          },
+          "fundsReceived": {
+            "title": "Fons rebuts",
+            "description": "En assolir l'objectiu, completa un formulari i envia documentació per a la transferència. Assegura la transparència i explica a la comunitat el projecte."
+          },
+          "followUp": {
+            "title": "Seguiment",
+            "description": "Després de la campanya, comparteix l'avanç del projecte amb la teva comunitat de donants i tanca el cicle amb transparència."
+          }
+        }
+      },
+      "events": {
+        "title": "Apunta't a les nostres formacions i esdeveniments",
+        "description": "Periòdicament organitzem tallers, webinars i trobades on compartim aprenentatges, tendències i experiències reals de crowdfunding. Són espais per formar-te, inspirar-te i connectar amb altres persones que, com tu, volen transformar idees en realitats. Subscriu-t'hi per rebre informació actualitzada des del nostre butlletí."
+      },
+      "advantages": {
+        "title": "Avantatges de Goteo",
+        "items": {
+          "taxDeductions": {
+            "title": "Deduccions fiscals",
+            "description": "Les donacions a Goteo tenen avantatges fiscals tant per a particulars com per a empreses, gràcies a que gestionem les aportacions a través d'una fundació. Això és quelcom que la majoria de plataformes no ofereixen."
+          },
+          "allOrNothing": {
+            "title": "Tot o res",
+            "description": "Els projectes reben el suport econòmic únicament si demostren ser viables i assoleixen el pressupost mínim. Si no, les donacions tornen als donants per seguir donant suport a noves iniciatives."
+          },
+          "twoRounds": {
+            "title": "Dues rondes de cofinançament en 40+40 dies",
+            "description": "Per defecte s'estableixen dues rondes de cofinançament, de 40 dies cada una. La primera, a \"tot o res\", lligada al pressupost mínim imprescindible; i la segona a un import òptim, per realitzar millores addicionals en què tot hi entra."
+          },
+          "personalizedSupport": {
+            "title": "Acompanyament personalitzat",
+            "description": "No deixem els impulsors sols. El nostre equip assessora abans, durant i després de la campanya, amb recomanacions estratègiques i suport tècnic. Altres plataformes es limiten a ser un aparador de projectes."
+          },
+          "loyalCommunity": {
+            "title": "Comunitat fidelitzada",
+            "description": "Comptem amb una base de donants recurrents que confien en Goteo i tornen a donar suport a campanyes perquè valoren l'impacte social i cultural. Això dóna als projectes més oportunitats d'assolir les seves metes."
+          },
+          "matchfunding": {
+            "title": "Cofinançament institucional (matchfunding)",
+            "description": "A través de comandes amb institucions, multipliquem les aportacions ciutadanes amb fons públics o privats. Aquest model híbrid és únic a Goteo i no existeix en la majoria de plataformes."
+          },
+          "socialImpact": {
+            "title": "Focalització en impacte social transformador",
+            "description": "No tots els projectes són acceptats. A Goteo prioritzem aquells alineats amb l'Economia Social i els valors democràtics, sigui en forma de coneixement obert, millores comunitàries o impacte ambiental i social."
+          },
+          "transparency": {
+            "title": "Transparència i confiança",
+            "description": "Les campanyes passen per un procés de validació i assessorament. La comunitat sap que els projectes publicats compleixen uns mínims de qualitat i coherència, el que augmenta la credibilitat."
+          },
+          "provenMethodology": {
+            "title": "Metodologia provada",
+            "description": "Més d'una dècada d'experiència, amb centenars de projectes finançats, ens permet oferir una metodologia contrastada que incrementa les possibilitats d'èxit."
+          }
+        }
+      }
+    },
+    "search": {
+      "title": "Cerca campanyes - Goteo",
+      "description": "Explora el nostre catàleg de campanyes i troba la que més t'inspiri per fer la teva donació",
+      "heading": "Troba la campanya que busques",
+      "subtitle": "Explora el nostre catàleg de campanyes i tria la que més t'inspiri per fer la teva donació",
+      "topResults": "Campanyes més buscades",
+      "showingTopResults": "Mostrando las {{count}} campañas más populares",
+      "loading": "Buscant campanyes...",
+      "input": {
+        "placeholder": "Cerca",
+        "label": "Cerca campanyes",
+        "clear": "Neteja cerca",
+        "button": "Cerca"
+      },
+      "filters": {
+        "show": "Mostrar filtres",
+        "hide": "Amagar filtres",
+        "close": "Tancar filtres",
+        "apply": "Aplicar filtres",
+        "clear": "Neteja filtres",
+        "categoryLabel": "Tria una categoria",
+        "selectCategory": "Seleccionar categoria",
+        "deselectCategory": "Deseleccionar categoria",
+        "selectedCategories": "{{count}} categorías seleccionadas",
+        "status": {
+          "label": "Estat de la campanya"
+        }
+      },
+      "empty": {
+        "title": "No s'han trobat campanyes",
+        "description": "No hi ha campanyes que coincideixin amb la teva cerca actual. Verifica l'ortografia o prova amb paraules clau diferents o termes més generals.",
+        "clearFilters": "Neteja filtres",
+        "suggestions": {
+          "title": "Suggeriments per millorar la teva busca:",
+          "checkSpelling": "Verifica l'ortografia de les teves paraules clau",
+          "tryDifferentKeywords": "Prova amb paraules clau diferents",
+          "removeFilters": "Elimina alguns filtres per ampliar la cerca",
+          "broadenSearch": "Utilitza termes més generals"
+        }
+      },
+      "initial": {
+        "title": "Cerca la teva campanya ideal",
+        "description": "Utilitza els filtres de dalt per trobar campanyes que t'inspirin."
+      },
+      "results": {
+        "count": "{{count}} resultados encontrados",
+        "found": "{{count}} resultados encontrados",
+        "noResults": "No s'han trobat resultats",
+        "regionLabel": "Resultats de cerca",
+        "showing": "Mostrando {{count}} resultados",
+        "empty": {
+          "title": "No s'han trobat resultats",
+          "description": "No hi ha campanyes que coincideixin amb la teva cerca actual.",
+          "clearFilters": "Neteja filtres"
+        }
+      },
+      "error": {
+        "title": "Error en la cerca",
+        "retry": "Intenta de nou",
+        "network": {
+          "title": "Sense connexió a internet",
+          "description": "No es pot connectar amb el servidor. Verifica la teva connexió a internet i intenta-ho de nou."
+        },
+        "timeout": {
+          "title": "La cerca està trigant massa",
+          "description": "El servidor no respon. Intenta-ho de nou o usa les dades locals."
+        },
+        "server": {
+          "title": "Error del servidor",
+          "description": "Hi ha un problema amb el servidor. Intenta-ho més tard o usa les dades locals."
+        },
+        "unknown": {
+          "title": "Error inesperat",
+          "description": "Ha ocorregut un error inesperat. Intenta-ho de nou."
+        },
+        "actions": {
+          "retry": "Reintentar",
+          "showHelp": "Mostrar ajuda"
+        },
+        "technicalDetails": "Detalls tècnics"
+      },
+      "errors": {
+        "searchFailed": "No s'ha pogut realitzar la cerca. Intenta-ho de nou.",
+        "api": {
+          "invalidToken": "Autenticació fallida. Si us plau, verifica les teves credencials.",
+          "expiredToken": "La teva sessió ha expirat. Si us plau, inicia sessió de nou.",
+          "missingToken": "Es requereix autenticació. Si us plau, inicia sessió.",
+          "networkError": "Error de connexió. Verifica la teva connexió a internet.",
+          "serverError": "Error del servidor. Si us plau, intenta-ho de nou més tard."
+        }
+      },
+      "accessibility": {
+        "resultsFound": "Se encontraron {{count}} campañas"
+      },
+      "loadMore": {
+        "button": "Carregar més",
+        "loading": "S'estan carregant més resultats...",
+        "announcement": "Se cargaron {{count}} resultados más. Mostrando {{loaded}} resultados en total."
+      },
+      "pagination": {
+        "summary": "Pàgina {{page}} de {{totalPages}} ({{totalCount}} resultats en total)",
+        "ariaLabel": "Navegació de pàgines de resultats",
+        "page": "Pàgina {{page}}",
+        "currentPage": "Pàgina {{page}}",
+        "previous": "Anterior",
+        "next": "Següent",
+        "loading": "Carregant...",
+        "loadMore": "Carregar més resultats",
+        "noMoreResults": "No hi ha més resultats"
       }
     }
   },
@@ -205,6 +719,13 @@
     "loading": "Carregant...",
     "notImplemented": "Aquesta funcionalitat encara no està implementada. Estem treballant-hi, gràcies per la teva paciència!",
     "error": {
+      "unknown": "Ha ocorregut un error desconegut",
+      "payment": {
+        "missingMethod": "S'ha de seleccionar un mètode de pagament",
+        "missingCartData": "La cistella és buida",
+        "unprocessableCartData": "No es pot processar la cistella, si us plau buida-la i intenta-ho de nou",
+        "badAPIResponse": "Hi ha hagut un error en comunicar-se amb la passarel·la de pagament"
+      },
       "file": {
         "sizeTooLarge": "El fitxer {{ file }} supera la mida màxima ({{ max }})",
         "unsupportedType": "Tipus de fitxer no permès: {{ file }}"
@@ -224,71 +745,22 @@
     "donors": "donatius",
     "units": "Queden {{units}} unitats",
     "noUnits": "No queden unitats",
-    "trending": "Recompenses més populars",
     "headline": "Selecciona la teva recompensa",
     "addAndContinue": "Afegeix al carro i continua",
     "input": "Seleccioneu l'aportació Ej.20€",
-    "btnFreeDonationLabel": "Donació lliure",
-    "showAll": "Veure totes"
+    "btnFreeDonationLabel": "Donació lliure"
   },
   "budget": {
     "headline": "Coneix les necessitats clau d'aquesta campanya i descobreix com el teu suport pot fer realitat aquest projecte.",
     "chart": {
       "minimum": "Mínim",
       "optimal": "Òptim",
-      "progress": "Estat de la campanya",
-      "secondRound": "2a Ronda",
-      "start": "Inici"
+      "progress": "Estat de la campanya"
     }
   },
   "project": {
-    "tabs": {
-      "project": "Informació de campanya",
-      "budget": {
-        "chart-title": "Aquest és el pressupost per a aquesta campanya. Descobreix com el teu suport pot portar-nos a l'èxit.",
-        "title": "Pressupost",
-        "minimum": "Mínim",
-        "optimal": "Òptim",
-        "raised": "Obtingut",
-        "total": "Total",
-        "campaingState": "Estat de la campanya"
-      },
-      "rewards": "Recompenses",
-      "updates": {
-        "title": "Actualitzacions",
-        "modal-title": "Nova actualització",
-        "by": "Per:",
-        "content": {
-          "title": "No perdis detall dels avenços d'aquesta campanya",
-          "empty": "No hi ha més actualitzacions previstes.",
-          "btn": {
-            "read-more": "Seguir llegint",
-            "share": "Compartir"
-          }
-        }
-      },
-      "community": {
-        "title": "Comunitat",
-        "owner-anonymous": "Anònim",
-        "content": {
-          "title": "Donacions i missatges de suport de la comunitat"
-        },
-        "contribution": "Aportació",
-        "matchfunding": {
-          "contribution": "Suma de les aportacions",
-          "aported": "Aportats",
-          "up_to": "fins a"
-        },
-        "anonymous": {
-          "length": "anònims",
-          "title": "Donacions anònimes",
-          "description": "No totes les persones heroiques porten capa ni tampoc senten la necessitat de mostrar la seva identitat."
-        }
-      }
-    },
     "actions": {
       "share": "Compartir",
-      "remember": "Recordar",
       "viewAll": "Veure totes",
       "viewMore": "Veure més",
       "viewLess": "Veure menys"
@@ -296,16 +768,6 @@
     "impact": {
       "description": "Quan col·labores amb un projecte impulsat a Goteo pots sol·licitar un certificat de donació. Així, et dedueixes fins a un 80% del que hagis aportat a la teva pròxima declaració de la renda.",
       "learnMore": "Saber més."
-    },
-    "banner": {
-      "donator": {
-        "description": "Goteo pertany a la Fundació Platoniq. Quan col·labores en una campanya els teus diners seran custodiats per Platoniq i donats a {{owner}} en cas que s'assoleixin els objectius d'èxit marcats.",
-        "learnMore": "Saber més."
-      },
-      "certificate": {
-        "description": "Quan col·labores amb un projecte impulsat a Goteo pots sol·licitar un certificat de donació. Així, et dedueixes fins a un 80% del que hagis aportat a la teva pròxima declaració de la renda.",
-        "learnMore": "Saber més."
-      }
     },
     "share": {
       "modal": {
@@ -332,147 +794,6 @@
       "placeholder": "Busca la teva campanya"
     },
     "categories": "Categories"
-  },
-  "search": {
-    "title": "Buscar campanyes - Goteo",
-    "description": "Explora el nostre catàleg de campanyes i troba la que més t'inspiri per fer la teva donació",
-    "heading": "Troba la campanya que busques",
-    "subtitle": "Explora el nostre catàleg de campanyes i tria la que més t'inspiri per fer la teva donació",
-    "topResults": "Campanyes més buscades",
-    "showing_top_results": "Mostrant les {{count}} campanyes més populars",
-    "placeholder": "Cerca",
-    "label": "Cercar campanyes",
-    "clearSearch": "Netejar cerca",
-    "searchButton": "Cercar",
-    "closeFilters": "Tancar filtres",
-    "showFilters": "Mostrar filtres",
-    "hideFilters": "Ocultar filtres",
-    "applyFilters": "Aplicar filtres",
-    "categoryLabel": "Tria una categoria",
-    "selectCategory": "Seleccionar categoria",
-    "deselectCategory": "Deseleccionar categoria",
-    "selectedCategories": "{{count}} categories seleccionades",
-    "clearFilters": "Netejar filtres",
-    "loading": "Cercant campanyes...",
-    "results": {
-      "count": "{{count}} resultats trobats",
-      "found": "{{count}} resultats trobats",
-      "noResults": "No s'han trobat resultats",
-      "regionLabel": "Resultats de cerca",
-      "showing": "Mostrant {{count}} resultats",
-      "empty": {
-        "title": "No s'han trobat resultats",
-        "description": "No hi ha campanyes que coincideixin amb la teva cerca actual.",
-        "clearFilters": "Netejar filtres"
-      }
-    },
-    "initial": {
-      "title": "Cerca la teva campanya ideal",
-      "description": "Utilitza els filtres de dalt per trobar campanyes que t'inspirin."
-    },
-    "filters": {
-      "clear": "Netejar filtres"
-    },
-    "errors": {
-      "searchFailed": "No s'ha pogut realitzar la cerca. Torna a intentar-ho.",
-      "api": {
-        "invalidToken": "Autenticació fallida. Si us plau, verifica les teves credencials.",
-        "expiredToken": "La teva sessió ha expirat. Si us plau, inicia sessió de nou.",
-        "missingToken": "Es requereix autenticació. Si us plau, inicia sessió.",
-        "networkError": "Error de connexió. Verifica la teva connexió a internet.",
-        "serverError": "Error del servidor. Si us plau, prova-ho de nou més tard."
-      }
-    },
-    "empty": {
-      "title": "No s'han trobat campanyes",
-      "description": "No hi ha campanyes que coincideixin amb la teva cerca actual. Verifica l'ortografia o prova amb paraules clau diferents o termes més generals.",
-      "suggestions": {
-        "title": "Suggeriments per millorar la teva cerca:",
-        "checkSpelling": "Verifica l'ortografia de les teves paraules clau",
-        "tryDifferentKeywords": "Prova amb paraules clau diferents",
-        "removeFilters": "Treu alguns filtres per ampliar la cerca",
-        "broadenSearch": "Usa termes més generals"
-      }
-    },
-    "accessibility": {
-      "resultsFound": "S'han trobat {{count}} campanyes"
-    },
-    "loadMore": {
-      "button": "Carregar més",
-      "loading": "Carregant més resultats...",
-      "announcement": "S'han carregat {{count}} resultats més. Mostrant {{loaded}} resultats en total."
-    },
-    "pagination": {
-      "summary": "Pàgina {{page}} de {{totalPages}} ({{totalCount}} resultats en total)",
-      "ariaLabel": "Navegació de pàgines de resultats",
-      "page": "Pàgina {{page}}",
-      "currentPage": "Pàgina {{page}}",
-      "previous": "Anterior",
-      "next": "Següent",
-      "loading": "Carregant...",
-      "loadMore": "Carregar més resultats",
-      "noMoreResults": "No hi ha més resultats"
-    },
-    "error": {
-      "title": "Error en cercar",
-      "retry": "Torni a intentar-ho",
-      "network": {
-        "title": "Sense connexió a internet",
-        "description": "No es pot connectar amb el servidor. Verifica la teva connexió a internet i torna a intentar-ho."
-      },
-      "timeout": {
-        "title": "La cerca està trigant massa",
-        "description": "El servidor no respon. Intenti-ho de nou o usa les dades locals."
-      },
-      "server": {
-        "title": "Error del servidor",
-        "description": "Hi ha un problema amb el servidor. Si us plau, intenta-ho més tard o usa les dades locals."
-      },
-      "unknown": {
-        "title": "Error inesperat",
-        "description": "S'ha produït un error inesperat. Torna a provar-ho."
-      },
-      "actions": {
-        "retry": "Reintentar",
-        "showHelp": "Mostrar ajuda"
-      },
-      "technicalDetails": "Detalls tècnics"
-    }
-  },
-  "filters": {
-    "selectOption": "Seleccionar opció",
-    "timePeriod": "Període de temps",
-    "campaignStatus": "Estat de la campanya",
-    "location": "Ubicació",
-    "time": {
-      "all": "Qualsevol moment",
-      "week": "Última setmana",
-      "month": "Últim mes",
-      "year": "Últim any"
-    },
-    "status": {
-      "all": "Tots els estats",
-      "funding": "En finançament",
-      "successful": "Eixides",
-      "completed": "Completades"
-    },
-    "locationOptions": {
-      "all": "Qualsevol ubicació",
-      "spain": "Espanya",
-      "europe": "Europa",
-      "global": "Global"
-    }
-  },
-  "categories": {
-    "culture": "Cultura",
-    "rights": "Drets",
-    "education": "Educació",
-    "journalism": "Periodisme independent",
-    "health": "Salut",
-    "ecological_transition": "Transició ecològica",
-    "social_economy": "Economia social",
-    "rural": "Rural",
-    "science": "Ciència"
   },
   "ShareButton": {
     "title": "Difon aquest projecte pel món",
@@ -597,22 +918,14 @@
     "invalid": "Entrada no vàlida"
   },
   "countdown": {
-    "expired": "Campanya finalitzada",
-    "remaining": "Queden",
     "error": {
       "not-found": "No s'ha trobat la data de finalització de la campanya."
     }
   },
   "rewards": {
-    "title": "Selecciona les teves recompenses",
     "unavailable": "No hi ha recompenses disponibles.",
     "donators": "{{donators}} donants",
     "units-available": "Queden {{units}} unitats",
-    "donation-free": {
-      "title": "Renuncio a una recompensa individual, només vull ajudar el projecte",
-      "description": "En aquest espai pots donar la quantitat que consideris sense obtenir recompensa a canvi. Cada aportació, gran o petita, fa la diferència i ens acosta a la meta.",
-      "placeholder": "Seleccioneu el aporti Ex.20€"
-    },
     "by-amount-or-more": "Per {{amount}} o més",
     "thanks-message": "Gràcies per cooperar",
     "reward-iva-message": "Recorda que cada aportació té una desgravació fiscal entre el 35 i 80%! Calcula aquí: {{link}}",
@@ -643,7 +956,6 @@
   },
   "title": "Hola!",
   "header": {
-    "login": "Iniciar Sessió",
     "btnCart": "Anar al checkout",
     "search": "Cercar",
     "createProject": "Crea el teu projecte",
@@ -653,7 +965,7 @@
     "title": "Resum de les teves donacions seleccionades",
     "subtitle": "Et mostrem les que has seleccionat, prem el botó \"continuar\" per pagar.",
     "reward": {
-      "claimed": "persones ja han reclamat aquesta recompensa",
+      "claimed": "{{ units }} persones ja han reclamat aquesta recompensa",
       "unclaimed": "Encara ningú ha reclamat aquesta recompensa. Fes-ho tu primer!"
     },
     "tipjar": {
@@ -679,8 +991,8 @@
       "hide_details": "Ocultar detall",
       "show_more": "Veure més",
       "hide": "Ocultar",
-      "donations": "Donacions",
-      "foundation": "Fundació Platoniq"
+      "donations": "de donacions",
+      "foundation": "d'aportacions a "
     },
     "cart": {
       "freeDonation": {
@@ -768,13 +1080,6 @@
       "paymentFailed": "El pagament ha fallat. Si us plau, revisa les dades introduïdes i torna-ho a intentar.",
       "paymentCancelled": "El pagament ha estat cancel·lat. Si us plau, torna-ho a intentar.",
       "missingAccountingId": "No s'han trobat totes les dades. Si us plau, torna a iniciar la sessió."
-    }
-  },
-  "global": {
-    "btn": {
-      "continue": "Continuar",
-      "back": "Tornar",
-      "send": "Enviar"
     }
   },
   "contributions": {
@@ -891,12 +1196,12 @@
       "rangeAmount": {
         "title": "Selecciona import",
         "options": {
+          "500000": "+ 5.000 €",
           "all": "Tots",
           "000..10000": "0€ - 100€",
           "10000..50000": "100€ - 500€",
           "50000..100000": "500 € - 1.000 €",
-          "100000..500000": "1.000 € - 5.000 €",
-          "500000": "+ 5.000 €"
+          "100000..500000": "1.000 € - 5.000 €"
         }
       },
       "dateRange": {
@@ -955,130 +1260,10 @@
       "noData": "No es van trobar dades per exportar"
     }
   },
-  "home": {
-    "campaigns": {
-      "title": "Campanyes més recents",
-      "tabsTitle": "Campanyes a Goteo",
-      "tabs": {
-        "endingSoon": "Acaben aviat",
-        "mostSuccessful": "Més exitoses",
-        "withMatchfunding": "Amb Matchfunding"
-      },
-      "viewAll": "Veure totes",
-      "obtained": "Obtingut",
-      "minimum": "Mínim",
-      "optimum": "Òptim",
-      "daysRemaining": "Queden {{days}} dies",
-      "matchfunding": "Matchfunding",
-      "status": {
-        "minimumReached": "Mínim aconseguit!",
-        "goForMinimum": "A per al mínim!"
-      },
-      "remaining": {
-        "toOptimum": "Falta per òptim",
-        "toMinimum": "Falta per mínim"
-      },
-      "userDonations": "Les teves donacions:"
-    },
-    "blog": {
-      "title": "S'acosten grans canvis… no et perdis res!",
-      "excerpt": "Un procés que implica una important migració tècnica de la plataforma actual, i per fer-ho amb totes les garanties de seguretat i sense pèrdua d'informació, necessitem portar a terme una transició ordenada, amb dates clau per a la publicació de campanyes i la realització de donacions…",
-      "readMore": "Segueix llegint"
-    },
-    "matchfunding": {
-      "title": "Matchfunding",
-      "description": "L'efecte match només el veuràs en Goteo. Des del 2013 busquem organitzacions que vulguin multiplicar l'impacte del micromecenatge. Per cada euro que una persona aporta a una campanya de Goteo, una institució col·laboradora (fundació, administració pública, empresa…) aporta la mateixa quantitat, o fins i tot més.",
-      "actions": {
-        "learnMore": "Vull saber més",
-        "viewCalls": "Veure convocatòries actives"
-      },
-      "impact": {
-        "title": "Dades d'impacte",
-        "description": "El matchfunding no només multiplica recursos econòmics, sinó que genera un impacte social tangible. En essència, el matchfunding transforma microdonacions en impacte macro, validant projectes amb suport ciutadà i optimitzant recursos públics/privats.",
-        "matchers": "Aportat en Matchfunding:",
-        "successfulProjects": "Projectes beneficiats:",
-        "successRate": "Percentatge d'èxit:"
-      },
-      "cards": {
-        "grant": "Dotació convocatòria",
-        "inscription": "Data d'inscripció",
-        "participants": "Projectes participants",
-        "apply": "Inscriu-te en la convocatòria",
-        "viewCampaigns": "Veure les campanyes de la convocatòria",
-        "finished": "Finalitzada {{date}}"
-      }
-    },
-    "stats": {
-      "title": "Estadístiques de Goteo",
-      "theoryToAction": {
-        "title": "De la teoria a l'acció",
-        "subtitle": "Les xifres que revelen la nostra petjada real. Dades a data de desembre de 2024.",
-        "projectsReceived": {
-          "value": "10.281",
-          "label": "Projectes rebuts"
-        },
-        "projectsPublished": {
-          "value": "2.813",
-          "label": "Projectes publicats"
-        },
-        "successRate": {
-          "value": "83%",
-          "label": "Taxa d'èxit"
-        },
-        "button": "Veure Estadístiques de Goteo"
-      },
-      "whyGoteo": {
-        "title": "Per què Goteo?",
-        "subtitle": "Tenim valors i les dades ens avalen. Dades a data de desembre de 2024.",
-        "community": {
-          "value": "384.341",
-          "label": "Comunitat"
-        },
-        "averageDonors": {
-          "value": "152",
-          "label": "Mitjana de donants per projecte"
-        },
-        "totalRaised": {
-          "value": "23M €",
-          "label": "Recaptació total"
-        },
-        "button": "Vull saber-ne més"
-      }
-    },
-    "stories": {
-      "title": "Goteo estrena nova web!",
-      "subtitle": "Encantats de compartir-ho amb tu",
-      "description": "Goteo té una nova cara! Navega pel nostre web renovat i descobreix una experiència de crowdfunding social més intuïtiva i atractiva. Explora projectes innovadors, coneix els creadors darrere ells i uneix-te a la nostra comunitat.\nFes-te donant i fes realitat les teves idees!",
-      "button": "Fes-te donant"
-    },
-    "featuredPromoters": {
-      "title": "Impulsors destacats",
-      "viewAll": "Veure totes",
-      "projectsPromoted": "Projectes impulsats",
-      "capitalRaised": "Capital recaptat",
-      "promoterImage": "Foto de l'impulsor",
-      "shareProfile": "Compartir perfil de {{name}}"
-    },
-    "resources": {
-      "title": "Recursos: Combustible per a Projectes Creatius",
-      "viewAll": "Veure més recursos",
-      "readMore": "Llegir més",
-      "articles": {
-        "firstCampaign": {
-          "title": "Com faig la meva primera campanya?",
-          "description": "El teu projecte mereix enlairar-se: Domina el crowdfunding social amb la nostra CAIXA D’EINES GRATUÏTA. Guia pràctica + plantilles descarregables per conquistar la teva audiència."
-        },
-        "testimonials": {
-          "title": "Testimonis dels nostres impulsors",
-          "description": "Qui pot explicar-te millor com és impulsar campanyes exitoses? Els nostres impulsors ens expliquen de primera mà com és gestionar una campanya amb Goteo."
-        }
-      }
-    }
-  },
   "admin": {
     "projects": {
       "totalizers": {
-        "selectedCampaigns": "Campanyes seleccionades:",
+        "selected": "Projectes seleccionats:",
         "totalEarned": "Total aconseguit:",
         "totalPaid": "Total pagat:",
         "totalUnpaid": "Falta per pagar:"
@@ -1111,12 +1296,10 @@
         "contact": "Contacte",
         "taxCalculator": "Calculadora fiscal"
       },
-      "aboutGoteo": {
-        "title": "Sobre Goteo",
-        "whoWeAre": "Qui som?",
-        "goteoBenefits": "Avantatges de Goteo",
-        "foundationImpact": "Impacte de la fundació",
-        "platoniqFoundation": "Fundació Platoniq"
+      "about": {
+        "title": "Sobre Bauhaus4Med Crowd",
+        "crowdfunding": "Què és Goteo?",
+        "crowdvocacy": "Què és Bauhaus4Med?"
       },
       "forUsers": {
         "title": "Per a usuaris",
@@ -1135,35 +1318,6 @@
     "platoniq": {
       "foundation": "Fundació",
       "name": "Platoniq"
-    }
-  },
-  "create": {
-    "project": {
-      "title": "Proposa una campanya",
-      "subtitle": "Descriu breument el projecte i la campanya de crowdfunding.",
-      "budgetPreview": "Diners necessaris",
-      "description": {
-        "title": "Descriu breument la teva proposta",
-        "titlePrompt": "Indica el nom de la teva campanya",
-        "titlePlaceholder": "Nom de campanya",
-        "subtitle": "Indica el nom de la teva campanya i descriu breument el projecte que realitzaràs si aconsegueixes el finançament.",
-        "subtitlePrompt": "Indica breument la descripció del teu projecte.",
-        "subtitlePlaceholder": "Sense descripció"
-      },
-      "categories": {
-        "title": "Quina categoria s'ajusta a la teva campanya?",
-        "subtitle": "(Pots triar un màxim de 2)"
-      },
-      "budget": {
-        "title": "Quants diners necessites?",
-        "subtitle": "Selecciona la quantitat que necessitis per dur a terme el teu projecte.",
-        "amountPrompt": "Indica la quantitat que necessites"
-      },
-      "release": {
-        "title": "Data sortida de campanya",
-        "subtitle": "(Ten en compte que les campanyes de crowdfunding tenen una durada mínima de 40 dies)"
-      },
-      "submit": "Proposa una campanya"
     }
   },
   "profile": {
@@ -1270,9 +1424,12 @@
       }
     }
   },
-  "lang": {
-    "error": {
-      "notAvailable": "L'idioma seleccionat \"{{lang}}\" no està disponible per a aquest projecte. Mostrant contingut en l'idioma disponible."
+  "blog": {
+    "share": {
+      "modal": {
+        "title": "Difon aquest blog pel món",
+        "description": "Pots copiar l'enllaç per enviar-lo i també compartir-lo a Facebook o X."
+      }
     }
   }
 }

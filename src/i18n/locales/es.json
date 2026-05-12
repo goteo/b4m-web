@@ -1296,12 +1296,10 @@
         "contact": "Contacto",
         "taxCalculator": "Calculadora fiscal"
       },
-      "aboutGoteo": {
-        "title": "Sobre Goteo",
-        "whoWeAre": "¿Quiénes somos?",
-        "goteoBenefits": "Ventajas de Goteo",
-        "foundationImpact": "Impacto de la fundación",
-        "platoniqFoundation": "Fundación Platoniq"
+      "about": {
+        "title": "Sobre Bauhaus4Med Crowd",
+        "crowdfunding": "¿Qué  es Goteo?",
+        "crowdvocacy": "¿Qué es Bauhaus4Med?"
       },
       "forUsers": {
         "title": "Para usuarias",
