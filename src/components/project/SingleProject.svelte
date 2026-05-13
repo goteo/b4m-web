@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Banner from "./Banner.svelte";
     import Card from "./Card.svelte";
     import Tabs from "./Tabs.svelte";
     import TopRewards from "./TopRewards.svelte";
@@ -13,7 +12,6 @@
         type ProjectCalendar,
         type AccountingBalancePoint,
     } from "../../openapi/client/index";
-    import RememberIcon from "../../svgs/RememberIcon.svelte";
     import { getLanguageDisplayName } from "../../utils/lang";
     import Countdown from "../Countdown.svelte";
     import Arrow from "../icons/Arrow.svelte";
