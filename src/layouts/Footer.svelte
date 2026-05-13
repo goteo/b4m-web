@@ -102,6 +102,7 @@
 
                     <!-- Logo -->
                     <div class="flex justify-center lg:justify-end">
+                        <span>Powered by</span>
                         <div class="h-8 w-28 sm:h-10 sm:w-36">
                             <img
                                 src="/imgs/goteo-white-logo.svg"
