@@ -26,6 +26,9 @@
   },
   "domain": {
     "_": "Business concepts (project, reward, contribution, etc.)",
+    "header": {
+      "categories": "Projects"
+    },
     "project": {
       "campaign": {
         "minimumReached": "¡Minimum achieved!",

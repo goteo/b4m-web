@@ -26,6 +26,9 @@
   },
   "domain": {
     "_": "Conceptes empresarials (projecte, recompensa, contribució, etc.)",
+    "header": {
+      "categories": "Projectes"
+    },
     "project": {
       "campaign": {
         "minimumReached": "¡Mínim aconseguit!",

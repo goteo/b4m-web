@@ -26,6 +26,9 @@
   },
   "domain": {
     "_": "Concetti di business (progetto, ricompensa, contributo, ecc.)",
+    "header": {
+      "categories": "Progetti"
+    },
     "project": {
       "campaign": {
         "minimumReached": "Minimo raggiunto!",

@@ -26,6 +26,9 @@
   },
   "domain": {
     "_": "Επιχειρηματικές έννοιες (project, ανταμοιβή, συμβολή, κ.λπ.)",
+    "header": {
+      "categories": "έργα"
+    },
     "project": {
       "campaign": {
         "minimumReached": "Ελάχιστο επιτεύχθηκε!",
