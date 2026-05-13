@@ -5,11 +5,11 @@ import ReturnHeader from "../../../components/library/ReturnHeader.svelte";
 import BodyText from "../../../components/library/BodyText.svelte";
 
 const { t, lang, session } = Astro.locals;
-const { page } = Astro.params;
+const { post } = Astro.params;
 
-const markdownFiles = import.meta.glob<{ default: any }>("../../../../static/*md");
+const markdownFiles = import.meta.glob<{ default: any }>("../../../../static/blog/*md");
 
-const fileKey = Object.keys(markdownFiles).find((path) => path.endsWith(`${page}.md`));
+const fileKey = Object.keys(markdownFiles).find((path) => path.endsWith(`${post}.md`));
 
 if (!fileKey) {
     return Astro.redirect("/404");
