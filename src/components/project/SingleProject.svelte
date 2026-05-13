@@ -205,10 +205,6 @@
         <ProjectTags {project} />
         <div class="flex flex-row justify-between gap-6">
             <Sharebutton shareText={project.title ?? ""} projectSlug={project.slug ?? ""} />
-            <Button kind="invert" size="sm" class="px-0">
-                <RememberIcon />
-                {$t("common.remember")}
-            </Button>
         </div>
     </div>
     <div class="flex flex-col gap-8">
