@@ -74,7 +74,7 @@
     "_": "Contenuto specifico della pagina (/casa, /cerca, /progetto/[id], ecc.)",
     "home": {
       "banner": {
-        "title": "Rinnoviamo Goteo!",
+        "title": "Rinnoviamo Goteo",
         "description": "Goteo ha costruito una storia unica nel mondo del crowdfunding. Vuoi continuare a farne parte?",
         "ctaText": "Uniamoci alla nostra storia",
         "ctaLink": "/about",
@@ -105,8 +105,8 @@
         "userDonations": "Le tue donazioni:"
       },
       "blog": {
-        "title": "Sono in arrivo grandi cambiamenti... non perderti nulla!",
-        "excerpt": "Un processo che comporta una significativa migrazione tecnica dalla piattaforma attuale, e per eseguirlo in totale sicurezza e senza perdita di dati, dobbiamo attuare una transizione ordinata, con date chiave per la pubblicazione delle campagne e la realizzazione delle donazioni…",
+        "title": "Ribaltiamo la situazione. Finanziamo ciò che conta davvero!",
+        "excerpt": "Stiamo vivendo un periodo di emergenze sovrapposte: clima, alloggi, assistenza, senso di appartenenza. E troppe idee che potrebbero fare la differenza non trovano mai il sostegno di cui hanno bisogno. Questo spazio è dedicato a loro. E a te. Ispirato al Nuovo Bauhaus Europeo, supporta progetti che rispondono, riparano e reinventano il nostro modo di vivere insieme. Dal Mediterraneo e oltre.",
         "readMore": "Continua a leggere"
       },
       "matchfunding": {
@@ -522,8 +522,8 @@
     },
     "about": {
       "hero": {
-        "title": "Scopri il nostro modo di fare crowdfunding",
-        "description": "In Goteo crediamo che il crowdfunding sia più che denaro: è fiducia, comunità e impegno sociale. Il nostro modello di crowdfunding si basa sull'incoraggiamento di progetti che generano un impatto positivo e sul vicino supporto alle persone e alle organizzazioni che li rendono possibili.",
+        "title": "Finanziare il bello, il sostenibile, insieme",
+        "description": "Uno spazio in cui i progetti si allineano con la bussola del Nuovo Bauhaus Europeo. Dove la bellezza ispira l'azione, la sostenibilità guida le scelte e la condivisione plasma le decisioni. Dall'idea all'impatto, il finanziamento diventa una pratica civica condivisa. Il crowdfunding come passo collettivo verso il futuro che desideriamo abitare.",
         "cta": "Promuovi il tuo progetto"
       },
       "whatIs": {
