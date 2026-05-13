@@ -1,6 +1,7 @@
 <script lang="ts">
     import { languagesList } from "../i18n/locales";
     import { locale } from "../i18n/store";
+    import { getLanguageDisplayName } from "../utils/lang";
 
     const languages = Object.keys(languagesList);
 
@@ -35,7 +36,7 @@
 >
     {#each languages as lang}
         <option value={lang} selected={lang === $locale}>
-            {lang.toUpperCase()}
+            {getLanguageDisplayName(lang)}
         </option>
     {/each}
 </select>
