@@ -31,7 +31,7 @@
         <h3 class="text-secondary line-clamp-2 w-full text-left text-2xl font-semibold">
             <div>
                 {@html $t(
-                    "rewards.by-amount",
+                    "domain.project.reward.byAtLeast",
                     {
                         amount: formatCurrency(reward.money.amount, reward.money.currency),
                     },

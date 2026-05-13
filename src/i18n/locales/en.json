@@ -44,7 +44,7 @@
         }
       },
       "reward": {
-        "byAtLeast": "By {{ amount }}",
+        "byAtLeast": "For {{ amount }}",
         "unitsTotal": {
           "single": "There is one unit",
           "multiple": "There are {{ units }} units"

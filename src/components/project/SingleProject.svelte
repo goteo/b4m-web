@@ -207,7 +207,7 @@
             <Sharebutton shareText={project.title ?? ""} projectSlug={project.slug ?? ""} />
         </div>
     </div>
-    <div class="flex flex-col gap-8">
+    <div class="mb-20 flex flex-col gap-8">
         <div class="flex items-center justify-between">
             <h2 class="text-2xl font-bold text-black">
                 {$t("pages.project.view.rewards.trending")}
@@ -221,6 +221,5 @@
             <Arrow />{$t("pages.project.view.rewards.showAll")}
         </Button>
     </div>
-    <Banner ownerName={owner.displayName || ""} />
 </section>
 <Tabs bind:this={tabsComponent} bind:lang={projectLanguage} bind:project {accounting} />
