@@ -11,18 +11,18 @@
 
     const byCategory = {
         together: {
-            default: "bg-together-soft hover:bg-together text-content",
-            active: "bg-together hover:bg-together text-content",
+            default: "bg-together-soft hover:bg-together",
+            active: "bg-together hover:bg-together text-black",
             ghost: "",
         },
         sustainable: {
-            default: "bg-sustainable-soft hover:bg-sustainable text-content",
-            active: "bg-sustainable hover:bg-sustainable text-content",
+            default: "bg-sustainable-soft hover:bg-sustainable",
+            active: "bg-sustainable hover:bg-sustainable text-black",
             ghost: "",
         },
         beautiful: {
-            default: "bg-beautiful-soft hover:bg-beautiful text-content",
-            active: "bg-beautiful hover:bg-beautiful text-content",
+            default: "bg-beautiful-soft hover:bg-beautiful",
+            active: "bg-beautiful hover:bg-beautiful text-black",
             ghost: "",
         },
     };

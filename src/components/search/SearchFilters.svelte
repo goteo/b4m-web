@@ -134,7 +134,7 @@ Integrated with searchStore for state management and URL synchronization
         <!-- Category filters -->
         <div class="w-full">
             <CategoryFilter
-                selectedCategories={$searchFilters.categories}
+                selectedIds={$searchFilters.categories}
                 onCategoryChange={(categories) => updateFilters({ categories })}
                 data-testid="category-filter"
             />

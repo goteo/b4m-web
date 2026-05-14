@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     import CategoryOption from "./Category.svelte";
 
     import type { Category } from "../../openapi/client";
@@ -18,6 +20,26 @@
         onchange?: (selected: Category[], option: Category) => void;
         error?: string;
     } = $props();
+
+    onMount(() => {
+        const priorityOrder = ["beautiful", "sustainable", "together"];
+
+        options = [
+            ...options.sort((a, b) => {
+                const aIndex = priorityOrder.indexOf(a.id);
+                const bIndex = priorityOrder.indexOf(b.id);
+
+                if (aIndex !== -1 && bIndex !== -1) {
+                    return aIndex - bIndex;
+                }
+
+                if (aIndex !== -1) return -1;
+                if (bIndex !== -1) return 1;
+
+                return a.name.localeCompare(b.name);
+            }),
+        ];
+    });
 
     function isSelected(option: Category): boolean {
         return selectedIds.includes(option.id);

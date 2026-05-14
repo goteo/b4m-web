@@ -4,31 +4,37 @@ Interactive category selection using existing categories from utils/categories.t
 Implements active/inactive pill states matching Figma design
 -->
 <script lang="ts">
-    import { onMount } from "svelte";
-
     import { locale, t } from "../../i18n/store";
     import {
         apiCategoriesGetCollection,
         apiCategoriesIdGet,
         type Category,
     } from "../../openapi/client";
+    import { client } from "../../openapi/client/client.gen";
+    import { apiCategoriesIdGetUrl } from "../../openapi/client/paths.gen";
     import { extractId } from "../../utils/extractId";
     import CategorySelect from "../library/CategorySelect.svelte";
 
     interface Props {
-        selectedCategories?: string[];
+        selectedIds?: string[];
         onCategoryChange?: (categories: string[]) => void;
         showLabel?: boolean;
         "data-testid"?: string;
     }
 
-    let { selectedCategories = [], onCategoryChange, showLabel = true }: Props = $props();
+    let { selectedIds = [], onCategoryChange, showLabel = true }: Props = $props();
 
     let categories = getAvailableCategories();
     let selected = $state<Category[]>([]);
 
-    onMount(async () => {
-        selected = await Promise.all(selectedCategories.map((s) => getCategory(s)));
+    $effect(() => {
+        Promise.all(
+            selectedIds.map((id) => {
+                const iri = client.buildUrl({ url: apiCategoriesIdGetUrl, path: { id } });
+
+                return getCategory(iri);
+            }),
+        ).then((categories) => (selected = categories));
     });
 
     async function getAvailableCategories(): Promise<Category[]> {
@@ -63,7 +69,7 @@ Implements active/inactive pill states matching Figma design
             bind:selected
             selectedIds={selected.map((s) => s.id)}
             options={categories}
-            onchange={(selected) => onCategoryChange?.(selected.map((o) => `${o.id}`))}
+            onchange={(selected) => onCategoryChange?.(selected.map((o) => o.id))}
         />
     {/await}
 
