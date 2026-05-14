@@ -9,19 +9,31 @@
         ghost: "",
     };
 
+    const byCategory = {
+        together: "bg-[#feff99] hover:bg-[#ffffc1]",
+        sustainable: "bg-[#abffcd] hover:bg-[#c4e9e1]",
+        beautiful: "bg-[#a1c4fa] hover:bg-[#c3eeff]",
+    };
+
     let {
         type = "default",
+        ofCategory = undefined,
         disabled = false,
         class: classes = "",
         onclick,
         children,
     }: {
         type?: keyof typeof styles;
+        ofCategory?: string;
         disabled?: boolean;
         class?: ClassNameValue;
         onclick?: (event: MouseEvent) => void;
         children: Snippet;
     } = $props();
+
+    function isKnownCategory(value: string): value is keyof typeof byCategory {
+        return value in byCategory;
+    }
 </script>
 
 <button
@@ -29,6 +41,7 @@
     class={twMerge(
         "hover:bg-variant1 w-auto rounded-[32px] px-[16px] py-[8px] font-[700]",
         styles[type],
+        ofCategory && isKnownCategory(ofCategory) ? byCategory[ofCategory] : "",
         classes,
     )}
     onclick={(e) => onclick?.(e)}

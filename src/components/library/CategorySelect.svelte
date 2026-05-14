@@ -60,6 +60,7 @@
         {#each options as option}
             <CategoryOption
                 type={calcTagType(option)}
+                ofCategory={option.id}
                 disabled={calcTagDisabled(option)}
                 onclick={() => handleClick(option)}
             >

@@ -41,6 +41,14 @@
     --color-semantic-notification: #c2eeff;
     --color-semantic-warning: #ffffc2;
 
+    /* Colors for categories */
+    --color-together: #feff99;
+    --color-together-soft: #ffffc1;
+    --color-sustainable: #abffcd;
+    --color-sustainable-soft: #c4e9e1;
+    --color-beautiful: #a1c4fa;
+    --color-beautiful-soft: #c3eeff;
+
     --font-body: "Archivo", sans-serif;
     --body-regular: 1rem;
     --body-small: 0.875rem;
