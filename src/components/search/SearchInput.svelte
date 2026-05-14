@@ -89,7 +89,7 @@ Implements main search bar with floating label matching Figma design exactly
 
     <!-- Floating label -->
     <div class="pointer-events-none absolute -top-[4.5px] left-3 bg-[#fbfbfb] px-1">
-        <div class="font-['Karla'] text-xs leading-4 font-medium text-[#3d3d3d]">
+        <div class=" text-xs leading-4 font-medium text-[#3d3d3d]">
             {$t("pages.search.input.label")}
         </div>
     </div>

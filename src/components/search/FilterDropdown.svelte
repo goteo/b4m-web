@@ -91,7 +91,7 @@ Supports: Periodo de tiempo, Estado de la campaña, Ubicación
         type="button"
         onclick={toggleDropdown}
         onkeydown={handleKeydown}
-        class="flex w-full items-center justify-between rounded-[8px] border border-[#462949] bg-[#fbfbfb] px-4 py-4 font-['Karla'] text-base text-[#3d3d3d] focus:border-[#59e9d3] focus:ring-2 focus:ring-[#59e9d3] focus:outline-none {className}"
+        class="flex w-full items-center justify-between rounded-[8px] border border-[#462949] bg-[#fbfbfb] px-4 py-4 text-base text-[#3d3d3d] focus:border-[#59e9d3] focus:ring-2 focus:ring-[#59e9d3] focus:outline-none {className}"
         class:opacity-48={!selectedOption}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
@@ -113,7 +113,7 @@ Supports: Periodo de tiempo, Estado de la campaña, Ubicación
                 {#each options as option}
                     <button
                         type="button"
-                        class="hover:bg-variant1 focus:bg-variant1 w-full px-4 py-3 text-left font-['Karla'] text-[#3d3d3d] focus:outline-none"
+                        class="hover:bg-variant1 focus:bg-variant1 w-full px-4 py-3 text-left text-[#3d3d3d] focus:outline-none"
                         class:bg-variant1={selectedOption?.value === option.value}
                         onclick={() => selectOption(option)}
                         role="option"
