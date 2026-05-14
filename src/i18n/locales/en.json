@@ -628,7 +628,7 @@
         "categoryLabel": "Choose a category",
         "selectCategory": "Select category",
         "deselectCategory": "Unselect category",
-        "selectedCategories": "{{count, plural, one {One category selected} other {# categories selected}}}",
+        "selectedCategories": "{{ count }} categories selected",
         "status": {
           "label": "Campaign status"
         }
