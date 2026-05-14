@@ -10,9 +10,21 @@
     };
 
     const byCategory = {
-        together: "bg-[#feff99] hover:bg-[#ffffc1]",
-        sustainable: "bg-[#abffcd] hover:bg-[#c4e9e1]",
-        beautiful: "bg-[#a1c4fa] hover:bg-[#c3eeff]",
+        together: {
+            default: "bg-together-soft hover:bg-together text-content",
+            active: "bg-together hover:bg-together text-content",
+            ghost: "",
+        },
+        sustainable: {
+            default: "bg-sustainable-soft hover:bg-sustainable text-content",
+            active: "bg-sustainable hover:bg-sustainable text-content",
+            ghost: "",
+        },
+        beautiful: {
+            default: "bg-beautiful-soft hover:bg-beautiful text-content",
+            active: "bg-beautiful hover:bg-beautiful text-content",
+            ghost: "",
+        },
     };
 
     let {
@@ -41,7 +53,7 @@
     class={twMerge(
         "hover:bg-variant1 w-auto rounded-[32px] px-[16px] py-[8px] font-[700]",
         styles[type],
-        ofCategory && isKnownCategory(ofCategory) ? byCategory[ofCategory] : "",
+        ofCategory && isKnownCategory(ofCategory) ? byCategory[ofCategory][type] : "",
         classes,
     )}
     onclick={(e) => onclick?.(e)}
