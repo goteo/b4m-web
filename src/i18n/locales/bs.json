@@ -1,0 +1,1429 @@
+{
+  "common": {
+    "_": "Prevod globalnog UI (dugmad, etikete, itd.)",
+    "greeting": "Zdravo",
+    "farewell": "Zbogom",
+    "donate": "Doniraj",
+    "donateAmount": "Doniraj {{ amount }}",
+    "save": "Sačuvaj",
+    "edit": "Uredi",
+    "delete": "Obriši",
+    "continue": "Nastavi",
+    "back": "Nazad",
+    "cancel": "Otkaži",
+    "publish": "Objavi",
+    "preview": "Pregledaj",
+    "select": "Izaberi opciju",
+    "remove": "Ukloni",
+    "textPlaceholder": "Piši ovdje",
+    "remember": "Zapamti",
+    "countdown": {
+      "remaining": "Preostaje",
+      "expired": "Kampanja završena"
+    },
+    "login": "Prijavi se",
+    "goHome": "Vrati se na početak",
+    "viewAll": "Prikaži sve"
+  },
+  "domain": {
+    "_": "Poslovni pojmovi (projekat, nagrada, doprinos itd.)",
+    "header": {
+      "categories": "Projekti"
+    },
+    "project": {
+      "campaign": {
+        "minimumReached": "Minimalno postignuto!",
+        "optimumReached": "Optimum postignut!",
+        "obtained": "Postignuto",
+        "supports": "Jedinstveni donatori",
+        "donate": "Doniraj ovoj kampanji"
+      },
+      "budget": {
+        "optimum": "Optimum",
+        "minimum": "Minimum",
+        "type": {
+          "infrastructure": "Infrastruktura",
+          "material": "Materijal",
+          "task": "Zadatak"
+        }
+      },
+      "reward": {
+        "byAtLeast": "Za {{ amount }}",
+        "unitsTotal": {
+          "single": "Postoji jedna jedinica",
+          "multiple": "Ima {{ units }} jedinica"
+        },
+        "isInfinite": "Bez ograničenja jedinica"
+      },
+      "status": {
+        "all": "Sva stanja",
+        "funding": "U finansiranju",
+        "successful": "Uspješni",
+        "completed": "Završeni"
+      }
+    }
+  },
+  "pages": {
+    "_": "Sadržaj specifičan za stranicu (/home, /search, /project/[id], itd.)",
+    "home": {
+      "banner": {
+        "title": "Goteo se obnavlja!",
+        "description": "Goteo je izgradio jedinstvenu priču u svijetu crowdfundinga. Želite li biti dio nje?",
+        "ctaText": "Pridružite se našoj priči",
+        "ctaLink": "/about",
+        "closeAriaLabel": "Zatvori banner"
+      },
+      "campaigns": {
+        "title": "Najnovije kampanje",
+        "tabsTitle": "Kampanje na Goteo",
+        "tabs": {
+          "endingSoon": "Završavaju uskoro",
+          "mostSuccessful": "Najuspješniji",
+          "withMatchfunding": "Sa Matchfunding"
+        },
+        "viewAll": "Pogledaj sve",
+        "obtained": "Postignuto",
+        "minimum": "Minimum",
+        "optimum": "Optimum",
+        "daysRemaining": "Preostalo {{days}} dana",
+        "matchfunding": "Matchfunding",
+        "status": {
+          "minimumReached": "Minimalno postignuto!",
+          "goForMinimum": "Idemo na minimum!"
+        },
+        "remaining": {
+          "toOptimum": "Preostalo do optimuma",
+          "toMinimum": "Preostalo do minimuma"
+        },
+        "userDonations": "Vaše donacije:"
+      },
+      "blog": {
+        "title": "Promijenite pravila igre! Finansirajte ono što je važno!",
+        "excerpt": "Živimo u sredini istovremenih vanrednih situacija: klima, stanovanje, socijalna skrb i osjećaj pripadnosti. Previše ideja koje bi mogle donijeti razliku nikada ne pronađu podršku koju trebaju. Ovaj prostor je za njih. I za vas. Inspirisano Novom Evropskom Bauhausom, podržite projekte koji odgovaraju, popravljaju i osmišljavaju našu suživot. Od Mediterana i dalje.",
+        "readMore": "Nastavite čitati"
+      },
+      "matchfunding": {
+        "title": "Matchfunding",
+        "description": "Efekat “match” vidjet ćete samo u Goteu. Od 2013. godine tražimo organizacije koje žele povećati učinak crowdfundinga. Za svaku euro koju osoba donira Goteo kampanji, partnerska institucija (fondacija, javna uprava, kompanija…) donira isti iznos, ili čak i više.",
+        "actions": {
+          "learnMore": "Želim znati više",
+          "viewCalls": "Pogledaj aktivne pozive"
+        },
+        "impact": {
+          "title": "Podaci o uticaju",
+          "description": "Matchfunding ne samo da umnožava ekonomske resurse, nego generiše opipljiv društveni uticaj. U biti, matchfunding transformiše mikrodonacije u makro uticaj, validirajući projekte podrškom građana i optimizirajući javne/privatne resurse.",
+          "matchers": "Uloženo u Matchfunding:",
+          "successfulProjects": "Projekti koji su imali koristi:",
+          "successRate": "Postotak uspjeha:"
+        },
+        "cards": {
+          "grant": "Dotacija poziva",
+          "inscription": "Datum prijave",
+          "participants": "Učesnici projekata",
+          "apply": "Prijavi se na poziv",
+          "viewCampaigns": "Pogledaj kampanje poziva",
+          "finished": "Završeno {{date}}"
+        }
+      },
+      "stats": {
+        "title": "Statistika Goteo",
+        "theoryToAction": {
+          "title": "Od teorije do akcije",
+          "subtitle": "Brojevi koji otkrivaju naš stvarni otisak. Podaci od decembra 2024.",
+          "projectsReceived": {
+            "value": "10.281",
+            "label": "Primljeni projekti"
+          },
+          "projectsPublished": {
+            "value": "2.813",
+            "label": "Objavljeno projekata"
+          },
+          "successRate": {
+            "value": "83%",
+            "label": "Stopa uspješnosti"
+          },
+          "button": "Pogledaj Goteo statistiku"
+        },
+        "whyGoteo": {
+          "title": "Zašto Goteo?",
+          "subtitle": "Imamo vrijednosti i podaci nas podržavaju. Podaci od decembra 2024.",
+          "community": {
+            "value": "384.341",
+            "label": "Zajednica"
+          },
+          "averageDonors": {
+            "value": "152",
+            "label": "Prosečan broj donatora po projektu"
+          },
+          "totalRaised": {
+            "value": "23M €",
+            "label": "Ukupna suma"
+          },
+          "button": "Želim znati više"
+        }
+      },
+      "stories": {
+        "title": "Goteo lansira novu web stranicu!",
+        "subtitle": "Sretni smo što to možemo podijeliti s vama",
+        "description": "Goteo ima novo lice! Pretražujte našu obnovljenu web stranicu i otkrijte intuitivnije i atraktivnije iskustvo društvenog crowdfundinga. Istražite inovativne projekte, upoznajte kreatore iza njih i pridružite se našoj zajednici.\nPostanite donator i ostvarite svoje ideje!",
+        "button": "Postani donator"
+      },
+      "featuredPromoters": {
+        "title": "Istaknuti pokretači",
+        "viewAll": "Pogledaj sve",
+        "projectsPromoted": "Pokrenuti projekti",
+        "capitalRaised": "Prikupljeni kapital",
+        "promoterImage": "Slika pokretača",
+        "shareProfile": "Podijeli profil od {{name}}"
+      },
+      "resources": {
+        "title": "Resursi: Gorivo za Kreativne Projekte",
+        "viewAll": "Pogledaj više resursa",
+        "readMore": "Pročitaj više",
+        "articles": {
+          "firstCampaign": {
+            "title": "Kako započeti svoju prvu kampanju?",
+            "description": "Vaš projekat zaslužuje poletjeti: Savladajte društveni crowdfunding s našim BESPLATNIM ALATOM. Praktični vodič + preuzimljivi predlošci za osvajanje svoje publike."
+          },
+          "testimonials": {
+            "title": "Svjedočenja naših pokretača",
+            "description": "Ko može bolje reći kakvo je vođenje uspješnih kampanja? Naši pokretači prvi sada govore o tome kako je upravljati kampanjom s Goteo."
+          }
+        }
+      }
+    },
+    "index": {
+      "title": "Goteo"
+    },
+    "403": {
+      "title": "Nemate dovoljno prava da nastavite",
+      "subtitle": "Molimo vas, vratite se odakle ste došli.",
+      "meta": {
+        "title": "Pristup zabranjen",
+        "description": "Nedovoljno prava."
+      }
+    },
+    "404": {
+      "title": "Ni kap stranice koju tražite nije ostala",
+      "subtitle": "Molimo, vratite se na početak.",
+      "meta": {
+        "title": "Stranica nije pronađena",
+        "description": "Stranica koju tražite ne postoji ili je premještena."
+      }
+    },
+    "500": {
+      "title": "Nešto je strašno pogrešno krenulo",
+      "subtitle": "Molimo, sačekajte nekoliko sekundi prije nego ponovo pokušate.",
+      "meta": {
+        "title": "Neočekivano stanje zahteva",
+        "description": "Interna greška servera."
+      }
+    },
+    "checkout": {
+      "summary": {
+        "toRecipient": "{{ amount }} za {{ name }}"
+      }
+    },
+    "project": {
+      "edit": {
+        "title": "Uređivanje projekta: {{ project }}",
+        "tabs": {
+          "configuration": "Podešavanja",
+          "campaign": "Informacije o kampanji",
+          "rewards": "Nagrade",
+          "collaborations": "Saradnje",
+          "budget": "Budžet",
+          "aboutYou": "O vama"
+        },
+        "configuration": {
+          "title": "Podešavanja",
+          "subtitle": "Postavite osnovne podatke za vašu kampanju",
+          "languages": {
+            "title": "Jezici kampanje",
+            "description": "Koji su to jezici na kojima ćete objavljivati sadržaj kampanje",
+            "primaryLabel": "Glavni jezik sadržaja",
+            "secondaryLabel": "Sekundarni jezik sadržaja",
+            "addButton": "Dodaj jezik"
+          },
+          "rounds": {
+            "title": "Odaberite runde koje će imati vaša kampanja",
+            "description": "Podrazumijevana konfiguracija je 40 dana po rundi, možete zatražiti izmjene od svog savjetnika ako je vaš projekat odabran",
+            "option1": "1 Runda",
+            "option2": "2 Runde"
+          },
+          "continue": "Nastavi sa informacijama o kampanji"
+        },
+        "campaignInfo": {
+          "title": "Informacije o kampanji",
+          "subtitle": "Popunite potrebne informacije za vašu kampanju",
+          "media": {
+            "title": "Slika i video uvoda",
+            "description": "Dodajte sliku ili video koji predstavlja vaš projekat. To će biti prva stvar koju će vaši budući donatori vidjeti na vašoj kampanji",
+            "addImage": "Dodaj sliku",
+            "addVideo": "Dodaj video"
+          },
+          "goals": {
+            "title": "Ciljevi i svrha vaše kampanje",
+            "description": "Navedite ciljeve i svrhu vašeg projekta. Odgovorite na pitanja šta, kako i zašto"
+          },
+          "legacy": {
+            "title": "Koje nasleđe će vaš projekat ostaviti?",
+            "description": "Kada se kampanja završi, šta će ostati? Recite nam koje nasleđe će vaš projekat ostaviti"
+          },
+          "target": {
+            "title": "Kome se obraća?",
+            "description": "Opišite kome je vaš projekat namijenjen"
+          },
+          "team": {
+            "title": "Koji tim imate?",
+            "description": "Opišite tim koji imate i ako imate prethodna iskustva radeći na sličnim projektima"
+          },
+          "continue": "Nastavi na nagrade"
+        },
+        "rewards": {
+          "title": "Nagrade",
+          "subtitle": "Dodajte atraktivne nagrade kako biste postigli vaš cilj",
+          "continue": "Nastavi na saradnje",
+          "add": {
+            "title": "Ne pokrećite kampanju bez njih! Nagrade su vaša supermoć",
+            "description": "Donacije se povećavaju za 30%* u kampanjama sa više i atraktivnijim nagradama. Jednostavno je: više opcija znači veće mogućnosti povezivanja sa interesima potencijalnih donatora. Ekskluzivni proizvodi? Jedinstvena iskustva? Posebna priznanja? Vaša kreativnost je granica! Što je vaš meni nagrada raznovrsniji, to će vaš uspeh biti veći.",
+            "button": "Dodajte nagradu"
+          },
+          "modal": {
+            "title": "Dodajte nagrade",
+            "description": "Opišite nagradu koju nudite",
+            "unitsExisting": "Broj postojećih jedinica",
+            "placeholders": {
+              "title": "Naslov nagrade",
+              "description": "Opis nagrade",
+              "moneyAmount": "Cijena",
+              "files": "Kliknite ili prevucite ovde datoteku da je otpremite"
+            }
+          },
+          "deleteModal": {
+            "title": "Brišete ovu nagradu",
+            "description": "Ovo je trajna akcija i ne može se opozvati"
+          },
+          "validation": {
+            "title": "Naslov ne može biti prazan",
+            "amount": "Cijena mora biti veća od nule",
+            "units": "Broj jedinica mora biti veći od nule ako je nagrada ograničena"
+          }
+        },
+        "collaborations": {
+          "title": "Saradnje",
+          "subtitle": "Dodajte saradnje koje smatrate prikladnim da pomognete vašoj kampanji",
+          "continue": "Nastavi na budžet",
+          "add": {
+            "title": "Proširite svoju kampanju! Tražite saradnike, ne samo novac",
+            "description": "Donacije povećavaju za 30%* u kampanjama s višestrukim i atraktivnim nagradama. Jednostavno je: više opcija znači više mogućnosti za povezivanje s interesima potencijalnih donatora. Ekskluzivni proizvodi? Jedinstvena iskustva? Posebni priznanja? Tvoja kreativnost je granica! Što je raznovrsniji tvoj meni nagrada, veći će biti tvoj uspjeh.",
+            "button": "Dodaj suradnju"
+          },
+          "modal": {
+            "title": "Dodaj suradnje",
+            "description": "Navedite tip suradnje koji trebate",
+            "placeholders": {
+              "title": "Naslov suradnje",
+              "description": "Opis suradnje"
+            }
+          },
+          "deleteModal": {
+            "title": "Brisat ćete ovu suradnju",
+            "description": "Ovo je trajna akcija i ne može se poništiti"
+          },
+          "validation": {
+            "title": "Naslov ne može ostati prazan",
+            "descriptionTooLong": "Opis suradnje je predug",
+            "description": "Opis ne može ostati prazan"
+          }
+        },
+        "budget": {
+          "title": "Budžet",
+          "subtitle": "Navedite minimalni i optimalni budžet koji vam je potreban za realizaciju projekta",
+          "continue": "Sljedeći korak",
+          "add": {
+            "title": "Dodajte stavku",
+            "description": "Možete navesti minimalni i optimalni iznos koji vam je potreban za realizaciju vašeg projekta.",
+            "button": "Dodaj stavku"
+          },
+          "modal": {
+            "title": "Dodajte stavke budžeta",
+            "description": "Opišite stavke budžeta",
+            "placeholders": {
+              "title": "Naslov stavke",
+              "type": "Vrsta stavke",
+              "moneyAmount": "Iznos",
+              "deadline": "Klasa",
+              "description": "Opis"
+            }
+          },
+          "deleteModal": {
+            "title": "Izbrisat ćete ovu stavku",
+            "description": "Ovo je trajna akcija i ne može se poništiti"
+          },
+          "validation": {
+            "title": "Naslov ne može ostati prazan",
+            "description": "Opis ne može ostati prazan",
+            "amount": "Iznos mora biti veći od nule",
+            "amountMinimum": "Minimalni budžet mora biti veći od nule",
+            "currency": "Iznos mora da specificira valutu",
+            "type": "Vrsta stavke se mora specificirati",
+            "class": "Klasa stavke se mora specificirati"
+          }
+        },
+        "aboutYou": {
+          "title": "Više o tebi",
+          "subtitle": "Opišite se pokretaču kampanje.",
+          "prefill": "Odaberite sačuvane podatke",
+          "legalEntity": "Pravni oblik",
+          "legalEntityHelper": "Navedite pravni oblik pokretača ove kampanje.",
+          "individual": "Fizička osoba",
+          "organization": "Pravna osoba",
+          "name": "Navedite ime pokretača",
+          "nameHelper": "Recite nam kako ćemo imenovati pokretača. Ovo ime će se pojavljivati u javnom dijelu kampanje.",
+          "namePlaceholder": "Ime pokretača",
+          "taxId": "Navedite JMBG pokretača",
+          "taxIdHelper": "Ovo će videti samo pokretač. Ove informacije neće biti javne i koristiti će se samo za finalizaciju dogovora i uvjeta kampanje.",
+          "taxIdPlaceholder": "Unesite PIB",
+          "location": "Mjesto aktivnosti",
+          "locationHelper": "Navedite kojim se geografskim područjem bavi pokretač ili grupa pokretača.",
+          "territory": "Područje djelovanja",
+          "country": "Za koju državu",
+          "teamDescription": "Opis tima pokretača",
+          "teamDescriptionHelper": "Recite nam čime se bavi pokretačka organizacija, koje vrste aktivnosti obavlja svakodnevno i koji su joj ciljevi.",
+          "teamDescriptionPlaceholder": "Ukratko opišite aktivnosti pokretača",
+          "privateContacts": "Privatni podaci za kontakt",
+          "privateContactsHelper": "Ispunite barem jedan kontakt podatak. Informacije neće biti javne i koristi će ih Goteo za komunikaciju o upotrebama povezanim s kampanjom koju pripremate.",
+          "email": "Email",
+          "phone": "Telefon",
+          "addContact": "Dodaj kontakt",
+          "preferred": "Preferirano",
+          "publicContacts": "Javni podaci za kontakt",
+          "publicContactsHelper": "Naznačit ćemo koji kontakt podaci/javni podaci želite da se pojave u vašoj kampanji i na vašem korisničkom profilu.",
+          "placeholders": {
+            "website": "Unesite svoju web stranicu",
+            "email": "Unesite svoj email",
+            "instagram": "Unesite svoj Instagram račun",
+            "facebook": "Unesite svoj Facebook račun",
+            "twitter": "Unesite svoj X/Twitter račun",
+            "linkedin": "Unesite svoj LinkedIn račun"
+          },
+          "continue": "Sljedeći korak"
+        }
+      },
+      "create": {
+        "title": "Predložite kampanju",
+        "subtitle": "Ukratko opišite projekt i crowdfunding kampanju.",
+        "budgetPreview": "Potreban novac",
+        "description": {
+          "title": "Ukratko opišite svoju ponudu",
+          "titlePrompt": "Navedite ime svoje kampanje",
+          "titlePlaceholder": "Naziv kampanje",
+          "subtitle": "Navedite ime svoje kampanje i ukratko opišite projekt koji ćete realizirati ako osigurate financiranje.",
+          "subtitlePrompt": "Navedite ukratko opis vašeg projekta.",
+          "subtitlePlaceholder": "Bez opisa"
+        },
+        "categories": {
+          "title": "Koja kategorija odgovara vašoj kampanji?",
+          "subtitle": "(Možete izabrati najviše 2)"
+        },
+        "budget": {
+          "title": "Koliko novca trebate?",
+          "subtitle": "Odaberite iznos koji vam je potreban za realizaciju vašeg projekta.",
+          "amountPrompt": "Navedite iznos koji vam je potreban"
+        },
+        "release": {
+          "title": "Datum izlaska kampanje",
+          "subtitle": "(Imajte na umu da crowdfunding kampanje imaju minimalno trajanje od 40 dana)"
+        },
+        "submit": "Predložite kampanju"
+      },
+      "view": {
+        "owner": "Crowdfunding kampanja koju pokreće {{ owner }}",
+        "tabs": {
+          "project": "Informacije o kampanji",
+          "rewards": "Nagrade",
+          "budget": {
+            "title": "Budžet",
+            "minimum": "Minimalno",
+            "optimal": "Optimalno",
+            "raised": "Sakupljeno",
+            "total": "Ukupno",
+            "chartTitle": "Ovo je budžet za ovu kampanju. Otkrijte kako vaša podrška može dovesti do uspjeha.",
+            "chart": {
+              "secondRound": "2. Krug",
+              "start": "Početak"
+            }
+          },
+          "updates": {
+            "title": "Ažuriranja",
+            "modalTitle": "Novo ažuriranje",
+            "by": "Autor:",
+            "content": {
+              "title": "Pratite detalje napretka ove kampanje",
+              "empty": "Nema više očekivanih ažuriranja.",
+              "btn": {
+                "readMore": "Nastavite čitati",
+                "share": "Podijelite"
+              }
+            }
+          },
+          "community": {
+            "title": "Zajednica",
+            "content": {
+              "title": "Donacije i poruke podrške iz zajednice"
+            },
+            "contribution": "Doprinos",
+            "matchfunding": {
+              "contribution": "Zbroj doprinosa",
+              "aported": "Donirano",
+              "upTo": "do toliko"
+            },
+            "anonymous": {
+              "length": "anonimni",
+              "title": "Anonimne donacije",
+              "description": "Nisu sve herojske osobe koje nose plašt niti osjećaju potrebu da pokažu svoj identitet."
+            }
+          }
+        },
+        "rewards": {
+          "trending": "Najpopularnije nagrade",
+          "showAll": "Pogledaj sve",
+          "title": "Odaberite svoje nagrade",
+          "donationFree": {
+            "title": "Odustajem od pojedinačne nagrade, želim samo pomoći projektu",
+            "description": "Na ovom prostoru možete donirati iznos koji smatrate prikladnim bez da dobijete nagradu zauzvrat. Svaki doprinos, veliki ili mali, čini razliku i približava nas cilju.",
+            "placeholder": "Odaberite doprinos  npr.20€"
+          },
+          "error": {
+            "amount": "Molimo vas unesite valjan iznos"
+          }
+        },
+        "banner": {
+          "donator": {
+            "description": "Goteo pripada Fundaciji Platoniq. Suradnjom u kampanji, vaš novac će biti čuvan od strane Platoniqa i doniran {{owner}} ako postignete postavljene ciljeve uspjeha.",
+            "learnMore": "Saznaj više."
+          },
+          "certificate": {
+            "description": "Suradnjom s projektom pokrenutim na Goteu, možete zatražiti potvrdu o donaciji. Također, možete odbiti do 80% onoga što ste dali na svojoj sljedećoj poreznoj prijavi.",
+            "learnMore": "Saznaj više."
+          }
+        },
+        "langNotAvailable": "Izabrani jezik \"{{lang}}\" nije dostupan za ovaj projekt. Prikazujemo sadržaj na dostupnom jeziku.",
+        "outOfCampaign": "Ovaj projekt je izvan kampanje i više ne prihvaća plaćanja."
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Saznajte više o našem načinu crowdfundinga",
+        "description": "U Goteu vjerujemo da je kolektivno financiranje više od novca: to je povjerenje, zajednica i društvena odgovornost. Naš model crowdfundinga temelji se na poticanju projekata koji stvaraju pozitivan utjecaj i bliskom praćenju ljudi i organizacija koji ih omogućuju.",
+        "cta": "Pokrenite svoj projekt"
+      },
+      "whatIs": {
+        "title": "Što je crowdfunding",
+        "subtitle": "Pravi društveni utjecaj.",
+        "description": "Crowdfunding je oblik financiranja koji okuplja mnoge ljude koji vjeruju u neku ideju i odluče je podržati s malim (ili velikim) doprinosima. U Goteu to smatramo prostorom u kojem se ne traže samo sredstva, već se kreiraju i mreže podrške, vidljivosti i učenja."
+      },
+      "advisory": {
+        "title": "Savjetovanje i podrška našeg tima",
+        "description": "U Goteu niste sami. Naš tim vas prati korak po korak, od definiranja vašeg projekta do upravljanja kampanjom. Nudimo besplatno savjetovanje koje će vam pomoći pripremiti vaš projekt. Ako trebate dodatnu pomoć, možete zatražiti personalizirano premijsko savjetovanje s materijalima za podršku i dokazanom metodologijom za poboljšanje vaših šansi za uspjeh."
+      },
+      "phases": {
+        "title": "Razumijte faze i mehaniku",
+        "items": {
+          "preparation": {
+            "title": "Priprema",
+            "description": "Definirajte ciljeve, budžet, trajanje i plan komunikacije. Vaš projekt može biti objavljen ako ispunjava te kriterije."
+          },
+          "launch": {
+            "title": "Lansiranje",
+            "description": "Pokrećemo prikupljanje sredstava i podržavamo vas u širenju informacija."
+          },
+          "fundsReceived": {
+            "title": "Primljena sredstva",
+            "description": "Nakon postizanja cilja, ispunite obrazac i pošaljite dokumentaciju za transfer. Osigurajte transparentnost i objasnite zajednici projekt."
+          },
+          "followUp": {
+            "title": "Praćenje",
+            "description": "Nakon kampanje, podijelite napredak projekta sa svojom zajednicom donatora i zaokružite ciklus transparentno."
+          }
+        }
+      },
+      "events": {
+        "title": "Prijavite se na naše obuke i događaje",
+        "description": "Periodično organiziramo radionice, webinare i sastanke gdje dijelimo lekcije, trendove i stvarna crowdfunding iskustva. To su prostori za obrazovanje, inspiraciju i povezivanje s ljudima koji, poput vas, žele pretvoriti ideje u stvarnosti. Pretplatite se da primate ažurirane informacije iz našeg biltena."
+      },
+      "advantages": {
+        "title": "Prednosti Gotea",
+        "items": {
+          "taxDeductions": {
+            "title": "Porezne olakšice",
+            "description": "Donacije na Goteou imaju porezne olakšice i za pojedince i za tvrtke, zahvaljujući upravljanju doprinosima putem fondacije. Ovo je nešto što većina platformi ne nudi."
+          },
+          "allOrNothing": {
+            "title": "Sve ili ništa",
+            "description": "Projekti dobivaju financijsku podršku samo ako se pokažu kao izvedivi i postignu minimalni proračun. Ako ne, donacije se vraćaju donatorima da nastave podržavati nove inicijative."
+          },
+          "twoRounds": {
+            "title": "Dva kruga sufinanciranja u 40+40 dana",
+            "description": "Po defaultu postavljamo dva kruga sufinanciranja, svaki u trajanju od 40 dana. Prvi, \"sve ili ništa,\" povezan je s minimalnim potrebnim proračunom; a drugi s optimalnim iznosom za dodatna poboljšanja gdje sve ulazi."
+          },
+          "personalizedSupport": {
+            "title": "Personalizirana podrška",
+            "description": "Ne ostavljamo pokretače same. Naš tim savjetuje prije, tijekom i nakon kampanje, sa strateškim preporukama i tehničkom podrškom. Druge platforme se ograničavaju na jednostavno prikazivanje projekata."
+          },
+          "loyalCommunity": {
+            "title": "Vjerno zajedništvo",
+            "description": "Imamo bazu stalnih donatora koji vjeruju u Goteo i nastavljaju podržavati kampanje jer cijene društveni i kulturni utjecaj. To projektima daje više prilika da postignu svoje ciljeve."
+          },
+          "matchfunding": {
+            "title": "Institucionalno sufinanciranje (matchfunding)",
+            "description": "Kroz saveze s institucijama, umnožavamo građanske doprinose sredstvima javnih ili privatnih izvora. Ovaj hibridni model je jedinstven u Goteu i ne postoji na većini platformi."
+          },
+          "socialImpact": {
+            "title": "Fokus na transformirajući društveni utjecaj",
+            "description": "Nisu svi projekti prihvaćeni. U Goteu dajemo prednost onima koji su usklađeni s društvenim gospodarstvom i demokratskim vrijednostima, bilo u obliku otvorenog znanja, društvenih poboljšanja ili okolišnog i društvenog utjecaja."
+          },
+          "transparency": {
+            "title": "Transparentnost i povjerenje",
+            "description": "Kampanje prolaze kroz proces validacije i savjetovanja. Zajednica zna da objavljeni projekti ispunjavaju minimalne standarde kvalitete i dosljednosti, čime se povećava vjerodostojnost."
+          },
+          "provenMethodology": {
+            "title": "Dokazana metodologija",
+            "description": "Više od desetljeća iskustva, s stotinama financiranih projekata, omogućava nam da ponudimo provjerenu metodologiju koja povećava šanse za uspjeh."
+          }
+        }
+      }
+    },
+    "search": {
+      "title": "Pretraži kampanje - Goteo",
+      "description": "Istražite naš katalog kampanja i pronađite onu koja vas najviše inspirira za donaciju",
+      "heading": "Pronađi kampanju koju tražiš",
+      "subtitle": "Istraži naš katalog kampanja i odaberi onu koja te najviše inspiriše za donaciju",
+      "topResults": "Najtraženije kampanje",
+      "showingTopResults": "Prikazano {{count}} najpopularnijih kampanja",
+      "loading": "Pretražujem kampanje...",
+      "input": {
+        "placeholder": "Pretraga",
+        "label": "Pretraga kampanja",
+        "clear": "Očisti pretragu",
+        "button": "Pretraga"
+      },
+      "filters": {
+        "show": "Prikaz filtera",
+        "hide": "Sakrij filtere",
+        "close": "Zatvori filtere",
+        "apply": "Primijeni filtere",
+        "clear": "Očisti filtere",
+        "categoryLabel": "Izaberi kategoriju",
+        "selectCategory": "Odaberi kategoriju",
+        "deselectCategory": "Ukloni kategoriju",
+        "selectedCategories": "{{count}} kategorija odabrano",
+        "status": {
+          "label": "Status kampanje"
+        }
+      },
+      "empty": {
+        "title": "Kampanje nisu pronađene",
+        "description": "Nema kampanja koje se podudaraju s vašom trenutnom pretragom. Provjerite pravopis ili pokušajte s različitim ključnim riječima ili općenitijim pojmovima.",
+        "clearFilters": "Očisti filtere",
+        "suggestions": {
+          "title": "Preporuke za poboljšanje pretrage:",
+          "checkSpelling": "Provjerite pravopis ključnih riječi",
+          "tryDifferentKeywords": "Pokušajte s različitim ključnim riječima",
+          "removeFilters": "Uklonite neke filtere za širenje pretrage",
+          "broadenSearch": "Koristite općenitije termine"
+        }
+      },
+      "initial": {
+        "title": "Pronađi svoju idealnu kampanju",
+        "description": "Koristite filtere iznad da pronađete kampanje koje vas inspirišu."
+      },
+      "results": {
+        "count": "{{count}} rezultata pronađeno",
+        "found": "{{count}} rezultata pronađeno",
+        "noResults": "Nema rezultata pronađeno",
+        "regionLabel": "Rezultati pretrage",
+        "showing": "Prikazano {{count}} rezultata",
+        "empty": {
+          "title": "Nema rezultata pronađeno",
+          "description": "Nema kampanja koje se podudaraju s vašom trenutnom pretragom.",
+          "clearFilters": "Očisti filtere"
+        }
+      },
+      "error": {
+        "title": "Greška u pretrazi",
+        "retry": "Pokušaj ponovo",
+        "network": {
+          "title": "Nema internetske veze",
+          "description": "Ne može se povezati s serverom. Provjerite internetsku vezu i pokušajte ponovo."
+        },
+        "timeout": {
+          "title": "Pretraga traje predugo",
+          "description": "Server ne odgovara. Pokušajte ponovo ili koristite lokalne podatke."
+        },
+        "server": {
+          "title": "Greška na serveru",
+          "description": "Problem s serverom. Pokušajte kasnije ili koristite lokalne podatke."
+        },
+        "unknown": {
+          "title": "Neočekivana greška",
+          "description": "Došlo je do neočekivane greške. Pokušajte ponovo."
+        },
+        "actions": {
+          "retry": "Pokušajte ponovo",
+          "showHelp": "Prikaži pomoć"
+        },
+        "technicalDetails": "Tehnički detalji"
+      },
+      "errors": {
+        "searchFailed": "Pretraga nije uspjela. Pokušajte ponovo.",
+        "api": {
+          "invalidToken": "Neuspjela autentikacija. Provjerite vjerodajnice.",
+          "expiredToken": "Vaša sesija je istekla. Molimo vas, prijavite se ponovo.",
+          "missingToken": "Potrebna autentikacija. Molimo vas, prijavite se.",
+          "networkError": "Greška u vezi. Provjerite internetsku vezu.",
+          "serverError": "Greška servera. Molimo pokušajte ponovo kasnije."
+        }
+      },
+      "accessibility": {
+        "resultsFound": "Pronađeno {{count}} kampanja"
+      },
+      "loadMore": {
+        "button": "Učitaj više",
+        "loading": "Učitavam više rezultata...",
+        "announcement": "Učitano je još {{count}} rezultata. Prikazano ukupno {{loaded}} rezultata."
+      },
+      "pagination": {
+        "summary": "Stranica {{page}} od {{totalPages}} (ukupno {{totalCount}} rezultata)",
+        "ariaLabel": "Navigacija po stranicama rezultata",
+        "page": "Stranica {{page}}",
+        "currentPage": "Stranica {{page}}",
+        "previous": "Prethodna",
+        "next": "Sljedeća",
+        "loading": "Učitavam...",
+        "loadMore": "Učitaj još rezultata",
+        "noMoreResults": "Nema više rezultata"
+      }
+    }
+  },
+  "system": {
+    "_": "Poruke sistema (greške, obavijesti, validacije itd.)",
+    "loading": "Učitavam...",
+    "notImplemented": "Ova funkcionalnost još nije implementirana. Na tome radimo, hvala na vašem strpljenju!",
+    "error": {
+      "unknown": "Došlo je do nepoznate greške",
+      "payment": {
+        "missingMethod": "Potrebno je odabrati način plaćanja",
+        "missingCartData": "Košarica je prazna",
+        "unprocessableCartData": "Ne može se obraditi košarica, molimo vas da je ispraznite i pokušajte ponovo",
+        "badAPIResponse": "Došlo je do greške u komunikaciji s payment gateway-om"
+      },
+      "file": {
+        "sizeTooLarge": "Datoteka {{ file }} premašuje maksimalnu veličinu ({{ max }})",
+        "unsupportedType": "Nepodržan tip datoteke: {{ file }}"
+      }
+    },
+    "constraint": {
+      "file": {
+        "maxAllowedSize": "Maksimalna dozvoljena veličina 10MB",
+        "supportedTypes": "Podržani formati datoteka: .png, .jpg"
+      }
+    },
+    "validation": {
+      "missingRequiredFields": "Jedno ili više obaveznih polja je prazno"
+    }
+  },
+  "reward": {
+    "donors": "donacije",
+    "units": "Preostalo {{units}} jedinica",
+    "noUnits": "Nema više jedinica",
+    "headline": "Izaberite svoju nagradu",
+    "addAndContinue": "Dodaj u korpu i nastavi",
+    "input": "Izaberite svoj doprinos npr.20€",
+    "btnFreeDonationLabel": "Slobodna donacija"
+  },
+  "budget": {
+    "headline": "Saznajte ključne potrebe ove kampanje i otkrijte kako vaša podrška može realizovati ovaj projekat.",
+    "chart": {
+      "minimum": "Minimalno",
+      "optimal": "Optimalno",
+      "progress": "Status kampanje"
+    }
+  },
+  "project": {
+    "actions": {
+      "share": "Podijeli",
+      "viewAll": "Pogledaj sve",
+      "viewMore": "Pogledaj više",
+      "viewLess": "Pogledaj manje"
+    },
+    "impact": {
+      "description": "Pružanjem podrške projektu na Goteo možete zatražiti potvrdu o donaciji. Tako možete odbiti do 80% onih koje ste sigurni u vašu poreznu prijavu.",
+      "learnMore": "Saznaj više."
+    },
+    "share": {
+      "modal": {
+        "title": "Širi ovaj projekat po svijetu",
+        "description": "Možete kopirati vezu za slanje i također podijeliti na Facebook-u ili X. Čak i kopirati dio koda, kako bi umetnuli kartu kampanje na drugu web stranicu. Postanite dalje!"
+      },
+      "iframe-modal": {
+        "title": "Ovako će izgledati na vašoj platformi",
+        "description": "Kopiraj ovaj dio koda i zalijepite ga u kôd vaše stranice. Tako će kampanja doći do više ljudi",
+        "btnCopy": "Kopiraj kôd",
+        "btnCopied": "Kôd kopiran!"
+      }
+    },
+    "video": {
+      "title": "Video kampanje",
+      "description": "Ovdje možete pogledati prezentacijski video kampanje. Pritisnite za reproduciranje!",
+      "poster": "Slika videa",
+      "not-found": "Žao nam je, ova kampanja nema prezentacijski video",
+      "not-supported": "Video se ne može učitati. Provjerite link ili kontaktirajte administratora kampanje."
+    }
+  },
+  "navigation": {
+    "search": {
+      "placeholder": "Pronađi svoju kampanju"
+    },
+    "categories": "Kategorije"
+  },
+  "ShareButton": {
+    "title": "Širi ovaj projekat po svijetu",
+    "description": "Možete kopirati vezu za slanje i također podijeliti na Facebook-u ili X. Čak i kopirati dio koda, kako bi umetnuli kartu kampanje na drugu web stranicu. Postanite dalje!",
+    "global": "globalno dijeljenje",
+    "facebook": "podijeli na facebook",
+    "twitter": "podijeli na X",
+    "code": "podijeli kao kôd",
+    "copied": "Veza kopirana u međuspremnik!"
+  },
+  "register": {
+    "page": {
+      "title": "Unesite svoje lične podatke",
+      "description": "Trebamo znati tko ste prije plaćanja.",
+      "registerOr": "Registrirajte se ili",
+      "loginBtnLabel": "Prijavite se putem računa",
+      "goteoUserInfo": "Ako već koristite Goteo ne morate se ponovo registrirati.",
+      "otherAccessMethods": "Također možete pristupiti putem:"
+    },
+    "form": {
+      "userType": {
+        "individual": "Fizička osoba",
+        "organization": "Pravna osoba (kompanije)"
+      },
+      "btnSubmit": "Registruj se",
+      "termsCheckbox": "Prihvaćam zakonske uslove",
+      "policiesCheckbox": "Registracijom potvrđujem da prihvaćam uvjete korištenja, politiku privatnosti i politiku kolačića.",
+      "zod": {
+        "taxId.custom": "Porez ID mora imati najmanje 8 znakova",
+        "legalName.custom": "Ime je neophodno za firme"
+      },
+      "validation": {
+        "password": {
+          "minLength": "*Zahtjevi za lozinku: mora imati 8 znakova"
+        }
+      }
+    },
+    "individual": {
+      "firstName": "Ime",
+      "lastName": "Prezime",
+      "email": "Email",
+      "password": "Lozinka",
+      "taxIdCheckbox": "Želim odbiti porez na moje donacije. Potrebno je unijeti broj identifikacijske brojke radi komunikacije s Poreskom upravom.",
+      "taxId": {
+        "label": "ID*",
+        "msgDeduction": "Želim odbiti porez na moje donacije. Potrebno je unijeti broj identifikacijske brojke radi komunikacije s Poreskom upravom."
+      }
+    },
+    "organization": {
+      "legalName": "Naziv firme",
+      "email": "Email",
+      "password": "Lozinka",
+      "taxId": "Porez ID*",
+      "taxIdDescription": "*Uz porezni ID obavještavamo poresku agenciju radi vaše porezne prijave.",
+      "representativeTitle": "Podaci predstavnika kompanije.",
+      "firstName": "Ime",
+      "lastName": "Prezime"
+    },
+    "error": {
+      "incompletePersonFields ": "Molimo vas završite sva obavezna polja za fizičke osobe.",
+      "incompleteOrgFields ": "Molimo vas završite sva obavezna polja za pravne osobe.",
+      "unexpectedRegistration": "Greška pri registraciji. Pokušajte ponovo kasnije."
+    }
+  },
+  "login": {
+    "page": {
+      "title": "Unesite svoje lične podatke",
+      "description": "Trebamo znati tko ste prije plaćanja.",
+      "registerOr": "Prijavite se na vaš račun ili",
+      "registerBtnLabel": "Registrirajte se",
+      "otherAccessMethods": "Također možete pristupiti putem:",
+      "forgotPassword": "Zaboravili ste lozinku?",
+      "welcome": {
+        "title": "Dobrodošli na novi Goteo.",
+        "subtitle": "Pokrećemo novu fazu i želimo je podijeliti s vama od početka. Platforma će rasti postepeno: aktiviraćemo sekcije i funkcionalnosti kako budu spremne i validirane s našom zajednicom. Za sada se možete prijaviti s istim emailom i lozinkom i istraživati arhiv projekata. Hvala što nas pratite na ovom putu."
+      }
+    },
+    "form": {
+      "email": "Email ili korisničko ime",
+      "password": "Lozinka",
+      "btnSubmit": "Prijavite se"
+    },
+    "error": {
+      "invalidCredentials": "Neispravan email ili lozinka.",
+      "unexpectedLogin": "Greška pri prijavi. Pokušajte ponovo kasnije.",
+      "invalidEmail": "Email nije validan.",
+      "maxCharacters": "Email ne može prelaziti 255 znakova."
+    }
+  },
+  "logout": {
+    "label": "Odjava",
+    "error": {
+      "cookieNotFound": "Kolačić sesije nije pronađen.",
+      "invalidToken": "Sesija nije validna. Molimo vas, ponovo se prijavite.",
+      "logoutSuccess": "Uspješno ste se odjavili.",
+      "unexpectedLogout": "Greška pri odjavi. Pokušajte ponovo kasnije."
+    }
+  },
+  "zod": {
+    "required": "Ovo polje je obavezno",
+    "invalid_type": "Očekivano {expected} ali primljeno {received}",
+    "string": {
+      "too_small": "Mora imati najmanje {min} znakova",
+      "too_big": "Ne može prelaziti {max} znakova",
+      "invalid": "Nepravilan format teksta"
+    },
+    "number": {
+      "too_small": "Mora biti najmanje {min}",
+      "too_big": "Ne smije prelaziti {max}"
+    },
+    "too_small": "Mora biti najmanje {min}",
+    "too_big": "Ne smije prelaziti {max}",
+    "email": {
+      "invalid": "Nevalidan email"
+    },
+    "url": {
+      "invalid": "Nevalidan format URL-a"
+    },
+    "enum": {
+      "invalid": "Nevalidna opcija. Validne opcije su: {options}"
+    },
+    "invalid": "Nevalidan unos"
+  },
+  "countdown": {
+    "error": {
+      "not-found": "Datum završetka kampanje nije pronađen."
+    }
+  },
+  "rewards": {
+    "unavailable": "Nema dostupnih nagrada.",
+    "donators": "{{donators}} donatora",
+    "units-available": "Preostalo {{units}} jedinica",
+    "by-amount-or-more": "Za {{amount}} ili više",
+    "thanks-message": "Hvala na saradnji",
+    "reward-iva-message": "Zapamtite da svaka donacija nosi porezni odbitak između 35 i 80%! Izračunajte ovdje: {{link}}",
+    "reward-donate-close": "Dodajte u korpu i nastavite",
+    "error-invalid-amount": "Unesite važeči iznos veći ili jednak nagradi",
+    "error-amount": "Unesite valjani iznos",
+    "loading": "Učitavam nagrade..."
+  },
+  "updates": {
+    "heading": "Nemojte propustiti detalje napretka ove kampanje",
+    "empty": "Ne postoje predviđene daljnje ažuriranja."
+  },
+  "updateCard": {
+    "readMore": "Nastavi čitati"
+  },
+  "metadata": {
+    "title": "Početna",
+    "description": "Početna stranica"
+  },
+  "hero": {
+    "title": "Financiranje ljepote, održivosti, onoga što nas ujedinjuje.",
+    "description": "Mjesto gdje se projekti usklađuju s filozofijom Nove evropske Bauhaus. Gdje ljepota inspiriše akciju, održivost upravlja odlukama, a saradnja oblikuje izbore. Od ideje do utjecaja, financiranje postaje dijeljena građanska praksa. Crowdfunding kao kolektivni korak prema željenoj budućnosti."
+  },
+  "renovationBanner": {
+    "title": "Obnavljamo Goteo!",
+    "description": "Goteo je izgradio jedinstvenu priču u svetu crowdfundinga. Želite biti dio toga?",
+    "ctaButton": "Pridružite se našoj priči"
+  },
+  "title": "Zdravo!",
+  "header": {
+    "btnCart": "Idi na checkout",
+    "search": "Traži",
+    "createProject": "Kreiraj svoj projekt",
+    "goToProfile": "Idi na Profil"
+  },
+  "checkout": {
+    "title": "Sažetak odabranih donacija",
+    "subtitle": "Prikazujemo one koje ste odabrali, pritisnite dugme \"nastavi\" za plaćanje.",
+    "reward": {
+      "claimed": "{{ units }} osoba već je zatražilo ovu nagradu",
+      "unclaimed": "Još nitko nije zatražio ovu nagradu. Budi prvi!"
+    },
+    "tipjar": {
+      "community": "Želim podržati Fondaciju Platoniq",
+      "checkboxLabel": "Podržati pravednije i solidarno društvo",
+      "input": "Unesite slobodan iznos",
+      "error": {
+        "invalidAmount": "Minimalni iznos je 1€"
+      }
+    },
+    "changeAddressLabel": "Pošaljite ovu nagradu na adresu koja nije moja.",
+    "summary": {
+      "total": {
+        "title": "Ukupno što ćete donirati",
+        "description": "Opis ukupno"
+      },
+      "deduct": "Možete ostvariti povrat do 100€ u prijavi poreza ako izvršite ovu donaciju.",
+      "resume": {
+        "donationsPrefix": "donacija",
+        "foundationPrefix": "doprinos za fondaciju"
+      },
+      "show_details": "Pogledajte detalje",
+      "hide_details": "Sakrijte detalje",
+      "show_more": "Prikaži više",
+      "hide": "Sakrij",
+      "donations": "donacija",
+      "foundation": "doprinos za "
+    },
+    "cart": {
+      "freeDonation": {
+        "title": "Slobodna donacija"
+      }
+    },
+    "steps": {
+      "reward": {
+        "title": "Nagrada"
+      },
+      "data": {
+        "title": "Vaši podaci"
+      },
+      "payment": {
+        "title": "Metoda plaćanja"
+      },
+      "confirmation": {
+        "title": "Potvrdi"
+      }
+    },
+    "btnContinue": {
+      "label": "Nastavi"
+    }
+  },
+  "payment": {
+    "postPayment": {
+      "title": "Čestitamo! Hvala na vašoj donaciji",
+      "emailSent": "Poslali smo vam sažetak na:",
+      "certificate": {
+        "title": "Kako da dobijem svoj certifikat?",
+        "description": "Certifikat se automatski generira krajem fiskalne godine (decembar). Poslat ćemo vam e-mail nakon što predamo dokumentaciju Poreznoj upravi. Ako naiđemo na problem, kontaktirat ćemo vas e-poštom."
+      },
+      "donatedProjects": {
+        "title": "Donirali ste sljedeće projekte",
+        "empty": "Nisu pronađeni donirani projekti"
+      },
+      "suggestedProjects": {
+        "title": "Ostali projekti kojima je potrebna vaša pomoć",
+        "empty": "U ovom trenutku nema dostupnih projekata"
+      }
+    },
+    "page": {
+      "title": "Unesite podatke za plaćanje",
+      "description": "Sada trebamo da nam kažete kako želite platiti.",
+      "selectMethod": "Odaberite način plaćanja:"
+    },
+    "page-approved": {
+      "title": "Vaša metoda plaćanja je uspješno obrađena",
+      "description": "Odlično! Samo ste jedan korak do završetka i poboljšanja svijeta.",
+      "form-goal": {
+        "title": "Ako kampanja ne postigne svoj cilj",
+        "options": {
+          "1": "Unesite u moj Goteo novčanik i prenamijenite ga za druge projekte. Saznajte više",
+          "2": "Vratite na moj platni metod"
+        }
+      },
+      "form-review": {
+        "title": "Ostavite poruku projektima koje ste podržali",
+        "description": "Vaša donacija će se odraziti na projekte koje ste podržali. Možete ostaviti poruku ili ostati anonimni ",
+        "labels": {
+          "name": "Oznaka",
+          "anonymous": "Ostavite poruku anonimno",
+          "leave-a-message": "Ostavite poruku javno"
+        }
+      }
+    },
+    "page-error": {
+      "title": "Nešto je pošlo po zlu... Ponovno pokušajte kako biste donirali.",
+      "description": "Oh, možda je to naša greška, greška platnog medija ili jednostavno zlonamjerni računalni patuljak. Pokušajmo ponovno.",
+      "selectMethod": "Odaberite ponovno način plaćanja:",
+      "btnContinue": "Pokušajte ponovno"
+    },
+    "wallet-confirmation": {
+      "title": "Vaš virtualni novčanik",
+      "description": "Dobro, platit ćete s akumuliranim saldom na svom novčaniku. Imajte na umu da će se, ako imate saldo i ne potrošite ga za dvije godine, prenijeti na fondaciju.",
+      "currentBalance": "Trenutni saldo",
+      "amountToUse": "Koliko ćete koristiti",
+      "remainingBalance": "Saldo koji ćete zadržati"
+    },
+    "wallet": {
+      "balanceLabel": "Saldo: "
+    },
+    "error": {
+      "unexpectedPayment": "Greška pri obradi plaćanja. Molimo pokušajte ponovo kasnije.",
+      "paymentFailed": "Plaćanje nije uspjelo. Molimo provjerite unesene podatke i pokušajte ponovo.",
+      "paymentCancelled": "Plaćanje je otkazano. Molimo pokušajte ponovo.",
+      "missingAccountingId": "Nedostaju svi podaci. Molimo prijavite se ponovo."
+    }
+  },
+  "contributions": {
+    "title": "Doprinosi",
+    "description": "Ovdje su vaši posljednji doprinosi kampanjama. Možete ih sortirati i filtrirati kako želite.",
+    "table": {
+      "headers": {
+        "target": "Odredište",
+        "amount": "Iznos",
+        "origin": "Porijeklo",
+        "paymentMethod": "Metoda plaćanja",
+        "date": "Datum",
+        "chargeStatus": "Status operacije",
+        "refundToWallet": "Povratak na novčanik"
+      },
+      "rows": {
+        "payments": {
+          "tpv": "Kartica",
+          "paypal": "PayPal",
+          "stripe": "Stripe",
+          "wallet": "Novčanik"
+        },
+        "status": {
+          "to_charge": "Za naplatu",
+          "in_charge": "Naplata",
+          "to_refund": "Za povrat",
+          "refunded": "Povrat",
+          "to_wallet": "Za povrat u novčanik",
+          "walleted": "Povratak u novčanik"
+        },
+        "refund": {
+          "to_wallet": "Da",
+          "to_gateway": "Ne"
+        },
+        "noData": "Nema dostupnih podataka"
+      }
+    },
+    "grid": {
+      "details": {
+        "operationTime": "Vrijeme operacije",
+        "trackingCodes": {
+          "title": "Kodovi za praćenje",
+          "headers": {
+            "title": "Naslov",
+            "trackingCode": "Kod za praćenje"
+          }
+        },
+        "toWallet": "U novčanik",
+        "platformLinks": {
+          "title": "Link na platformu",
+          "headers": {
+            "type": "Vrsta linka",
+            "rel": "Odnos",
+            "href": "URL"
+          }
+        },
+        "estimatedFee": "Procijenjena naknada",
+        "concept": "Koncept"
+      },
+      "actions": {
+        "refundToWallet": "Povrat u novčanik",
+        "refundToUser": "Povrat korisniku",
+        "changeUser": "Promijeni korisnika",
+        "manageReward": "Upravljaj nagradom"
+      },
+      "content-footer": {
+        "lastEdited": "Zadnja izmjena: {{date}} {{time}}",
+        "downloadDetails": "Preuzmite detalje",
+        "annotations": "{{annotations}} Bilješke"
+      }
+    },
+    "filters": {
+      "order": {
+        "title": "Sortiraj prema:",
+        "options": {
+          "date-desc": "Datum (najnoviji prvi)",
+          "date-asc": "Datum (najstariji prvi)",
+          "amount-desc": "Iznos (od najvećeg do najmanjeg)",
+          "amount-asc": "Iznos (od najmanjeg do najvećeg)",
+          "status-desc": "Status (Z-A)",
+          "status-asc": "Status (A-Z)"
+        }
+      },
+      "itemsPerPage": {
+        "title": "Linije po stranici:",
+        "options": {
+          "10": "10",
+          "20": "20",
+          "30": "30",
+          "50": "50"
+        }
+      },
+      "search": {
+        "placeholder": "Traži...",
+        "btnLabel": "Traži",
+        "resultsFound": "{{totalItems}} rezultata za \"{{query}}\"",
+        "noResults": "Nisu pronađeni rezultati",
+        "labels": {
+          "projects": "Projekti",
+          "users": "Korisnici",
+          "tipjars": "Kasice za napojnice",
+          "tipjar-id": "ID kasice za napojnice"
+        }
+      },
+      "paymentMethod": {
+        "title": "Metoda plaćanja",
+        "options": {
+          "all": "Sve",
+          "paypal": "Paypal",
+          "stripe": "Stripe",
+          "wallet": "Novčanik"
+        }
+      },
+      "rangeAmount": {
+        "title": "Odaberite iznos",
+        "options": {
+          "500000": "+ 5.000€",
+          "all": "Sve",
+          "000..10000": "0€ - 100€",
+          "10000..50000": "100€ - 500€",
+          "50000..100000": "500€ - 1.000€",
+          "100000..500000": "1.000€ - 5.000€"
+        }
+      },
+      "dateRange": {
+        "initDate": "Datum početka",
+        "endDate": "Datum završetka",
+        "from": "Od",
+        "to": "Do",
+        "errors": {
+          "invalidDate": "Nevažeći datum",
+          "invalidRange": "Datum početka ne može biti veći od datuma završetka."
+        }
+      },
+      "chargeStatus": {
+        "title": "Status doprinosa",
+        "options": {
+          "all": "Sve",
+          "to_charge": "Za naplatu",
+          "in_charge": "Naplata",
+          "to_refund": "Za povrat",
+          "refunded": "Povrat",
+          "to_wallet": "Za povrat u novčanik",
+          "walleted": "Povratak u novčanik"
+        }
+      },
+      "projectStatus": {
+        "title": "Status kampanje",
+        "options": {
+          "all": "Sve",
+          "active": "Aktivne",
+          "finished": "Završene",
+          "cancelled": "Otkazane"
+        }
+      },
+      "btns": {
+        "openFilters": "Filtri",
+        "closeFilters": "Zatvori filtere",
+        "reset": "Resetiraj filtere",
+        "apply": "Primijeni filtere"
+      }
+    },
+    "pagination": {
+      "showing": "Prikazuje {{items}} od {{total}}",
+      "unloaded": "Prikazuje...",
+      "noResults": "Nema rezultata"
+    },
+    "tootip": {
+      "copied": "Kopirano!"
+    },
+    "export": {
+      "csv": "Izvoz u CSV",
+      "exporting": "Izvoz...",
+      "error": "Pogreška pri izvozu CSV datoteke. Pokušajte ponovo.",
+      "errorAuth": "Greška pri autentifikaciji. Molimo vas da se ponovno prijavite.",
+      "filename": "gateway-charges",
+      "itemsText": "stavke",
+      "noData": "Nema pronađenih podataka za izvoz"
+    }
+  },
+  "admin": {
+    "projects": {
+      "totalizers": {
+        "selected": "Odabrani projekti:",
+        "totalEarned": "Ukupno prikupljeno:",
+        "totalPaid": "Ukupno plaćeno:",
+        "totalUnpaid": "Nepodmireno:"
+      }
+    },
+    "charges": {
+      "lastContributions": "Posljednji doprinosi:",
+      "totalizers": {
+        "totalCharges": "Ukupno doprinosa:",
+        "totalTips": "Ukupno napojnica:",
+        "totalFees": "Ukupne provizije:"
+      }
+    }
+  },
+  "footer": {
+    "funding": {
+      "title": "Financira:",
+      "partOf": "Dio smo:"
+    },
+    "navigation": {
+      "collaborate": {
+        "title": "Surađuj",
+        "createProject": "Kreiraj projekt",
+        "matchfunding": "Matchfunding",
+        "workshops": "Radionice"
+      },
+      "help": {
+        "title": "Pomoć",
+        "faqs": "Najčešća pitanja",
+        "contact": "Kontakt",
+        "taxCalculator": "Porezni kalkulator"
+      },
+      "about": {
+        "title": "O Bauhaus4Med Crowd",
+        "crowdfunding": "Što je Goteo?",
+        "crowdvocacy": "Što je Bauhaus4Med?"
+      },
+      "forUsers": {
+        "title": "Za korisnike",
+        "rechargeWallet": "Punjenje novčanika",
+        "downloadCertificate": "Preuzmite certifikat",
+        "accessComplementaryFunds": "Pristupite dodatnim sredstvima",
+        "designFundingProgram": "Dizajnirajte program financiranja"
+      }
+    },
+    "legal": {
+      "termsOfUse": "Uvjeti korištenja",
+      "privacyPolicy": "Politika privatnosti",
+      "cookies": "Kolačići",
+      "licenses": "Licence",
+      "stats": "Statistike"
+    },
+    "platoniq": {
+      "foundation": "Zaklada",
+      "name": "Platoniq"
+    }
+  },
+  "profile": {
+    "share": "Podijeli",
+    "subscribe": "Pretplatite se",
+    "tabs": {
+      "about": "O profilu",
+      "projects": "Pokrenuti projekti",
+      "donorType": "Vrsta donatora"
+    },
+    "notFound": "Korisnik nije pronađen",
+    "location": "Lokacija",
+    "userIntro": "Aktivni član Goteo zajednice",
+    "organizationIntro": "Organizacija posvećena društvenim promjenama",
+    "bioSample": "Sa dugogodišnjim iskustvom u ekosistemu crowdfunding-a i kolektivnog finansiranja, {{name}} se etablirao kao referenca u kreiranju kolaborativnih projekata i mobilizaciji resursa. Njegova vizija se fokusira na osnaživanje inicijativa koje transformišu lokalne stvarnosti, kombinirajući inovativne strategije sa dubokom posvećenošću građanskom sudjelovanju i društvenoj jednakosti.",
+    "noProjects": "Još nema pokrenutih projekata.",
+    "donorType": {
+      "fan": {
+        "title": "Fan",
+        "description": "Ovaj donator je uložio više od 25€",
+        "projectsDonated": "Donirani projekti",
+        "moneyDonated": "Donirani novac"
+      },
+      "nextLevel": {
+        "title": "Sljedeći nivo",
+        "description": "Nastavi donirati da skočiš na viši nivo"
+      }
+    }
+  },
+  "me": {
+    "page": {
+      "title": "Aktivnost",
+      "subtitle": "Provjerite svoju aktivnost na Goteu"
+    },
+    "period": {
+      "label": "Period",
+      "year": "Godina {{year}}"
+    },
+    "donations": {
+      "title": "Moje donacije",
+      "empty": "Još niste donirali niti jednom projektu",
+      "explore": "Istražuj projekte",
+      "illustration": "/images/profile/ilustration-donations.png",
+      "ctaLink": "/projects",
+      "count": "Donacije",
+      "total": "Ukupno donirano",
+      "recent": "Najnovije donacije",
+      "viewAll": "Pogledaj sve",
+      "certificate": "Zatraži certifikat"
+    },
+    "projects": {
+      "title": "Pokrenuti projekti",
+      "empty": "Još uvijek niste pokrenuli nijedan projekt",
+      "create": "Pokreni svoj projekt",
+      "illustration": "/images/profile/ilustration-project.png",
+      "ctaLink": "/projects/new",
+      "count": "Projekti",
+      "raised": "Prikupljeno",
+      "recent": "Najnoviji pokrenuti projekti",
+      "viewAll": "Pogledaj sve",
+      "createNew": "Stvorite projekt"
+    },
+    "ownedProjects": {
+      "title": "Vaši aktivni projekti",
+      "messageToDonatorsButton": "Poruka donatorima",
+      "uploadNewsButton": "Postavi novosti"
+    },
+    "donatedProjects": {
+      "title": "Aktivni projekti na koje ste donirali"
+    },
+    "cta": {
+      "discover": {
+        "title": "Otkrijte, povežite se i donirajte",
+        "description": "Zamislite prostor gdje stotine društvenih projekata čekaju vašu podršku. Na našoj platformi, istraživanje je lako: pretražujte društvene, ekološke ili obrazovne inicijative. Jer ovdje, vi odlučujete koje se priče pišu.",
+        "button": "Donirajte projektu"
+      },
+      "matchfunding": {
+        "title": "Sjajne donacije. Inspirativni projekti.",
+        "description": "Goteo je pionir u matchfundingu. Bilo da ste donator koji želi povećati svoju podršku projektima, pokretač koji želi povećati svoj budžet ili entitet koji želi podržati projekte putem dodataka... naš matchfunding program vam omogućava da umnožite napore za promjenu",
+        "learnMore": "Saznajte kako funkcionira matchfunding",
+        "becomeMatcher": "Postanite Matcher"
+      }
+    },
+    "matchfunding": {
+      "card": {
+        "title": "Matchfunding",
+        "calls": "Pozivi",
+        "donated": "Donirano",
+        "recent": "Najnoviji pozivi",
+        "viewAll": "Pogledaj pozive",
+        "create": "Kreiraj poziv"
+      },
+      "section": {
+        "title": "Vaši aktivni pozivi za Matchfunding",
+        "empty": "Nemate aktivnih poziva",
+        "error": "Greška pri učitavanju poziva"
+      },
+      "callCard": {
+        "donationCall": "Donacija poziva",
+        "participatingProjects": "Projekti u učešću",
+        "successfulProjects": "Projekti koji su uspješno podržani",
+        "projects": "projekti",
+        "viewCall": "Idi na poziv"
+      }
+    }
+  },
+  "blog": {
+    "share": {
+      "modal": {
+        "title": "Podijelite ovaj blog sa svijetom",
+        "description": "Možete kopirati link kako biste ga poslali, a također ga podijelite na Facebooku ili X-u."
+      }
+    }
+  }
+}
