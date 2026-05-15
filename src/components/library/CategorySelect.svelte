@@ -22,7 +22,7 @@
     } = $props();
 
     onMount(() => {
-        const priorityOrder = ["beautiful", "sustainable", "together"];
+        const priorityOrder = ["together", "sustainable", "beautiful"];
 
         options = [
             ...options.sort((a, b) => {
