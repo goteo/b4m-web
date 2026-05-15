@@ -22,7 +22,8 @@
       "expired": "Campagna terminata"
     },
     "login": "Accedi",
-    "goHome": "Torna all'inizio"
+    "goHome": "Torna all'inizio",
+    "viewAll": "Vedi tutti"
   },
   "domain": {
     "_": "Concetti di business (progetto, ricompensa, contributo, ecc.)",

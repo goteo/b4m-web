@@ -22,7 +22,8 @@
       "expired": "Campanya finalitzada"
     },
     "login": "Iniciar sessió",
-    "goHome": "Tornar a l'inici"
+    "goHome": "Tornar a l'inici",
+    "viewAll": "Veure tots"
   },
   "domain": {
     "_": "Conceptes empresarials (projecte, recompensa, contribució, etc.)",

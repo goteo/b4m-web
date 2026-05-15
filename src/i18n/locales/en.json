@@ -22,7 +22,8 @@
       "expired": "Campaign ended"
     },
     "login": "Login",
-    "goHome": "Go back home"
+    "goHome": "Go back home",
+    "viewAll": "View all"
   },
   "domain": {
     "_": "Business concepts (project, reward, contribution, etc.)",
